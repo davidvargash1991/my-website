@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./footer.module.scss";
-import linkedin from "icons/linkedin.svg";
-import github from "icons/github.svg";
+import Linkedin from "components/ui/icons/linkedin";
+import Github from "components/ui/icons/github";
 import { INavigationProps } from "../navbar";
 
 const Footer: React.FC<INavigationProps> = (props) => {
@@ -25,14 +25,18 @@ const Footer: React.FC<INavigationProps> = (props) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.icon} alt="linkedin" src={linkedin} />
+            <div className={styles.link}>
+              <Linkedin color="#ffffff" />
+            </div>
           </a>
           <a
             href="https://github.com/davidvargash1991"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.icon} alt="github" src={github} />
+            <div className={styles.link}>
+              <Github color="#ffffff" />
+            </div>
           </a>
         </div>
         <div className={styles.navigation}>
