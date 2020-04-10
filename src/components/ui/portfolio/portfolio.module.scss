@@ -14,9 +14,10 @@
     font-size: 30px;
     color: $gray-title;
     font-weight: 600;
-    border-bottom: 2px $primary solid;
+    border-bottom: 3px $primary solid;
     margin: 10px 0;
     display: inline-block;
+    padding: 6px 0;
   }
 
   .text {
@@ -40,6 +41,11 @@
 
     .text {
       margin: 15px 10px;
+    }
+
+    .projects {
+      position: relative;
+      left: 10%;
     }
   }
 }

@@ -53,7 +53,8 @@ export const strings: IStrings = {
       {
         title: "Animal Wiki",
         description: "Es una enciclopedia animal de prueba con fotos de Flickr",
-        img: "https://i.postimg.cc/WpJv5yPB/animal-home.png",
+        img:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Schrecklicherpfeilgiftfrosch-01.jpg/220px-Schrecklicherpfeilgiftfrosch-01.jpg",
         repo: "https://github.com/davidvargash1991/animal-wiki",
         link: "https://animal-wiki.now.sh/home",
         type: "Frontend - React.js",
@@ -202,7 +203,8 @@ export const strings: IStrings = {
         title: "Animal Wiki",
         description:
           "This is a sample animal encyclopedia with gallery from Flickr",
-        img: "https://i.postimg.cc/WpJv5yPB/animal-home.png",
+        img:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Schrecklicherpfeilgiftfrosch-01.jpg/220px-Schrecklicherpfeilgiftfrosch-01.jpg",
         repo: "https://github.com/davidvargash1991/animal-wiki",
         link: "https://animal-wiki.now.sh/home",
         type: "Frontend - React.js",

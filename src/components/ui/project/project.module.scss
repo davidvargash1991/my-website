@@ -2,15 +2,25 @@
 
 .container {
   width: 266px;
+  max-width: 266px;
   display: block;
   height: auto;
-  margin: 0 10px;
+  margin: 10px;
   position: relative;
+  border: 1px solid #ededed;
+  border-radius: 5px;
+
+  &:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  }
 
   .img {
     height: 213px;
     width: 266px;
-    border: 1px $gray-title solid;
+    border: 1px solid #ededed;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 
     &.logo {
       object-fit: cover;
@@ -26,8 +36,10 @@
     left: 0;
     height: 213px;
     width: 266px;
-    background: rgba(128, 128, 128, 0.5);
+    background: rgba(39, 46, 55, 0.9);
     opacity: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 
     &:hover {
       opacity: 1;
@@ -43,9 +55,10 @@
         border: none;
         width: 90px;
         height: 30px;
-        background-color: $primary;
+        background-color: transparent;
         color: $white;
         border-radius: 5px;
+        font-size: 22px;
 
         .icon {
           width: 18px;
@@ -77,7 +90,7 @@
     font-size: 12px;
     color: $gray-title;
     text-align: center;
-    margin-top: 10px;
+    margin: 15px;
     height: 60px;
   }
 }
@@ -85,9 +98,5 @@
 @media only screen and (max-width: 767px) {
   .container {
     width: 100%;
-    .imgContainer {
-      left: 37px;
-      top: 1px;
-    }
   }
 }
