@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Switch, Route, Redirect, withRouter } from "react-router-dom";
+import { RouteComponentProps } from "react-router";
+import Home from "./components/pages/home";
+import { strings } from "data/strings";
 
-function App() {
+const App: React.FC<RouteComponentProps> = (props) => {
+  const handleSpanishClick = () => {
+    props.history.push("/es");
+  };
+  const handleEnglishClick = () => {
+    props.history.push("/en");
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <Route
+        path="/en"
+        component={() => (
+          <Home
+            strings={strings.english}
+            handleSpanishClick={handleSpanishClick}
+            handleEnglishClick={handleEnglishClick}
+          />
+        )}
+      />
+      <Route
+        path="/es"
+        component={() => (
+          <Home
+            strings={strings.spanish}
+            handleSpanishClick={handleSpanishClick}
+            handleEnglishClick={handleEnglishClick}
+          />
+        )}
+      />
+      <Redirect to="/en" />
+    </Switch>
   );
-}
+};
 
-export default App;
+export default withRouter(App);

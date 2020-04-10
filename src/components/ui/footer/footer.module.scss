@@ -1,0 +1,77 @@
+@import "../../../styles/styleguide.scss";
+
+.container {
+  width: 100%;
+  height: 270px;
+  background-color: $gray-footer;
+  overflow: hidden;
+  font-family: $sen-sans;
+
+  .content {
+    width: 1180px;
+    margin: 0 auto;
+    display: block;
+    padding: 60px 0;
+
+    .title {
+      font-size: 30px;
+      color: $white;
+      text-align: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .text {
+      font-size: 14px;
+      color: $gray-secondary;
+      text-align: center;
+      margin: 10px;
+    }
+
+    .navigation {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+
+      .link {
+        text-decoration: none;
+        color: $white;
+        width: 70px;
+        margin: 0 20px;
+        text-align: center;
+
+        &:hover {
+          cursor: pointer;
+          border-bottom: 2px $white solid;
+        }
+      }
+    }
+
+    .social {
+      margin: 30px auto;
+      width: 58px;
+
+      .icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 5px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    .content {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,126 @@
+@import "../../../styles/styleguide.scss";
+
+.container {
+  position: relative;
+  margin-bottom: 45px;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -43px;
+    top: 0;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background: $white;
+    border: 3px solid $primary;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -37px;
+    top: 6px;
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background: $primary;
+    z-index: 10;
+  }
+
+  .content {
+    width: 100%;
+    height: auto;
+    text-align: left;
+
+    ul {
+      list-style: none;
+      li {
+        &::before {
+          content: "\2022";
+          color: $primary;
+          font-weight: bold;
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .position {
+      font-size: 14px;
+      max-width: 220px;
+      color: $gray-secondary;
+    }
+    .location {
+      font-size: 14px;
+      color: $gray-secondary;
+    }
+    .company {
+      margin-top: 12px;
+      margin-bottom: 5px;
+      font-size: 26px;
+      font-weight: 600;
+      color: $primary;
+    }
+    .techTitle {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .technologies {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .tech {
+        background-color: $primary;
+        color: $white;
+        border-radius: 5px;
+        display: inline;
+        font-size: 14px;
+        padding: 3px;
+        margin: 2px;
+      }
+    }
+  }
+}
+
+.icon {
+  height: 16px;
+  width: 16px;
+  position: relative;
+  top: 1px;
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    .content {
+      width: 70%;
+      ul {
+        padding-left: 10px;
+
+        li {
+          margin: 7px 0;
+        }
+      }
+    }
+  }
+}
