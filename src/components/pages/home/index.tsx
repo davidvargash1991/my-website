@@ -62,9 +62,9 @@ class Home extends Component<IHomeProps> {
         />
         <Hero strings={strings} />
         <About ref={this.aboutRef} strings={strings} />
-        <Responsive />
+        <Responsive strings={strings} />
         <Portfolio ref={this.portfolioRef} strings={strings} />
-        <Technologies />
+        <Technologies strings={strings} />
         <Experience ref={this.experienceRef} strings={strings} />
         <Footer
           strings={strings}

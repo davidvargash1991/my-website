@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import styles from "./tech.module.scss";
 import code from "icons/code.jpg";
+import { ILanguageProps } from "data/strings";
 
 let simpleParallax: any = null;
 if (typeof window !== "undefined") {
   simpleParallax = require("simple-parallax-js");
 }
 
-class Technologies extends Component {
+class Technologies extends Component<ILanguageProps> {
   private ParallaxObj: any;
   private ImageRef = React.createRef<HTMLImageElement>();
   constructor(props: any) {
@@ -34,14 +35,15 @@ class Technologies extends Component {
     }
   }
   public render() {
+    const { strings } = this.props;
     return (
       <div className={styles.container}>
         <div className={styles.blur}>
           <div className={styles.textContainer}>
             <div className={styles.title}>Technologies</div>
             <div className={styles.text}>
-              I work with React.js, Redux, Typescript, SASS, .Net, Entity
-              Framework, SQL Server
+              {`${strings.techText} React.js, Redux, Typescript, SASS, .Net, Entity
+              Framework, SQL Server`}
             </div>
           </div>
         </div>

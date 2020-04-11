@@ -29,8 +29,10 @@ export interface ILanguage {
   remoteText: string;
   locationTitle: string;
   locationText: string;
+  responsiveText: string;
   portfolioTitle: string;
   portfolioText: string;
+  techText: string;
   experienceTitle: string;
   projects: IProject[];
   experience: IExperience[];
@@ -62,6 +64,9 @@ export const strings: IStrings = {
       "Tengo experiencia trabajando en equipos distribuidos, personalmente prefiero el trabajo desde casa",
     locationTitle: "Ubicación",
     locationText: "Bogotá - Colombia",
+    responsiveText:
+      "Construyo las aplicaciones pensando siempre en todos los dispositivos, y revisando en multiples navegadores",
+    techText: "Trabajo con",
     portfolioTitle: "Portafolio",
     portfolioText:
       "Estos son proyectos que creo en mi tiempo libre, me ayudan a practicar y aprender",
@@ -218,6 +223,9 @@ export const strings: IStrings = {
       "I have experience working with distributed teams, personally I prefer working from home",
     locationTitle: "Location",
     locationText: "Bogota - Colombia",
+    responsiveText:
+      "I build the applications with responsive design in mind, always testing across browsers",
+    techText: "I work with",
     portfolioTitle: "Portfolio",
     portfolioText:
       "These are projects that I build in my free time, they are projects that help me practice and learn",
