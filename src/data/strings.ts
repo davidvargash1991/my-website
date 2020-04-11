@@ -56,7 +56,7 @@ export const strings: IStrings = {
       "Soy un desarrollador Full Stack experimentado, me enfoco sobre todo en desarrollo FrontEnd el cual disfruto bastante",
     aboutMeTitle: "Sobre mi",
     textAbout:
-      "Me considero una persona que siempre esta aprendiendo y buscando mejorar sus habilidades, aprendo constantemente en escuelas online como Coursera o Platzi. Tengo experiencia en metodologías ágiles.",
+      "Disfruto construir webistes modernos y bellos; para este propósito, siempre estoy haciendo cursos para aprender las últimas técnicas y tecnologías, de esa manera puedo construir las mejores aplicaciones posibles",
     totalExpTitle: "Experienciencia total",
     totalExp: `${years} años desde Agosto de 2011`,
     remoteTitle: "Trabajo Remoto",
@@ -215,7 +215,7 @@ export const strings: IStrings = {
       "I am an experienced Full Stack developer, I focus mostly on FrontEnd Development which I enjoy a lot",
     aboutMeTitle: "About Me",
     textAbout:
-      "I consider myself a person who is always learning and looking to improve his skills, always keep learning in online schools such as Coursera or Platzi. I have experience working with Agile methodologies.",
+      "I enjoy building modern and beautiful webistes, for this purpose I keep always making courses to learn new cool features, that way I can build the most impressive applications as possible",
     totalExpTitle: "Total Experience",
     totalExp: `${years} years since August 2011`,
     remoteTitle: "Remote Work",

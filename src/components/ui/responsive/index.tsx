@@ -16,7 +16,7 @@ class Responsive extends Component<ILanguageProps> {
     animateClassText: "",
   };
   private listenToScroll = () => {
-    if (this.ref.current) {
+    if (this.ref.current && this.state.animateClassImg === "") {
       if (this.ref.current.getBoundingClientRect().top <= 500) {
         this.setState({
           animateClassImg: styles.animateImg,
