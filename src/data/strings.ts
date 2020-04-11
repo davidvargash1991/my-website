@@ -23,7 +23,6 @@ export interface ILanguage {
   heroSubtitle: string;
   aboutMeTitle: string;
   textAbout: string;
-  totalExpTitle: string;
   totalExp: string;
   remoteTitle: string;
   remoteText: string;
@@ -57,7 +56,6 @@ export const strings: IStrings = {
     aboutMeTitle: "Sobre mi",
     textAbout:
       "Disfruto construir webistes modernos y bellos; para este propósito, siempre estoy haciendo cursos para aprender las últimas técnicas y tecnologías, de esa manera puedo construir las mejores aplicaciones posibles",
-    totalExpTitle: "Experienciencia total",
     totalExp: `${years} años desde Agosto de 2011`,
     remoteTitle: "Trabajo Remoto",
     remoteText:
@@ -216,7 +214,6 @@ export const strings: IStrings = {
     aboutMeTitle: "About Me",
     textAbout:
       "I enjoy building modern and beautiful webistes, for this purpose I keep always making courses to learn new cool features, that way I can build the most impressive applications as possible",
-    totalExpTitle: "Total Experience",
     totalExp: `${years} years since August 2011`,
     remoteTitle: "Remote Work",
     remoteText:

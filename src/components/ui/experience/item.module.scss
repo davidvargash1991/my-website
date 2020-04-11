@@ -53,6 +53,9 @@
     ul {
       list-style: none;
       li {
+        font-weight: 300;
+        font-size: 18px;
+
         &::before {
           content: "\2022";
           color: $primary;
@@ -78,11 +81,11 @@
       margin-top: 12px;
       margin-bottom: 5px;
       font-size: 26px;
-      font-weight: 600;
+      font-weight: 500;
       color: $primary;
     }
     .techTitle {
-      font-weight: 600;
+      font-weight: 500;
       margin-bottom: 5px;
     }
     .technologies {

@@ -21,7 +21,7 @@ const About: React.FC<ISectionProps> = React.forwardRef(
           <div className={styles.info}>
             <div className={styles.item}>
               <img className={styles.img} src={work} alt="work" />
-              <div className={styles.name}>{props.strings.totalExpTitle}</div>
+              <div className={styles.name}>{props.strings.experienceTitle}</div>
               <div className={styles.description}>{props.strings.totalExp}</div>
             </div>
             <div className={styles.item}>
