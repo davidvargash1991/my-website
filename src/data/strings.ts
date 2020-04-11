@@ -1,3 +1,5 @@
+import moment from "moment";
+
 export interface IProject {
   img: string;
   title: string;
@@ -21,6 +23,12 @@ export interface ILanguage {
   heroSubtitle: string;
   aboutMeTitle: string;
   textAbout: string;
+  totalExpTitle: string;
+  totalExp: string;
+  remoteTitle: string;
+  remoteText: string;
+  locationTitle: string;
+  locationText: string;
   portfolioTitle: string;
   portfolioText: string;
   experienceTitle: string;
@@ -37,6 +45,8 @@ export interface ILanguageProps {
   strings: ILanguage;
 }
 
+const years = moment().diff("2011-08-01", "years");
+
 export const strings: IStrings = {
   spanish: {
     heroTitle: "Full Stack Developer",
@@ -44,7 +54,14 @@ export const strings: IStrings = {
       "Soy un desarrollador Full Stack experimentado, me enfoco sobre todo en desarrollo FrontEnd el cual disfruto bastante",
     aboutMeTitle: "Sobre mi",
     textAbout:
-      "Tengo más de 8 años de experiencia en la industria, me gusta trabajar remotamente con las mejores tecnologías como React.js y .Net. Me gusta construir interfaces bellas, modernas y que se adapten a cualquier dispositivo. Me considero una persona que siempre esta aprendiendo y buscando mejorar sus habilidades, aprendo constantemente en escuelas online como Coursera o Platzi. Tengo experiencia en metodologías ágiles y vivo en Bogotá Colombia, mi zona horaria es UTC-05:00",
+      "Me considero una persona que siempre esta aprendiendo y buscando mejorar sus habilidades, aprendo constantemente en escuelas online como Coursera o Platzi. Tengo experiencia en metodologías ágiles.",
+    totalExpTitle: "Experienciencia total",
+    totalExp: `${years} años desde Agosto de 2011`,
+    remoteTitle: "Trabajo Remoto",
+    remoteText:
+      "Tengo experiencia trabajando en equipos distribuidos, personalmente prefiero el trabajo desde casa",
+    locationTitle: "Ubicación",
+    locationText: "Bogotá - Colombia",
     portfolioTitle: "Portafolio",
     portfolioText:
       "Estos son proyectos que creo en mi tiempo libre, me ayudan a practicar y aprender",
@@ -193,7 +210,14 @@ export const strings: IStrings = {
       "I am an experienced Full Stack developer, I focus mostly on FrontEnd Development which I enjoy a lot",
     aboutMeTitle: "About Me",
     textAbout:
-      "I have more than 8 years of experience in the IT industry, always like to work remotely and with the best technologies like React.js and .Net Framework and enjoy building beautiful, modern and responsive interfaces. I consider myself a person who is always learning and looking to improve his skills, always keep learning in online schools such as Coursera or Platzi. I have experience working with Agile methodologies and currently live in Bogota Colombia, my timezone is UTC-05:00",
+      "I consider myself a person who is always learning and looking to improve his skills, always keep learning in online schools such as Coursera or Platzi. I have experience working with Agile methodologies.",
+    totalExpTitle: "Total Experience",
+    totalExp: `${years} years since August 2011`,
+    remoteTitle: "Remote Work",
+    remoteText:
+      "I have experience working with distributed teams, personally I prefer working from home",
+    locationTitle: "Location",
+    locationText: "Bogota - Colombia",
     portfolioTitle: "Portfolio",
     portfolioText:
       "These are projects that I build in my free time, they are projects that help me practice and learn",

@@ -6,6 +6,17 @@
   }
 }
 
+@keyframes title {
+  0% {
+    left: -200px;
+    opacity: 0;
+  }
+  100% {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -49,8 +60,11 @@
     font-size: 60px;
     color: $primary;
     height: 100px;
-    font-weight: 600;
+    font-weight: 500;
     margin: 0;
+    opacity: 0;
+    position: relative;
+    animation: title 1.5s 0.4s ease forwards;
   }
 
   .subtitle {
@@ -58,10 +72,16 @@
     margin-bottom: 30px;
     color: $white;
     max-width: 660px;
+    position: relative;
+    opacity: 0;
+    animation: title 1.5s 0.6s ease forwards;
   }
 
   .images {
     display: flex;
+    position: relative;
+    opacity: 0;
+    animation: title 1.5s 0.8s ease forwards;
 
     .logo {
       height: 100px;
@@ -85,7 +105,7 @@
     .subtitle {
       font-size: 14px;
       height: 22px;
-      margin-right: 5px;
+      margin-right: 20px;
     }
 
     .images {

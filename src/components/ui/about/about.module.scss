@@ -3,7 +3,7 @@
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 40px 0 80px 0;
+  padding: 40px 0 10px 0;
   text-align: center;
   background-color: $white;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
@@ -12,28 +12,80 @@
   .title {
     font-size: 30px;
     color: $gray-title;
-    font-weight: 600;
     border-bottom: 3px $primary solid;
     margin: 10px 0;
     display: inline-block;
     padding: 6px 0;
+    font-weight: 500;
   }
 
   .text {
     color: $gray-title;
     margin: 15px auto;
     text-align: center;
-    max-width: 1180px;
+    max-width: 920px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 920px;
+    margin: 15px auto;
+    justify-content: space-between;
+    margin: 60px auto;
+
+    .item {
+      height: 140px;
+
+      .img {
+        height: 50px;
+        width: 50px;
+      }
+      .name {
+        color: $gray-title;
+        font-size: 22px;
+        text-align: center;
+      }
+      .description {
+        color: $gray-secondary;
+        font-size: 14px;
+        max-width: 200px;
+      }
+    }
   }
 }
 
 @media only screen and (max-width: 767px) {
   .container {
     width: 100%;
-    padding: 40px 0 80px 0;
 
     .text {
       margin: 15px 10px;
+    }
+
+    .info {
+      width: 100%;
+
+      .item {
+        justify-content: center;
+        margin: 0 auto;
+
+        .img {
+          height: 40px;
+          width: 40px;
+        }
+        .name {
+          color: $gray-title;
+          font-size: 16px;
+          text-align: center;
+        }
+        .description {
+          color: $gray-secondary;
+          font-size: 12px;
+          max-width: 120px;
+        }
+      }
     }
   }
 }
