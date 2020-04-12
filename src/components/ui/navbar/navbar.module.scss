@@ -138,6 +138,7 @@
         .flag {
           &:hover {
             transform: translateY(-2px);
+            -webkit-transform: translateY(-2px);
           }
         }
       }

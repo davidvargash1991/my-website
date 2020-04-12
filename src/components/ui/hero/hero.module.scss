@@ -66,6 +66,7 @@
     opacity: 0;
     position: relative;
     animation: title 1.5s 0.5s ease forwards;
+    -webkit-animation: title 1.5s 0.5s ease forwards;
   }
 
   .subtitle {
@@ -77,6 +78,7 @@
     position: relative;
     opacity: 0;
     animation: title 1.5s 0.7s ease forwards;
+    -webkit-animation: title 1.5s 0.7s ease forwards;
   }
 
   .images {
@@ -84,6 +86,7 @@
     position: relative;
     opacity: 0;
     animation: title 1.5s 0.8s ease forwards;
+    -webkit-animation: title 1.5s 0.8s ease forwards;
 
     .logo {
       height: 100px;

@@ -2,7 +2,13 @@ import React from "react";
 import { IIconProps } from "../IconProps";
 
 const Github: React.FC<IIconProps> = (props) => (
-  <svg height="14" width="14" id="Layer_1" version="1.1" viewBox="0 0 512 512">
+  <svg
+    height={props.heigth ? props.heigth : "14"}
+    width={props.width ? props.width : "14"}
+    id="Layer_1"
+    version="1.1"
+    viewBox="0 0 512 512"
+  >
     <g>
       <path
         d="M309.4,415.9c2.1,1.8,1.3,4.3,1.3,6.5c0,29.6,0,59.1,0,88.7c0,0.6,0.2,1.3,0.2,1.9c-35.3,0-70.7,0-106,0   c0.4-17.4,0.4-34.9,0-52.3c3.2,0.1,1.7,2.6,1.7,3.9c0.1,14,0.2,28,0,41.9c-0.1,4,1.2,5.1,5.1,5.1c30.8-0.1,61.6-0.2,92.4,0   c4.4,0,5.1-1.5,5.1-5.4c-0.2-25.3-0.1-50.6-0.1-75.9C309.2,425.5,309.4,420.7,309.4,415.9z"

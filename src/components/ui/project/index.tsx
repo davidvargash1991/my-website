@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./project.module.scss";
 import cx from "classnames";
 import { IProject } from "data/strings";
-import github from "icons/github.svg";
+import Github from "components/ui/icons/github";
 import web from "icons/web.svg";
 import csharp from "icons/csharp.png";
 import reactLogo from "icons/react-no-text.png";
@@ -42,7 +42,7 @@ const Project: React.FC<IProjectProps> = ({ project }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={styles.icon} src={github} alt="repo" />
+            <Github color="#ffffff" heigth="16" width="16" />
             Repo
           </a>
           {project.link && (

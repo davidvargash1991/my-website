@@ -24,10 +24,12 @@
 
 .animateImg {
   animation: image 1.5s ease forwards;
+  -webkit-animation: image 1.5s ease forwards;
 }
 
 .animateText {
   animation: text 1.5s ease forwards;
+  -webkit-animation: text 1.5s ease forwards;
 }
 
 .container {
