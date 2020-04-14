@@ -29,7 +29,7 @@ class Hero extends Component<ILanguageProps> {
     if (this.shouldInitParallax()) {
       setTimeout(() => {
         this.ParallaxObj = new simpleParallax(this.ImageRef.current, {
-          scale: 1.5,
+          scale: 1.2,
           delay: 0.8,
           orientation: "down",
         });
