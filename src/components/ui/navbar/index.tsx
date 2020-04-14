@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import styles from "./navbar.module.scss";
 import cx from "classnames";
-import logo from "icons/logo.png";
 import mail from "icons/mail.svg";
 import Linkedin from "components/ui/icons/linkedin";
 import Github from "components/ui/icons/github";
@@ -19,11 +18,16 @@ export interface INavigationProps extends ILanguageProps {
 
 interface INavbarState {
   hasPassedHero: boolean;
+  viewportWidth: number;
 }
 
 class Navbar extends Component<INavigationProps, INavbarState> {
   public state: INavbarState = {
     hasPassedHero: false,
+    viewportWidth: window.innerWidth,
+  };
+  public updateWindowDimensions = () => {
+    this.setState({ viewportWidth: window.innerWidth });
   };
   private logoClick = () => {
     const c = document.documentElement.scrollTop || document.body.scrollTop;
@@ -33,7 +37,8 @@ class Navbar extends Component<INavigationProps, INavbarState> {
     }
   };
   private listenToScroll = (event: any) => {
-    if (window.scrollY > 580) {
+    const heroLimit = this.state.viewportWidth > 767 ? 580 : 280;
+    if (window.scrollY > heroLimit) {
       if (!this.state.hasPassedHero) {
         this.setState({ hasPassedHero: true });
       }
@@ -45,10 +50,15 @@ class Navbar extends Component<INavigationProps, INavbarState> {
   };
   public componentDidMount() {
     window.addEventListener("scroll", this.listenToScroll);
+    this.updateWindowDimensions();
+    window.addEventListener("resize", this.updateWindowDimensions);
   }
-
+  public componentWillMount() {
+    this.updateWindowDimensions();
+  }
   public componentWillUnmount() {
     window.removeEventListener("scroll", this.listenToScroll);
+    window.removeEventListener("resize", this.updateWindowDimensions);
   }
   public render() {
     return (
@@ -58,7 +68,12 @@ class Navbar extends Component<INavigationProps, INavbarState> {
           this.state.hasPassedHero ? styles.shadow : ""
         )}
       >
-        <div className={styles.upper}>
+        <div
+          className={cx(
+            styles.upper,
+            this.state.hasPassedHero ? styles.color : ""
+          )}
+        >
           <div className={styles.content}>
             <div>
               <a
@@ -93,12 +108,9 @@ class Navbar extends Component<INavigationProps, INavbarState> {
         </div>
         <div className={styles.lower}>
           <div className={styles.content}>
-            <img
-              className={styles.logo}
-              src={logo}
-              alt="logo"
-              onClick={this.logoClick}
-            />
+            <div className={styles.logo} onClick={this.logoClick}>
+              David Vargas
+            </div>
             <div className={styles.navigation}>
               <div
                 className={styles.link}

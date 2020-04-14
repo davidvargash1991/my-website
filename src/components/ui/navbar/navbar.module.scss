@@ -7,7 +7,7 @@
   z-index: 10;
   top: 0;
   left: 0;
-  background-color: $primary;
+  background-color: transparent;
   overflow: hidden;
   font-family: $sen-sans;
   color: $white;
@@ -16,6 +16,7 @@
     -webkit-box-shadow: 0 5px 10px -3px $box_shadow;
     -moz-box-shadow: 0 5px 10px -3px $box_shadow;
     box-shadow: 0 5px 10px -3px $box_shadow;
+    background-color: $primary;
   }
 
   .upper {
@@ -24,7 +25,11 @@
     padding: 5px 0;
     display: flex;
     justify-content: space-between;
-    background-color: $nav-secondary;
+    background-color: transparent;
+
+    &.color {
+      background-color: $nav-secondary;
+    }
 
     .content {
       width: 1180px;
@@ -101,6 +106,10 @@
       .logo {
         height: 55px;
         width: 200px;
+        font-family: $alex-brush;
+        color: $white;
+        font-size: 30px;
+        padding: 15px;
 
         &:hover {
           cursor: pointer;
@@ -182,7 +191,9 @@
 
         .logo {
           height: 35px;
-          width: 100px;
+          width: 150px;
+          font-size: 20px;
+          padding: 10px;
         }
 
         .navigation {
