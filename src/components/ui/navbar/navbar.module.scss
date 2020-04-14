@@ -74,17 +74,36 @@
 
           &:hover {
             background-color: $white;
-            border: 2px solid $nav-secondary;
+            border: 2px solid #000000;
 
             svg {
               path {
-                fill: $nav-secondary;
+                fill: #000000;
               }
               rect {
-                fill: $nav-secondary;
+                fill: #000000;
               }
               circle {
-                fill: $nav-secondary;
+                fill: #000000;
+              }
+            }
+          }
+
+          &.blue {
+            &:hover {
+              background-color: $white;
+              border: 2px solid $nav-secondary;
+
+              svg {
+                path {
+                  fill: $nav-secondary;
+                }
+                rect {
+                  fill: $nav-secondary;
+                }
+                circle {
+                  fill: $nav-secondary;
+                }
               }
             }
           }

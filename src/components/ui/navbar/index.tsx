@@ -37,7 +37,7 @@ class Navbar extends Component<INavigationProps, INavbarState> {
     }
   };
   private listenToScroll = (event: any) => {
-    const heroLimit = this.state.viewportWidth > 767 ? 580 : 280;
+    const heroLimit = this.state.viewportWidth > 767 ? 160 : 80;
     if (window.scrollY > heroLimit) {
       if (!this.state.hasPassedHero) {
         this.setState({ hasPassedHero: true });
@@ -61,19 +61,10 @@ class Navbar extends Component<INavigationProps, INavbarState> {
     window.removeEventListener("resize", this.updateWindowDimensions);
   }
   public render() {
+    const { hasPassedHero } = this.state;
     return (
-      <nav
-        className={cx(
-          styles.navbar,
-          this.state.hasPassedHero ? styles.shadow : ""
-        )}
-      >
-        <div
-          className={cx(
-            styles.upper,
-            this.state.hasPassedHero ? styles.color : ""
-          )}
-        >
+      <nav className={cx(styles.navbar, hasPassedHero ? styles.shadow : "")}>
+        <div className={cx(styles.upper, hasPassedHero ? styles.color : "")}>
           <div className={styles.content}>
             <div>
               <a
@@ -90,7 +81,9 @@ class Navbar extends Component<INavigationProps, INavbarState> {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className={styles.link}>
+                <div
+                  className={cx(styles.link, hasPassedHero ? styles.blue : "")}
+                >
                   <Linkedin color="#ffffff" />
                 </div>
               </a>
@@ -99,7 +92,9 @@ class Navbar extends Component<INavigationProps, INavbarState> {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className={styles.link}>
+                <div
+                  className={cx(styles.link, hasPassedHero ? styles.blue : "")}
+                >
                   <Github color="#ffffff" />
                 </div>
               </a>
