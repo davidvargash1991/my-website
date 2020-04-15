@@ -11,13 +11,17 @@ interface IExperienceItemProps {
 const ExperienceItem: React.FC<IExperienceItemProps> = ({ experience }) => {
   return (
     <div className={styles.container}>
+      <img
+        className={styles.image}
+        alt={experience.company}
+        src={experience.img}
+      />
       <div className={styles.content}>
+        <div className={styles.position}>{experience.position}</div>
         <div className={styles.location}>
           <img className={styles.icon} src={location} alt="location" />
           {`${experience.location} - ${experience.date}`}
         </div>
-        <h3 className={styles.company}>{experience.company}</h3>
-        <div className={styles.position}>{experience.position}</div>
         <ul>
           {_.map(experience.facts, (fact, idx) => (
             <li key={idx}>{fact}</li>

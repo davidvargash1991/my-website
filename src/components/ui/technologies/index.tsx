@@ -40,11 +40,7 @@ class Technologies extends Component<ILanguageProps> {
       <div className={styles.container}>
         <div className={styles.blur}>
           <div className={styles.textContainer}>
-            <div className={styles.title}>Technologies</div>
-            <div className={styles.text}>
-              {`${strings.techText} React.js, Redux, Typescript, SASS, .Net, Entity
-              Framework, SQL Server`}
-            </div>
+            <div className={styles.text}>{strings.techText}</div>
           </div>
         </div>
         <img

@@ -1,4 +1,9 @@
 import moment from "moment";
+import tl from "icons/tl.jpg";
+import tsg from "icons/tsg.jpg";
+import everis from "icons/everis.png";
+import csi from "icons/csi.png";
+import info from "icons/info.jpg";
 
 export interface IProject {
   img: string;
@@ -16,6 +21,7 @@ export interface IExperience {
   date: string;
   facts: string[];
   technologies: string[];
+  img: any;
 }
 
 export interface ILanguage {
@@ -33,6 +39,8 @@ export interface ILanguage {
   portfolioText: string;
   techText: string;
   experienceTitle: string;
+  expereinceBtnMore: string;
+  expereinceBtnLess: string;
   projects: IProject[];
   experience: IExperience[];
 }
@@ -63,11 +71,14 @@ export const strings: IStrings = {
     locationText: "Bogotá - Colombia",
     responsiveText:
       "Construyo las aplicaciones pensando siempre en todos los dispositivos, y revisando en multiples navegadores",
-    techText: "Trabajo con",
+    techText:
+      "Trabajo con las mejores tecnologies y técnicas para consturir aplicaciones brillantes y de clase mundial",
     portfolioTitle: "Portafolio",
     portfolioText:
       "Estos son proyectos que creo en mi tiempo libre, me ayudan a practicar y aprender",
     experienceTitle: "Experiencia",
+    expereinceBtnMore: "Ver más",
+    expereinceBtnLess: "Ver menos",
     projects: [
       {
         title: "Animal Wiki",
@@ -129,6 +140,7 @@ export const strings: IStrings = {
           "Jest",
           "Github",
         ],
+        img: tl,
       },
       {
         company: "TSGroup",
@@ -140,6 +152,7 @@ export const strings: IStrings = {
           "El cliente fue M9 en Londres",
         ],
         technologies: [".Net Core", "React.js", "SQL Server"],
+        img: tsg,
       },
       {
         company: "Everis",
@@ -152,6 +165,7 @@ export const strings: IStrings = {
           "Tareas de depuración",
         ],
         technologies: [".Net Core", "React.js", "SQL Server"],
+        img: everis,
       },
       {
         company: "Compañia de Soluciones Informaticas",
@@ -164,6 +178,7 @@ export const strings: IStrings = {
           "Creé interfaces usando HTML y Javascript",
         ],
         technologies: [".Net", "Javascript", "SQL Server"],
+        img: csi,
       },
       {
         company: "Infotrack",
@@ -179,6 +194,7 @@ export const strings: IStrings = {
           "Desarrollé un Controlador para calcular la carga de los camiones y sugerir rutas",
         ],
         technologies: [".Net", "Xamarin", "Javascript", "SQL Server"],
+        img: info,
       },
       {
         company: "Lumon",
@@ -192,6 +208,7 @@ export const strings: IStrings = {
           "Desarrolle un mapa con las coordenadas usando el API de Google Maps",
         ],
         technologies: [".Net", "Javascript", "SQL Server"],
+        img: everis,
       },
       {
         company: "Orbis",
@@ -203,6 +220,7 @@ export const strings: IStrings = {
           "Desarrolle modulo de nómina usando Delphi y Oracle",
         ],
         technologies: ["Delphi", "Oracle"],
+        img: everis,
       },
     ],
   },
@@ -220,11 +238,14 @@ export const strings: IStrings = {
     locationText: "Bogota - Colombia",
     responsiveText:
       "I build the applications with responsive design in mind, always testing across browsers",
-    techText: "I work with",
+    techText:
+      "I work with the best technologies and techniques in order to build brilliant world class applications",
     portfolioTitle: "Portfolio",
     portfolioText:
       "These are projects that I build in my free time, they are projects that help me practice and learn",
     experienceTitle: "Experience",
+    expereinceBtnMore: "Show more",
+    expereinceBtnLess: "Show less",
     projects: [
       {
         title: "Animal Wiki",
@@ -288,6 +309,7 @@ export const strings: IStrings = {
           "Jest",
           "Github",
         ],
+        img: tl,
       },
       {
         company: "TSGroup",
@@ -299,6 +321,7 @@ export const strings: IStrings = {
           "The client was M9 based in London",
         ],
         technologies: [".Net Core", "React.js", "SQL Server"],
+        img: tsg,
       },
       {
         company: "Everis",
@@ -311,6 +334,7 @@ export const strings: IStrings = {
           "Debugging tasks",
         ],
         technologies: [".Net Core", "React.js", "SQL Server"],
+        img: everis,
       },
       {
         company: "Compañia de Soluciones Informaticas",
@@ -323,6 +347,7 @@ export const strings: IStrings = {
           "Created interfaces using HTML and Javascript",
         ],
         technologies: [".Net", "Javascript", "SQL Server"],
+        img: csi,
       },
       {
         company: "Infotrack",
@@ -338,6 +363,7 @@ export const strings: IStrings = {
           "Developed Controller for calculating trucks load and suggested route",
         ],
         technologies: [".Net", "Xamarin", "Javascript", "SQL Server"],
+        img: info,
       },
       {
         company: "Lumon",
@@ -351,6 +377,7 @@ export const strings: IStrings = {
           "Developed rendering of coordinates using google maps API",
         ],
         technologies: [".Net", "Javascript", "SQL Server"],
+        img: everis,
       },
       {
         company: "Orbis",
@@ -359,6 +386,7 @@ export const strings: IStrings = {
         date: "2011 - 2015",
         facts: ["ERP Software", "Developed HR module using Delphi and Oracle"],
         technologies: ["Delphi", "Oracle"],
+        img: everis,
       },
     ],
   },
