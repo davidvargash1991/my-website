@@ -60,7 +60,7 @@
         background-color: transparent;
         color: $white;
         border-radius: 5px;
-        font-size: 22px;
+        font-size: 2rem;
 
         .icon {
           width: 18px;
@@ -72,20 +72,20 @@
   }
 
   .title {
-    font-size: 18px;
+    font-size: 2rem;
     color: $gray-title;
     font-weight: 500;
     text-align: center;
   }
 
   .type {
-    font-size: 12px;
+    font-size: 1.2rem;
     color: $gray-secondary;
     text-align: center;
   }
 
   .description {
-    font-size: 12px;
+    font-size: 1.3rem;
     color: $gray-title;
     text-align: center;
     margin: 15px;

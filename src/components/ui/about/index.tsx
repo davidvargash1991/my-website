@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./about.module.scss";
+import cx from "classnames";
 import { ILanguageProps } from "data/strings";
 import Location from "components/ui/icons/location";
 import work from "icons/work.svg";
@@ -31,13 +32,15 @@ const About: React.FC<ISectionProps> = React.forwardRef(
                 {props.strings.remoteText}
               </div>
             </div>
-            <div className={styles.item}>
+            <div className={cx(styles.item, styles.last)}>
               <Location color="#ffffff" width="50" heigth="50" />
               <div className={styles.name}>{props.strings.locationTitle}</div>
               <div className={styles.description}>
                 {props.strings.locationText}
               </div>
-              <div className={styles.description}>UTC -05:00</div>
+              <div className={cx(styles.description, styles.multiple)}>
+                UTC -05:00
+              </div>
             </div>
           </div>
         </div>

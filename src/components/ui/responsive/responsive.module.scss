@@ -55,25 +55,24 @@
 
     .text {
       position: relative;
-      font-weight: 500;
-      font-size: 32px;
+      font-weight: 400;
+      font-size: 3rem;
       height: 100%;
       display: flex;
       align-items: center;
       opacity: 0;
+      text-align: center;
     }
   }
 }
 
 @media only screen and (max-width: 767px) {
   .container {
-    height: 340px;
-
     .content {
       display: block;
 
       .img {
-        height: 180px;
+        height: 160px;
         width: 100%;
         position: relative;
         opacity: 0;
@@ -81,8 +80,19 @@
       }
 
       .text {
-        font-size: 26px;
         margin: 0 15px;
+        font-size: 2.3rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1180px) {
+  .container {
+    height: 200px;
+    .content {
+      .img {
+        height: 140px;
       }
     }
   }

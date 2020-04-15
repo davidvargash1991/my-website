@@ -58,8 +58,7 @@ export const strings: IStrings = {
       "Disfruto construir webistes modernos y bellos; para este propósito, siempre estoy haciendo cursos para aprender las últimas técnicas y tecnologías, de esa manera puedo construir las mejores aplicaciones posibles",
     totalExp: `${years} años desde Agosto de 2011`,
     remoteTitle: "Trabajo Remoto",
-    remoteText:
-      "Tengo experiencia trabajando en equipos distribuidos, personalmente prefiero el trabajo desde casa",
+    remoteText: "Tengo experiencia trabajando en equipos distribuidos",
     locationTitle: "Ubicación",
     locationText: "Bogotá - Colombia",
     responsiveText:
@@ -216,8 +215,7 @@ export const strings: IStrings = {
       "I enjoy building modern and beautiful webistes, for this purpose I keep always making courses to learn new cool features, that way I can build the most impressive applications as possible",
     totalExp: `${years} years since August 2011`,
     remoteTitle: "Remote Work",
-    remoteText:
-      "I have experience working with distributed teams, personally I prefer working from home",
+    remoteText: "I have experience working with distributed teams",
     locationTitle: "Location",
     locationText: "Bogota - Colombia",
     responsiveText:
