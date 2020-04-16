@@ -11,11 +11,15 @@ interface IExperienceItemProps {
 const ExperienceItem: React.FC<IExperienceItemProps> = ({ experience }) => {
   return (
     <div className={styles.container}>
-      <img
-        className={styles.image}
-        alt={experience.company}
-        src={experience.img}
-      />
+      {experience.img ? (
+        <img
+          className={styles.image}
+          alt={experience.company}
+          src={experience.img}
+        />
+      ) : (
+        <div className={styles.company}>{experience.company}</div>
+      )}
       <div className={styles.content}>
         <div className={styles.position}>{experience.position}</div>
         <div className={styles.location}>
