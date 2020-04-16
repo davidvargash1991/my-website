@@ -14,7 +14,7 @@
     padding: 60px 0;
 
     .title {
-      font-size: 30px;
+      font-size: 3rem;
       color: $white;
       text-align: center;
 
@@ -26,7 +26,7 @@
     }
 
     .text {
-      font-size: 14px;
+      font-size: 1.4rem;
       color: $gray-secondary;
       text-align: center;
       margin: 10px;
@@ -46,6 +46,7 @@
         margin: 0 20px;
         text-align: center;
         padding: 10px 0;
+        font-size: 1.6rem;
 
         &:hover {
           cursor: pointer;
