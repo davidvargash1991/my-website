@@ -6,10 +6,10 @@ import { ILanguageProps, IProject } from "data/strings";
 import { ISectionProps } from "../about";
 
 const Portfolio: React.FC<ISectionProps> = React.forwardRef(
-  (props: ILanguageProps, ref: React.Ref<HTMLDivElement>) => {
+  (props: ILanguageProps, ref: React.Ref<any>) => {
     return (
       <div ref={ref} className={styles.container}>
-        <div className={styles.title}>{props.strings.portfolioTitle}</div>
+        <h2 className={styles.title}>{props.strings.portfolioTitle}</h2>
         <p className={styles.text}>{props.strings.portfolioText}</p>
         <div className={styles.projects}>
           {_.map(props.strings.projects, (project: IProject, index: number) => (

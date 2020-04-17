@@ -8,7 +8,7 @@ import { ILanguageProps } from "data/strings";
 import { ISectionProps } from "../about";
 
 const Experience: React.FC<ISectionProps> = React.forwardRef(
-  (props: ILanguageProps, ref: React.Ref<HTMLDivElement>) => {
+  (props: ILanguageProps, ref: React.Ref<any>) => {
     const [btnLabel, setBtnLabel] = useState(props.strings.expereinceBtnMore);
     const [maxHeight, setMaxHeight] = useState("740px");
     let itemsStyle: React.CSSProperties = { maxHeight: maxHeight };
@@ -23,7 +23,7 @@ const Experience: React.FC<ISectionProps> = React.forwardRef(
     };
     return (
       <div ref={ref} className={styles.container}>
-        <div className={styles.title}>{props.strings.experienceTitle}</div>
+        <h2 className={styles.title}>{props.strings.experienceTitle}</h2>
         <div className={styles.items} style={itemsStyle}>
           {_.map(props.strings.experience, (exp, idx) => {
             return <ExperienceItem key={idx} experience={exp} />;

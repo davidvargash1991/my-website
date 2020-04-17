@@ -7,16 +7,16 @@ import work from "icons/work.svg";
 import world from "icons/world.svg";
 
 export interface ISectionProps extends ILanguageProps {
-  ref: React.Ref<HTMLDivElement>;
+  ref: React.Ref<any>;
 }
 
 const About: React.FC<ISectionProps> = React.forwardRef(
-  (props: ILanguageProps, ref: React.Ref<HTMLDivElement>) => {
+  (props: ILanguageProps, ref: React.Ref<any>) => {
     return (
       <div className={styles.container}>
-        <div ref={ref} className={styles.title}>
+        <h2 ref={ref} className={styles.title}>
           {props.strings.aboutMeTitle}
-        </div>
+        </h2>
         <p className={styles.text}>{props.strings.textAbout}</p>
         <div className={styles.infoContainer}>
           <div className={styles.info}>

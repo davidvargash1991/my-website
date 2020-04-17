@@ -17,7 +17,7 @@ interface IHomeProps extends ILanguageProps {
 }
 
 class Home extends Component<IHomeProps> {
-  private aboutRef = React.createRef<HTMLDivElement>();
+  private aboutRef = React.createRef<HTMLHeadElement>();
   private portfolioRef = React.createRef<HTMLDivElement>();
   private experienceRef = React.createRef<HTMLDivElement>();
 
