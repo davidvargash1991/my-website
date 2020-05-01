@@ -248,6 +248,16 @@ export const strings: IStrings = {
     expereinceBtnLess: "Show less",
     projects: [
       {
+        title: "Find your Home",
+        description:
+          "This is a sample real estate search for finding properties for rent or buy",
+        img:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Lower_Manhattan_skyline_-_June_2017.jpg/1920px-Lower_Manhattan_skyline_-_June_2017.jpg",
+        repo: "https://github.com/davidvargash1991/find-my-home",
+        link: "https://find-my-home.now.sh/home",
+        type: "Frontend - React.js",
+      },
+      {
         title: "Animal Wiki",
         description:
           "This is a sample animal encyclopedia with gallery from Flickr",
