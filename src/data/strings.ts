@@ -72,7 +72,7 @@ export const strings: IStrings = {
     responsiveText:
       "Construyo las aplicaciones pensando siempre en todos los dispositivos, y revisando en multiples navegadores",
     techText:
-      "Trabajo con las mejores tecnologies y técnicas para consturir aplicaciones brillantes y de clase mundial",
+      "Trabajo con las mejores tecnologías y técnicas para consturir aplicaciones brillantes y de clase mundial",
     portfolioTitle: "Portafolio",
     portfolioText:
       "Estos son proyectos que creo en mi tiempo libre, me ayudan a practicar y aprender",
