@@ -81,6 +81,15 @@ export const strings: IStrings = {
     expereinceBtnLess: "Ver menos",
     projects: [
       {
+        title: "Find your Home",
+        description: "Aplicación de búsqueda de casas para comprar o rentar",
+        img:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Lower_Manhattan_skyline_-_June_2017.jpg/1920px-Lower_Manhattan_skyline_-_June_2017.jpg",
+        repo: "https://github.com/davidvargash1991/find-my-home",
+        link: "https://find-my-home.now.sh/home",
+        type: "Frontend - React.js",
+      },
+      {
         title: "Animal Wiki",
         description: "Es una enciclopedia animal de prueba con fotos de Flickr",
         img:
