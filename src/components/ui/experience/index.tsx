@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "./experience.module.scss";
-import _ from "lodash";
 import cx from "classnames";
 import ExperienceItem from "./item";
 import CaretDown from "../icons/caretDown";
@@ -25,7 +24,7 @@ const Experience: React.FC<ISectionProps> = React.forwardRef(
       <div ref={ref} className={styles.container}>
         <h2 className={styles.title}>{props.strings.experienceTitle}</h2>
         <div className={styles.items} style={itemsStyle}>
-          {_.map(props.strings.experience, (exp, idx) => {
+          {props.strings.experience.map((exp, idx) => {
             return <ExperienceItem key={idx} experience={exp} />;
           })}
         </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./item.module.scss";
-import _ from "lodash";
 import { IExperience } from "data/strings";
 import location from "icons/location.svg";
 
@@ -27,13 +26,13 @@ const ExperienceItem: React.FC<IExperienceItemProps> = ({ experience }) => {
           {`${experience.location} - ${experience.date}`}
         </div>
         <ul>
-          {_.map(experience.facts, (fact, idx) => (
+          {experience.facts.map((fact, idx) => (
             <li key={idx}>{fact}</li>
           ))}
         </ul>
         <div className={styles.techTitle}>Technologies:</div>
         <div className={styles.technologies}>
-          {_.map(experience.technologies, (tech, idx) => (
+          {experience.technologies.map((tech, idx) => (
             <div key={`${tech}${idx}`} className={styles.tech}>
               {tech}
             </div>
