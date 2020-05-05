@@ -8,11 +8,13 @@
 
 @keyframes title {
   0% {
-    left: -200px;
+    transform: translateX(-200px);
+    -webkit-transform: translateX(-200px);
     opacity: 0;
   }
   100% {
-    left: 0px;
+    left: translateX(0);
+    -webkit-transform: translateX(0);
     opacity: 1;
   }
 }
@@ -63,6 +65,7 @@
     font-weight: 500;
     margin: 0;
     opacity: 0;
+    left: 0;
     position: relative;
     animation: title 1.5s 0.5s ease forwards;
     -webkit-animation: title 1.5s 0.5s ease forwards;
@@ -76,6 +79,7 @@
     font-weight: 400;
     position: relative;
     opacity: 0;
+    left: 0;
     animation: title 1.5s 0.7s ease forwards;
     -webkit-animation: title 1.5s 0.7s ease forwards;
   }
@@ -84,6 +88,7 @@
     display: flex;
     position: relative;
     opacity: 0;
+    left: 0;
     animation: title 1.5s 0.8s ease forwards;
     -webkit-animation: title 1.5s 0.8s ease forwards;
 
