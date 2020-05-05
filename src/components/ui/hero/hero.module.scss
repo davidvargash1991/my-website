@@ -52,34 +52,35 @@
 .textContainer {
   position: absolute;
   width: 100%;
-  bottom: 23%;
+  bottom: 20%;
   max-width: 1180px;
   min-height: 227px;
   text-align: left;
   z-index: 5;
 
   .title {
-    font-size: 5rem;
+    font-size: 6.5vh;
     color: $white;
-    height: 95px;
-    font-weight: 500;
+    height: auto;
+    height: 12.5vh;
+    font-weight: 400;
     margin: 0;
     opacity: 0;
-    left: 0;
+    left: 10px;
     position: relative;
     animation: title 1.5s 0.5s ease forwards;
     -webkit-animation: title 1.5s 0.5s ease forwards;
   }
 
   .subtitle {
-    font-size: 2.2rem;
-    margin-bottom: 30px;
+    font-size: 3vh;
+    margin-bottom: 25px;
     color: $white;
     max-width: 660px;
     font-weight: 400;
     position: relative;
     opacity: 0;
-    left: 0;
+    left: 10px;
     animation: title 1.5s 0.7s ease forwards;
     -webkit-animation: title 1.5s 0.7s ease forwards;
   }
@@ -88,13 +89,13 @@
     display: flex;
     position: relative;
     opacity: 0;
-    left: 0;
+    left: 10px;
     animation: title 1.5s 0.8s ease forwards;
     -webkit-animation: title 1.5s 0.8s ease forwards;
 
     .logo {
-      height: 100px;
-      width: 100px;
+      height: 13vh;
+      width: 13vh;
       margin: 0 5px;
     }
   }
@@ -113,21 +114,39 @@
     margin: 0 15px;
 
     .title {
-      font-size: 30px;
-      height: 58px;
+      font-size: 3rem;
+      height: 10vh;
     }
 
     .subtitle {
-      font-size: 14px;
-      height: 22px;
       margin-right: 20px;
+      font-size: 1.5rem;
     }
 
     .images {
       .logo {
-        height: 70px;
-        width: 70px;
-        margin: 0 5px;
+        height: 10vh;
+        width: 10vh;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  .textContainer {
+    .title {
+      font-size: 6.5vh;
+      height: 12.5vh;
+    }
+
+    .subtitle {
+      font-size: 3vh;
+    }
+
+    .images {
+      .logo {
+        height: 13vh;
+        width: 13vh;
       }
     }
   }
