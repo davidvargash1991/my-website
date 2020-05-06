@@ -1,41 +1,23 @@
 import React from "react";
-import { Switch, Route, Redirect, withRouter } from "react-router-dom";
-import { RouteComponentProps } from "react-router";
 import Home from "./components/pages/home";
 import { strings } from "data/strings";
 
-const App: React.FC<RouteComponentProps> = (props) => {
+const App = () => {
   const handleSpanishClick = () => {
-    props.history.push("/es");
+    window.location.replace(`${window.location.origin}/es`);
   };
   const handleEnglishClick = () => {
-    props.history.push("/en");
+    window.location.replace(`${window.location.origin}/en`);
   };
+  const lang = window.location.pathname.substr(1, 2);
+  console.log(lang);
   return (
-    <Switch>
-      <Route
-        path="/en"
-        component={() => (
-          <Home
-            strings={strings.english}
-            handleSpanishClick={handleSpanishClick}
-            handleEnglishClick={handleEnglishClick}
-          />
-        )}
-      />
-      <Route
-        path="/es"
-        component={() => (
-          <Home
-            strings={strings.spanish}
-            handleSpanishClick={handleSpanishClick}
-            handleEnglishClick={handleEnglishClick}
-          />
-        )}
-      />
-      <Redirect to="/en" />
-    </Switch>
+    <Home
+      strings={lang === "es" ? strings.spanish : strings.english}
+      handleSpanishClick={handleSpanishClick}
+      handleEnglishClick={handleEnglishClick}
+    />
   );
 };
 
-export default withRouter(App);
+export default App;

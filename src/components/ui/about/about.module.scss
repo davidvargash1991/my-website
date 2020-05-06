@@ -1,23 +1,7 @@
 @import "../../../styles/styleguide.scss";
 
 .container {
-  width: 100%;
-  margin: 0 auto;
   padding: 15px 0 0 0;
-  text-align: center;
-  background-color: $white;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-  overflow-x: hidden;
-
-  .title {
-    font-size: 3.1rem;
-    color: $gray-title;
-    border-bottom: 3px $primary solid;
-    margin: 10px 0;
-    display: inline-block;
-    padding: 6px 0;
-    font-weight: 400;
-  }
 
   .text {
     color: $gray-title;
@@ -72,8 +56,6 @@
 
 @media only screen and (max-width: 767px) {
   .container {
-    width: 100%;
-
     .text {
       margin: 15px 10px;
       line-height: 1.4;

@@ -19,16 +19,32 @@ export interface INavigationProps extends ILanguageProps {
 interface INavbarState {
   hasPassedHero: boolean;
   viewportWidth: number;
+  orientation: string;
 }
 
 class Navbar extends Component<INavigationProps, INavbarState> {
+  getScreenOrientation = () => {
+    if (window.matchMedia("(orientation: portrait)").matches) {
+      return "portrait";
+    }
+
+    if (window.matchMedia("(orientation: landscape)").matches) {
+      return "landscape";
+    }
+
+    return "";
+  };
+
   public state: INavbarState = {
     hasPassedHero: false,
     viewportWidth: window.innerWidth,
+    orientation: this.getScreenOrientation(),
   };
+
   public updateWindowDimensions = () => {
     this.setState({ viewportWidth: window.innerWidth });
   };
+
   private logoClick = () => {
     const c = document.documentElement.scrollTop || document.body.scrollTop;
     if (c > 0) {
@@ -36,8 +52,21 @@ class Navbar extends Component<INavigationProps, INavbarState> {
       window.scrollTo(0, c - c / 8);
     }
   };
+
+  private setScreenOrientation = () => {
+    setTimeout(() => {
+      this.setState({ orientation: this.getScreenOrientation() });
+    }, 200);
+  };
+
   private listenToScroll = (event: any) => {
-    const heroLimit = this.state.viewportWidth > 767 ? 160 : 80;
+    const { orientation } = this.state;
+    const heroLimit =
+      this.state.viewportWidth > 767
+        ? 160
+        : orientation === "landscape"
+        ? 1
+        : 80;
     if (window.scrollY > heroLimit) {
       if (!this.state.hasPassedHero) {
         this.setState({ hasPassedHero: true });
@@ -48,17 +77,21 @@ class Navbar extends Component<INavigationProps, INavbarState> {
       }
     }
   };
+
   public componentDidMount() {
     window.addEventListener("scroll", this.listenToScroll);
     this.updateWindowDimensions();
     window.addEventListener("resize", this.updateWindowDimensions);
+    window.addEventListener("orientationchange", this.setScreenOrientation);
   }
   public componentWillMount() {
     this.updateWindowDimensions();
+    this.setScreenOrientation();
   }
   public componentWillUnmount() {
     window.removeEventListener("scroll", this.listenToScroll);
     window.removeEventListener("resize", this.updateWindowDimensions);
+    window.removeEventListener("orientationchange", this.setScreenOrientation);
   }
   public render() {
     const { hasPassedHero } = this.state;

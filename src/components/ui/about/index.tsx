@@ -5,6 +5,7 @@ import { ILanguageProps } from "data/strings";
 import Location from "components/ui/icons/location";
 import work from "icons/work.svg";
 import world from "icons/world.svg";
+import Subtitle from "components/ui/subtitle";
 
 export interface ISectionProps extends ILanguageProps {
   ref: React.Ref<any>;
@@ -13,10 +14,11 @@ export interface ISectionProps extends ILanguageProps {
 const About: React.FC<ISectionProps> = React.forwardRef(
   (props: ILanguageProps, ref: React.Ref<any>) => {
     return (
-      <div className={styles.container}>
-        <h2 ref={ref} className={styles.title}>
+      <div className={cx("container", styles.container)}>
+        <Subtitle ref={ref} text={props.strings.aboutMeTitle} />
+        {/* <h2 ref={ref} className={styles.title}>
           {props.strings.aboutMeTitle}
-        </h2>
+        </h2> */}
         <p className={styles.text}>{props.strings.textAbout}</p>
         <div className={styles.infoContainer}>
           <div className={styles.info}>

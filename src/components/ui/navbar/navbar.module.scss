@@ -127,11 +127,12 @@
         width: 200px;
         font-family: $alex-brush;
         color: $white;
-        font-size: 4.4vh;
+        font-size: 3rem;
         padding: 15px;
 
         &:hover {
           cursor: pointer;
+          color: #d3d3d3;
         }
       }
 

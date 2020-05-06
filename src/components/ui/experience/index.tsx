@@ -5,6 +5,7 @@ import ExperienceItem from "./item";
 import CaretDown from "../icons/caretDown";
 import { ILanguageProps } from "data/strings";
 import { ISectionProps } from "../about";
+import Subtitle from "components/ui/subtitle";
 
 const Experience: React.FC<ISectionProps> = React.forwardRef(
   (props: ILanguageProps, ref: React.Ref<any>) => {
@@ -21,8 +22,11 @@ const Experience: React.FC<ISectionProps> = React.forwardRef(
       }
     };
     return (
-      <div ref={ref} className={styles.container}>
-        <h2 className={styles.title}>{props.strings.experienceTitle}</h2>
+      <div ref={ref} className={cx("container", styles.container)}>
+        <Subtitle
+          className={styles.subtitle}
+          text={props.strings.experienceTitle}
+        />
         <div className={styles.items} style={itemsStyle}>
           {props.strings.experience.map((exp, idx) => {
             return <ExperienceItem key={idx} experience={exp} />;
