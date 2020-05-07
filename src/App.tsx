@@ -10,7 +10,6 @@ const App = () => {
     window.location.replace(`${window.location.origin}/en`);
   };
   const lang = window.location.pathname.substr(1, 2);
-  console.log(lang);
   return (
     <Home
       strings={lang === "es" ? strings.spanish : strings.english}

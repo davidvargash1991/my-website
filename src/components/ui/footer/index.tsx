@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./footer.module.scss";
+import cx from "classnames";
 import Linkedin from "components/ui/icons/linkedin";
 import Github from "components/ui/icons/github";
 import { INavigationProps } from "../navbar";
@@ -14,7 +15,7 @@ const Footer: React.FC<INavigationProps> = (props) => {
   };
   return (
     <div className={styles.container}>
-      <div className={styles.content}>
+      <div className={cx(styles.fullWidth, styles.content)}>
         <div className={styles.title} onClick={logoClick}>
           David Vargas
         </div>
@@ -25,7 +26,7 @@ const Footer: React.FC<INavigationProps> = (props) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className={styles.link}>
+            <div className={cx("flex-center", styles.link)}>
               <Linkedin color="#ffffff" />
             </div>
           </a>
@@ -34,19 +35,28 @@ const Footer: React.FC<INavigationProps> = (props) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className={styles.link}>
+            <div className={cx("flex-center", styles.link)}>
               <Github color="#ffffff" />
             </div>
           </a>
         </div>
-        <div className={styles.navigation}>
-          <div className={styles.link} onClick={props.handleAboutClick}>
+        <div className={"flex-center"}>
+          <div
+            className={cx("flex-center", styles.navlink)}
+            onClick={props.handleAboutClick}
+          >
             {props.strings.aboutMeTitle}
           </div>
-          <div className={styles.link} onClick={props.handlePortfolioClick}>
+          <div
+            className={cx("flex-center", styles.navlink)}
+            onClick={props.handlePortfolioClick}
+          >
             {props.strings.portfolioTitle}
           </div>
-          <div className={styles.link} onClick={props.handleExperienceClick}>
+          <div
+            className={cx("flex-center", styles.navlink)}
+            onClick={props.handleExperienceClick}
+          >
             {props.strings.experienceTitle}
           </div>
         </div>

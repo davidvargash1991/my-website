@@ -16,7 +16,7 @@
   .infoContainer {
     width: 100%;
     height: auto;
-    background-image: linear-gradient(to right, #0460c7, #0cc7b1);
+    background-image: radial-gradient(circle, #00d4ff, #0460c7);
 
     .info {
       display: flex;
@@ -59,6 +59,7 @@
     .text {
       margin: 15px 10px;
       line-height: 1.4;
+      font-size: 1.8rem;
     }
 
     .infoContainer {

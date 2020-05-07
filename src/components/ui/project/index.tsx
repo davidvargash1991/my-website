@@ -52,7 +52,7 @@ const Project: React.FC<IProjectProps> = ({ project }) => {
         <div className={styles.imgContainer}>
           <div className={styles.buttons}>
             <a
-              className={styles.button}
+              className={cx("flex-center", styles.button)}
               href={project.repo}
               target="_blank"
               rel="noopener noreferrer"
@@ -62,7 +62,7 @@ const Project: React.FC<IProjectProps> = ({ project }) => {
             </a>
             {project.link && (
               <a
-                className={styles.button}
+                className={cx("flex-center", styles.button)}
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styles from "./tech.module.scss";
+import cx from "classnames";
 import code from "icons/code.jpg";
 import { ILanguageProps } from "data/strings";
 
@@ -39,7 +40,7 @@ class Technologies extends Component<ILanguageProps> {
     return (
       <div className={styles.container}>
         <div className={styles.blur}>
-          <div className={styles.textContainer}>
+          <div className={cx("flex-center", styles.textContainer)}>
             <div className={styles.text}>{strings.techText}</div>
           </div>
         </div>

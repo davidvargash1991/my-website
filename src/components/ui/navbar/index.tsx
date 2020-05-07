@@ -56,7 +56,7 @@ class Navbar extends Component<INavigationProps, INavbarState> {
   private setScreenOrientation = () => {
     setTimeout(() => {
       this.setState({ orientation: this.getScreenOrientation() });
-    }, 200);
+    }, 300);
   };
 
   private listenToScroll = (event: any) => {
@@ -98,7 +98,7 @@ class Navbar extends Component<INavigationProps, INavbarState> {
     return (
       <nav className={cx(styles.navbar, hasPassedHero ? styles.shadow : "")}>
         <div className={cx(styles.upper, hasPassedHero ? styles.color : "")}>
-          <div className={styles.content}>
+          <div className={cx(styles.content, styles.upperContent)}>
             <div>
               <a
                 className={styles.mail}
@@ -115,7 +115,11 @@ class Navbar extends Component<INavigationProps, INavbarState> {
                 rel="noopener noreferrer"
               >
                 <div
-                  className={cx(styles.link, hasPassedHero ? styles.blue : "")}
+                  className={cx(
+                    "flex-center",
+                    styles.link,
+                    hasPassedHero ? styles.blue : ""
+                  )}
                 >
                   <Linkedin color="#ffffff" />
                 </div>
@@ -126,7 +130,11 @@ class Navbar extends Component<INavigationProps, INavbarState> {
                 rel="noopener noreferrer"
               >
                 <div
-                  className={cx(styles.link, hasPassedHero ? styles.blue : "")}
+                  className={cx(
+                    "flex-center",
+                    styles.link,
+                    hasPassedHero ? styles.blue : ""
+                  )}
                 >
                   <Github color="#ffffff" />
                 </div>
@@ -139,7 +147,7 @@ class Navbar extends Component<INavigationProps, INavbarState> {
             <div className={styles.logo} onClick={this.logoClick}>
               David Vargas
             </div>
-            <div className={styles.navigation}>
+            <div className={cx("flex-center", styles.navigation)}>
               <div
                 className={styles.link}
                 onClick={this.props.handleAboutClick}
@@ -159,7 +167,7 @@ class Navbar extends Component<INavigationProps, INavbarState> {
                 {this.props.strings.experienceTitle}
               </div>
             </div>
-            <div className={styles.language}>
+            <div className={cx("flex-center", styles.language)}>
               <img
                 className={cx(styles.icon, styles.flag)}
                 src={en}
