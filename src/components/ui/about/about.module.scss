@@ -5,13 +5,10 @@
 }
 
 .text {
-  color: $gray-title;
   margin: 15px auto 70px auto;
   text-align: center;
   max-width: 920px;
   line-height: 1.7;
-  font-weight: 300;
-  font-size: 2rem;
 }
 
 .infoContainer {
@@ -38,6 +35,7 @@
   height: 50px;
   width: 50px;
 }
+
 .name {
   color: $white;
   font-size: 2rem;

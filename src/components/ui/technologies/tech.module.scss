@@ -20,20 +20,20 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
   z-index: 1;
+}
 
-  .textContainer {
-    max-width: 920px;
-    margin: 0 auto;
-    height: 100%;
-    position: relative;
+.textContainer {
+  max-width: 920px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
 
-    .text {
-      color: $white;
-      font-size: 3.5rem;
-      font-weight: 300;
-      text-align: center;
-      padding: 0 15px;
-    }
+  .text {
+    color: $white;
+    font-size: 3.5rem;
+    font-weight: 300;
+    text-align: center;
+    padding: 0 15px;
   }
 }
 
@@ -47,11 +47,10 @@
   .container {
     height: 250px;
   }
-  .blur {
-    .textContainer {
-      .text {
-        font-size: 2.5rem;
-      }
+
+  .textContainer {
+    .text {
+      font-size: 2.5rem;
     }
   }
 }

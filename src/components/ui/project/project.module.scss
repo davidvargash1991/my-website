@@ -20,74 +20,74 @@
       display: flex;
     }
   }
+}
 
-  .img {
-    height: 213px;
-    width: 266px;
-    border: 1px solid #ededed;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+.img {
+  height: 213px;
+  width: 266px;
+  border: 1px solid #ededed;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 
-    &.logo {
-      object-fit: cover;
-    }
+  &.logo {
+    object-fit: cover;
   }
+}
 
-  .imgContainer {
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 213px;
-    width: 266px;
-    background: rgba(39, 46, 55, 0.9);
-    opacity: 0;
-    display: none;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+.imgContainer {
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 213px;
+  width: 266px;
+  background: rgba(39, 46, 55, 0.9);
+  opacity: 0;
+  display: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 
-    .buttons {
-      .button {
-        margin: 15px 0;
-        text-decoration: none;
-        border: none;
-        width: 90px;
-        height: 30px;
-        background-color: transparent;
-        color: $white;
-        border-radius: 5px;
-        font-size: 2rem;
+  .buttons {
+    .button {
+      margin: 15px 0;
+      text-decoration: none;
+      border: none;
+      width: 90px;
+      height: 30px;
+      background-color: transparent;
+      color: $white;
+      border-radius: 5px;
+      font-size: 2rem;
 
-        .icon {
-          width: 2rem;
-          height: 2rem;
-          margin-right: 2px;
-        }
+      .icon {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 2px;
       }
     }
   }
+}
 
-  .title {
-    font-size: 2rem;
-    color: $gray-title;
-    font-weight: 500;
-    text-align: center;
-  }
+.title {
+  font-size: 2rem;
+  color: $gray-title;
+  font-weight: 500;
+  text-align: center;
+}
 
-  .type {
-    font-size: 1.2rem;
-    color: $gray-secondary;
-    text-align: center;
-  }
+.type {
+  font-size: 1.2rem;
+  color: $gray-secondary;
+  text-align: center;
+}
 
-  .description {
-    font-size: 1.3rem;
-    color: $gray-title;
-    text-align: center;
-    margin: 15px;
-    height: 60px;
-  }
+.description {
+  font-size: 1.3rem;
+  color: $gray-title;
+  text-align: center;
+  margin: 15px;
+  height: 60px;
 }
 
 @media only screen and (max-width: 767px) {

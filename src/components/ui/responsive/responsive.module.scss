@@ -42,84 +42,81 @@
   background: $white;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
   padding-top: 40px;
+}
 
-  .content {
-    display: flex;
-    max-width: 920px;
-    margin: 0 auto;
+.content {
+  display: flex;
+  max-width: 920px;
+  margin: 0 auto;
+}
 
-    .img {
-      height: 280px;
-      position: relative;
-      opacity: 0;
-      left: 0;
-      margin-right: 20px;
-    }
+.img {
+  height: 280px;
+  position: relative;
+  opacity: 0;
+  left: 0;
+  margin-right: 20px;
+}
 
-    .text {
-      position: relative;
-      font-weight: 400;
-      font-size: 3rem;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      opacity: 0;
-      right: 0;
-      text-align: center;
-    }
-  }
+.text {
+  position: relative;
+  font-weight: 400;
+  font-size: 3rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  right: 0;
+  text-align: center;
 }
 
 @media only screen and (max-width: 767px) {
-  .container {
-    .content {
-      display: block;
+  .content {
+    display: block;
+  }
+  .img {
+    height: 160px;
+    width: 100%;
+    position: relative;
+    opacity: 0;
+    animation: image 1.5s 0.4s ease forwards;
+  }
 
-      .img {
-        height: 160px;
-        width: 100%;
-        position: relative;
-        opacity: 0;
-        animation: image 1.5s 0.4s ease forwards;
-      }
-
-      .text {
-        margin: 0 15px;
-        font-size: 2.3rem;
-      }
-    }
+  .text {
+    margin: 0 15px;
+    font-size: 2.3rem;
   }
 }
 
 @media only screen and (max-width: 767px) and (orientation: landscape) {
   .container {
     height: 200px;
-    .content {
-      display: flex;
+  }
 
-      .img {
-        height: 160px;
-        width: 50%;
-        position: relative;
-        opacity: 0;
-        animation: image 1.5s 0.4s ease forwards;
-      }
+  .content {
+    display: flex;
+  }
 
-      .text {
-        margin: 0 15px;
-        font-size: 2.3rem;
-      }
-    }
+  .img {
+    height: 160px;
+    width: 50%;
+    position: relative;
+    opacity: 0;
+    animation: image 1.5s 0.4s ease forwards;
+  }
+
+  .text {
+    margin: 0 15px;
+    font-size: 2.3rem;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1180px) {
   .container {
     height: 200px;
-    .content {
-      .img {
-        height: 140px;
-      }
-    }
+  }
+
+  .img {
+    height: 140px;
   }
 }

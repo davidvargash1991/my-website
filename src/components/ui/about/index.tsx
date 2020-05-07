@@ -16,9 +16,6 @@ const About: React.FC<ISectionProps> = React.forwardRef(
     return (
       <div className={cx("container", styles.container)}>
         <Subtitle ref={ref} text={props.strings.aboutMeTitle} />
-        {/* <h2 ref={ref} className={styles.title}>
-          {props.strings.aboutMeTitle}
-        </h2> */}
         <p className={styles.text}>{props.strings.textAbout}</p>
         <div className={styles.infoContainer}>
           <div className={styles.info}>

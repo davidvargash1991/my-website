@@ -18,146 +18,146 @@
     box-shadow: 0 5px 10px -3px $box_shadow;
     background-color: $primary;
   }
+}
 
-  .upper {
-    width: 100%;
-    height: 15px;
-    padding: 5px 0;
-    display: flex;
-    justify-content: space-between;
-    background-color: transparent;
+.upper {
+  width: 100%;
+  height: 15px;
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
 
-    &.color {
-      background-color: $nav-secondary;
-    }
+  &.color {
+    background-color: $nav-secondary;
+  }
+}
 
-    .upperContent {
-      justify-content: space-between;
+.upperContent {
+  justify-content: space-between;
+}
 
-      .mail {
-        color: $white;
-        text-decoration: none;
-        font-size: 1.3rem;
-        font-weight: 500;
-        display: flex;
-        position: relative;
-        top: -5px;
+.mail {
+  color: $white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  display: flex;
+  position: relative;
+  top: -5px;
 
-        &:hover {
-          border-left: 2px $white solid;
-          padding-left: 5px;
-        }
+  &:hover {
+    border-left: 2px $white solid;
+    padding-left: 5px;
+  }
 
-        p {
-          color: $white;
-          margin: 1px 0;
-        }
+  .text {
+    margin-top: 2px;
+  }
+}
+
+.social {
+  position: relative;
+  top: -3px;
+  display: flex;
+}
+
+.sociallink {
+  border-radius: 50%;
+  border: 2px solid $white;
+  height: 18px;
+  width: 18px;
+  margin-right: 3px;
+
+  &:hover {
+    background-color: $white;
+    border: 2px solid #000000;
+
+    svg {
+      path {
+        fill: #000000;
       }
-
-      .social {
-        position: relative;
-        top: -3px;
-        display: flex;
-
-        .link {
-          border-radius: 50%;
-          border: 2px solid $white;
-          height: 18px;
-          width: 18px;
-          margin-right: 3px;
-
-          &:hover {
-            background-color: $white;
-            border: 2px solid #000000;
-
-            svg {
-              path {
-                fill: #000000;
-              }
-              rect {
-                fill: #000000;
-              }
-              circle {
-                fill: #000000;
-              }
-            }
-          }
-
-          &.blue {
-            &:hover {
-              background-color: $white;
-              border: 2px solid $nav-secondary;
-
-              svg {
-                path {
-                  fill: $nav-secondary;
-                }
-                rect {
-                  fill: $nav-secondary;
-                }
-                circle {
-                  fill: $nav-secondary;
-                }
-              }
-            }
-          }
-        }
+      rect {
+        fill: #000000;
+      }
+      circle {
+        fill: #000000;
       }
     }
   }
 
-  .lower {
-    width: 100%;
-    height: 75px;
-    display: flex;
+  &.blue {
+    &:hover {
+      background-color: $white;
+      border: 2px solid $nav-secondary;
 
-    .logo {
-      height: 55px;
-      width: 200px;
-      font-family: $alex-brush;
-      color: $white;
-      font-size: 3rem;
-      padding: 15px;
-      -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-      -moz-user-select: none; /* Old versions of Firefox */
-      user-select: none;
-
-      &:hover {
-        cursor: pointer;
-        color: #d3d3d3;
-      }
-    }
-
-    .navigation {
-      height: 100%;
-      margin: 0 auto;
-
-      .link {
-        text-decoration: none;
-        color: $white;
-        width: 70px;
-        margin: 0 20px;
-        text-align: center;
-        padding: 10px 0;
-        font-size: 1.6rem;
-
-        &:hover {
-          cursor: pointer;
-          border-bottom: 3px $white solid;
+      svg {
+        path {
+          fill: $nav-secondary;
+        }
+        rect {
+          fill: $nav-secondary;
+        }
+        circle {
+          fill: $nav-secondary;
         }
       }
     }
-    .language {
-      height: 65px;
-      padding-top: 5px;
+  }
+}
 
-      .flag {
-        &:hover {
-          transform: translateY(-2px);
-          -webkit-transform: translateY(-2px);
-        }
-      }
+.lower {
+  width: 100%;
+  height: 75px;
+  display: flex;
+}
+
+.logo {
+  height: 55px;
+  width: 200px;
+  font-family: $alex-brush;
+  color: $white;
+  font-size: 3rem;
+  padding: 15px;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Old versions of Firefox */
+  user-select: none;
+
+  &:hover {
+    cursor: pointer;
+    color: #d3d3d3;
+  }
+}
+
+.navigation {
+  height: 100%;
+  margin: 0 auto;
+}
+
+.link {
+  text-decoration: none;
+  color: $white;
+  width: 70px;
+  margin: 0 20px;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1.4rem;
+
+  &:hover {
+    cursor: pointer;
+    border-bottom: 3px $white solid;
+  }
+}
+
+.language {
+  height: 65px;
+  padding-top: 5px;
+
+  .flag {
+    &:hover {
+      transform: translateY(-2px);
+      -webkit-transform: translateY(-2px);
     }
   }
 }
@@ -174,7 +174,8 @@
 }
 
 .content {
-  width: 1180px;
+  max-width: 1180px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
 }
@@ -182,45 +183,34 @@
 @media only screen and (max-width: 767px) {
   .navbar {
     height: 68px;
-    .upper {
-      height: 18px;
-      .content {
-        width: 100%;
-        .mail {
-          font-size: 12px;
-
-          p {
-            margin-top: 5px;
-          }
-        }
-      }
-    }
-    .lower {
-      height: 50px;
-
-      .content {
-        width: 100%;
-        justify-content: space-between;
-
-        .logo {
-          height: 35px;
-          width: 150px;
-          font-size: 20px;
-          padding: 10px;
-        }
-
-        .navigation {
-          display: none;
-        }
-        .language {
-          display: flex;
-          height: 65px;
-          position: relative;
-          top: -15px;
-        }
-      }
-    }
   }
+  .upper {
+    height: 18px;
+  }
+
+  .lower {
+    height: 50px;
+  }
+  .content {
+    justify-content: space-between;
+  }
+  .logo {
+    height: 35px;
+    width: 150px;
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .navigation {
+    display: none;
+  }
+  .language {
+    display: flex;
+    height: 65px;
+    position: relative;
+    top: -15px;
+  }
+
   .icon {
     width: 20px;
     height: 20px;
@@ -228,11 +218,7 @@
 }
 
 @media only screen and (max-width: 1180px) {
-  .navbar {
-    .upper {
-      .content {
-        margin-left: 5px;
-      }
-    }
+  .upperContent {
+    margin-left: 5px;
   }
 }

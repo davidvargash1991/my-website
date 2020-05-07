@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./project.module.scss";
 import cx from "classnames";
-import { isMobile } from "react-device-detect";
+import { isMobile } from "utils/mobile";
 import { IProject } from "data/strings";
 import Github from "components/ui/icons/github";
 import web from "icons/web.svg";
@@ -32,7 +32,7 @@ const Project: React.FC<IProjectProps> = ({ project }) => {
   const logo = src !== project.img;
 
   const handleContainerClick = () => {
-    if (isMobile) {
+    if (isMobile()) {
       if (project.link) {
         window.open(project.link, "_blank");
       } else {
@@ -48,7 +48,7 @@ const Project: React.FC<IProjectProps> = ({ project }) => {
         src={src}
         alt={project.title}
       />
-      {!isMobile && (
+      {!isMobile() && (
         <div className={styles.imgContainer}>
           <div className={styles.buttons}>
             <a

@@ -6,73 +6,73 @@
   background-color: $gray-footer;
   overflow: hidden;
   font-family: $sen-sans;
+}
 
-  .content {
-    display: block;
-    padding: 60px 0;
+.content {
+  display: block;
+  padding: 60px 0;
+}
 
-    .title {
-      font-size: 3rem;
-      color: $white;
-      text-align: center;
+.title {
+  font-size: 3rem;
+  color: $white;
+  text-align: center;
 
-      &:hover {
-        cursor: pointer;
-        transform: translateY(-5px);
-        -webkit-transform: translateY(-5px);
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+  }
+}
+
+.text {
+  font-size: 1.4rem;
+  color: $gray-secondary;
+  text-align: center;
+  margin: 10px;
+}
+
+.navlink {
+  text-decoration: none;
+  color: $white;
+  width: 70px;
+  margin: 0 20px;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1.6rem;
+
+  &:hover {
+    cursor: pointer;
+    border-bottom: 3px $white solid;
+  }
+}
+
+.social {
+  margin: 30px auto;
+  width: 58px;
+  display: flex;
+}
+
+.link {
+  border-radius: 50%;
+  border: 2px solid $white;
+  height: 18px;
+  width: 18px;
+  margin-right: 3px;
+
+  &:hover {
+    background-color: $white;
+    border: 2px solid $gray-footer;
+
+    svg {
+      path {
+        fill: $gray-footer;
       }
-    }
-
-    .text {
-      font-size: 1.4rem;
-      color: $gray-secondary;
-      text-align: center;
-      margin: 10px;
-    }
-
-    .navlink {
-      text-decoration: none;
-      color: $white;
-      width: 70px;
-      margin: 0 20px;
-      text-align: center;
-      padding: 10px 0;
-      font-size: 1.6rem;
-
-      &:hover {
-        cursor: pointer;
-        border-bottom: 3px $white solid;
+      rect {
+        fill: $gray-footer;
       }
-    }
-
-    .social {
-      margin: 30px auto;
-      width: 58px;
-      display: flex;
-
-      .link {
-        border-radius: 50%;
-        border: 2px solid $white;
-        height: 18px;
-        width: 18px;
-        margin-right: 3px;
-
-        &:hover {
-          background-color: $white;
-          border: 2px solid $gray-footer;
-
-          svg {
-            path {
-              fill: $gray-footer;
-            }
-            rect {
-              fill: $gray-footer;
-            }
-            circle {
-              fill: $gray-footer;
-            }
-          }
-        }
+      circle {
+        fill: $gray-footer;
       }
     }
   }
@@ -84,9 +84,7 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .container {
-    .content {
-      width: 100%;
-    }
+  .content {
+    width: 100%;
   }
 }

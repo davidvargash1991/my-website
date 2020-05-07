@@ -81,12 +81,9 @@ class Navbar extends Component<INavigationProps, INavbarState> {
   public componentDidMount() {
     window.addEventListener("scroll", this.listenToScroll);
     this.updateWindowDimensions();
+    this.setScreenOrientation();
     window.addEventListener("resize", this.updateWindowDimensions);
     window.addEventListener("orientationchange", this.setScreenOrientation);
-  }
-  public componentWillMount() {
-    this.updateWindowDimensions();
-    this.setScreenOrientation();
   }
   public componentWillUnmount() {
     window.removeEventListener("scroll", this.listenToScroll);
@@ -105,7 +102,9 @@ class Navbar extends Component<INavigationProps, INavbarState> {
                 href="mailto:davidvargash.1991@tutanota.com"
               >
                 <img className={styles.icon} alt="mail" src={mail} />
-                <p>davidvargash.1991@tutanota.com</p>
+                <div className={styles.text}>
+                  davidvargash.1991@tutanota.com
+                </div>
               </a>
             </div>
             <div className={styles.social}>
@@ -117,7 +116,7 @@ class Navbar extends Component<INavigationProps, INavbarState> {
                 <div
                   className={cx(
                     "flex-center",
-                    styles.link,
+                    styles.sociallink,
                     hasPassedHero ? styles.blue : ""
                   )}
                 >
@@ -132,7 +131,7 @@ class Navbar extends Component<INavigationProps, INavbarState> {
                 <div
                   className={cx(
                     "flex-center",
-                    styles.link,
+                    styles.sociallink,
                     hasPassedHero ? styles.blue : ""
                   )}
                 >

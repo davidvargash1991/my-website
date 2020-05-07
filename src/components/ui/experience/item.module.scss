@@ -9,71 +9,74 @@
   border-radius: 5px;
   padding: 10px;
   margin: 0 20px;
+}
 
-  .image {
-    height: 100px;
-    width: 100px;
-  }
+.image {
+  height: 100px;
+  width: 100px;
+}
 
-  .company {
-    color: $primary;
-    font-size: 2.5rem;
-  }
+.company {
+  color: $primary;
+  font-size: 2.5rem;
+}
 
-  .content {
-    width: 100%;
-    height: auto;
-    text-align: left;
+.content {
+  width: 100%;
+  height: auto;
+  text-align: left;
+}
 
-    ul {
-      list-style: none;
-      li {
-        font-weight: 300;
-        font-size: 1.6rem;
-        color: $gray-title;
+ul {
+  list-style: none;
+  li {
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: $gray-title;
 
-        &::before {
-          content: "\2022";
-          color: $primary;
-          font-weight: bold;
-          display: inline-block;
-          width: 1em;
-          margin-left: -1em;
-          font-size: 18px;
-        }
-      }
-    }
-    .position {
-      font-size: 1.8rem;
-      max-width: 220px;
+    &::before {
+      content: "\2022";
       color: $primary;
-      margin-left: 3px;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+      font-size: 18px;
     }
-    .location {
-      font-size: 1.3rem;
-      color: $gray-secondary;
-    }
-    .techTitle {
-      font-weight: 600;
-      margin-bottom: 5px;
-      font-size: 1.3rem;
-      color: #000000;
-    }
-    .technologies {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+  }
+}
+.position {
+  font-size: 1.8rem;
+  max-width: 220px;
+  color: $primary;
+  margin-left: 3px;
+}
 
-      .tech {
-        background-color: $primary;
-        color: $white;
-        border-radius: 5px;
-        display: inline;
-        font-size: 1.4rem;
-        padding: 3px 5px;
-        margin: 2px;
-      }
-    }
+.location {
+  font-size: 1.3rem;
+  color: $gray-secondary;
+}
+
+.techTitle {
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 1.3rem;
+  color: #000000;
+}
+
+.technologies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .tech {
+    background-color: $primary;
+    color: $white;
+    border-radius: 5px;
+    display: inline;
+    font-size: 1.4rem;
+    padding: 3px 5px;
+    margin: 2px;
   }
 }
 
@@ -87,14 +90,12 @@
 @media only screen and (max-width: 767px) {
   .container {
     padding: 10px 20px;
-    .content {
-      ul {
-        padding-left: 10px;
+  }
+  ul {
+    padding-left: 10px;
 
-        li {
-          margin: 7px 0;
-        }
-      }
+    li {
+      margin: 7px 0;
     }
   }
 }

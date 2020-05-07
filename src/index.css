@@ -26,3 +26,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+p {
+  color: #424242;
+  font-weight: 300;
+  font-size: 2rem;
+}
