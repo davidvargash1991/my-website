@@ -49,7 +49,7 @@ const Project: React.FC<IProjectProps> = ({ project }) => {
         alt={project.title}
       />
       {!isMobile() && (
-        <div className={styles.imgContainer}>
+        <div className={cx("flex-center", styles.imgContainer)}>
           <div className={styles.buttons}>
             <a
               className={cx("flex-center", styles.button)}

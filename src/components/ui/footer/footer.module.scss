@@ -11,11 +11,11 @@
 .content {
   display: block;
   padding: 60px 0;
+  color: $white;
 }
 
 .title {
   font-size: 3rem;
-  color: $white;
   text-align: center;
 
   &:hover {
@@ -34,7 +34,6 @@
 
 .navlink {
   text-decoration: none;
-  color: $white;
   width: 70px;
   margin: 0 20px;
   text-align: center;

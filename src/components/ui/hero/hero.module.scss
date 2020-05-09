@@ -56,10 +56,10 @@
   min-height: 227px;
   text-align: left;
   z-index: 5;
+  color: $white;
 
   .title {
     font-size: 6.5vh;
-    color: $white;
     height: auto;
     height: 12.5vh;
     font-weight: 400;
@@ -74,7 +74,6 @@
   .subtitle {
     font-size: 3vh;
     margin-bottom: 25px;
-    color: $white;
     max-width: 660px;
     font-weight: 400;
     position: relative;

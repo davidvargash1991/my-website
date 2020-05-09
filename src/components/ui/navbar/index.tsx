@@ -94,7 +94,13 @@ class Navbar extends Component<INavigationProps, INavbarState> {
     const { hasPassedHero } = this.state;
     return (
       <nav className={cx(styles.navbar, hasPassedHero ? styles.shadow : "")}>
-        <div className={cx(styles.upper, hasPassedHero ? styles.color : "")}>
+        <div
+          className={cx(
+            styles.upper,
+            styles.upperContent,
+            hasPassedHero ? styles.color : ""
+          )}
+        >
           <div className={cx(styles.content, styles.upperContent)}>
             <div>
               <a

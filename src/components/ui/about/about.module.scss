@@ -29,6 +29,7 @@
 
 .item {
   min-height: 140px;
+  color: $white;
 }
 
 .img {
@@ -37,13 +38,11 @@
 }
 
 .name {
-  color: $white;
   font-size: 2rem;
   text-align: center;
 }
 
 .description {
-  color: $white;
   font-size: 1.4rem;
   max-width: 200px;
   margin-top: 7px;

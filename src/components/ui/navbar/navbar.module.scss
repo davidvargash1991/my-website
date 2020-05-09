@@ -25,8 +25,6 @@
   height: 15px;
   padding: 5px 0;
   display: flex;
-  justify-content: space-between;
-  background-color: transparent;
 
   &.color {
     background-color: $nav-secondary;
@@ -44,7 +42,7 @@
   font-weight: 500;
   display: flex;
   position: relative;
-  top: -5px;
+  top: -4px;
 
   &:hover {
     border-left: 2px $white solid;
@@ -116,7 +114,6 @@
   height: 55px;
   width: 200px;
   font-family: $alex-brush;
-  color: $white;
   font-size: 3rem;
   padding: 15px;
   -webkit-touch-callout: none; /* iOS Safari */
@@ -136,7 +133,6 @@
 }
 
 .link {
-  color: $white;
   width: 70px;
   margin: 0 20px;
   text-align: center;
@@ -184,7 +180,13 @@
     height: 68px;
   }
   .upper {
-    height: 18px;
+    height: 22px;
+  }
+
+  .mail {
+    .text {
+      margin-top: 3px;
+    }
   }
 
   .lower {
@@ -216,8 +218,8 @@
   }
 }
 
-@media only screen and (max-width: 1180px) {
+@media only screen and (max-width: 767px) {
   .upperContent {
-    margin-left: 5px;
+    padding: 2px 7px 2px 2px;
   }
 }

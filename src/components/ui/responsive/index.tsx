@@ -53,7 +53,7 @@ class Responsive extends Component<ILanguageProps> {
             alt="responsive"
           />
           <div>
-            <div className={cx(styles.text, animateClassText)}>
+            <div className={cx("flex-center", styles.text, animateClassText)}>
               {strings.responsiveText}
             </div>
           </div>
