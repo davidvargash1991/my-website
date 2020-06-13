@@ -9,6 +9,7 @@ import en from "icons/en.svg";
 import { ILanguageProps } from "data/strings";
 
 export interface INavigationProps extends ILanguageProps {
+  viewportWidth: number;
   handleAboutClick: () => void;
   handlePortfolioClick: () => void;
   handleExperienceClick: () => void;
@@ -18,7 +19,6 @@ export interface INavigationProps extends ILanguageProps {
 
 interface INavbarState {
   hasPassedHero: boolean;
-  viewportWidth: number;
   orientation: string;
 }
 
@@ -37,12 +37,7 @@ class Navbar extends Component<INavigationProps, INavbarState> {
 
   public state: INavbarState = {
     hasPassedHero: false,
-    viewportWidth: window.innerWidth,
     orientation: this.getScreenOrientation(),
-  };
-
-  public updateWindowDimensions = () => {
-    this.setState({ viewportWidth: window.innerWidth });
   };
 
   private logoClick = () => {
@@ -62,7 +57,7 @@ class Navbar extends Component<INavigationProps, INavbarState> {
   private listenToScroll = (event: any) => {
     const { orientation } = this.state;
     const heroLimit =
-      this.state.viewportWidth > 767
+      this.props.viewportWidth > 767
         ? 160
         : orientation === "landscape"
         ? 1
@@ -80,14 +75,11 @@ class Navbar extends Component<INavigationProps, INavbarState> {
 
   public componentDidMount() {
     window.addEventListener("scroll", this.listenToScroll);
-    this.updateWindowDimensions();
     this.setScreenOrientation();
-    window.addEventListener("resize", this.updateWindowDimensions);
     window.addEventListener("orientationchange", this.setScreenOrientation);
   }
   public componentWillUnmount() {
     window.removeEventListener("scroll", this.listenToScroll);
-    window.removeEventListener("resize", this.updateWindowDimensions);
     window.removeEventListener("orientationchange", this.setScreenOrientation);
   }
   public render() {

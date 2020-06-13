@@ -74,8 +74,8 @@ const Project: React.FC<IProjectProps> = ({ project }) => {
           </div>
         </div>
       )}
-      <div className={styles.title}>{project.title}</div>
       <div className={styles.type}>{project.type}</div>
+      <div className={styles.title}>{project.title}</div>
       <div className={styles.description}>{project.description}</div>
       <div
         className={cx(styles.buttons, !project.link ? styles.single : "")}

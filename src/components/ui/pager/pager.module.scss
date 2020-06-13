@@ -1,0 +1,25 @@
+@import "../../../styles/styleguide.scss";
+
+.container {
+  width: 100%;
+}
+
+.button {
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 1px $primary solid;
+
+  &.active {
+    background-color: $primary;
+
+    &:hover {
+      cursor: default;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
