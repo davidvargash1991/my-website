@@ -3,19 +3,18 @@ import styles from "./pager.module.scss";
 import cx from "classnames";
 
 interface IPagerProps {
-  numberOfElements: number;
+  numberOfPages: number;
   activePage: number;
   pageSize: number;
   onSetPage: (newPage: number) => void;
 }
 
 const Pager: React.FC<IPagerProps> = ({
-  numberOfElements,
+  numberOfPages,
   activePage,
   pageSize,
   onSetPage,
 }) => {
-  const numberOfPages = Math.ceil(numberOfElements / pageSize);
   let pages: number[] = [];
   for (let i = 1; i <= numberOfPages; i++) {
     pages.push(i);
