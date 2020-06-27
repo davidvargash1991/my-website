@@ -5,32 +5,12 @@ import { isMobile } from "utils/mobile";
 import { IProject } from "data/strings";
 import Github from "components/ui/icons/github";
 import web from "icons/web.svg";
-import csharp from "icons/csharp.png";
-import reactLogo from "icons/react-no-text.png";
-import netLogo from "icons/net-orange-bg.png";
 
 interface IProjectProps {
   project: IProject;
 }
 
 const Project: React.FC<IProjectProps> = ({ project }) => {
-  const getImgUrl = () => {
-    switch (project.img) {
-      case "csharp":
-        return csharp;
-      case "react":
-        return reactLogo;
-      case "net":
-        return netLogo;
-      default:
-        return project.img;
-    }
-  };
-
-  const src = getImgUrl();
-
-  const logo = src !== project.img;
-
   const handleContainerClick = () => {
     if (isMobile()) {
       if (project.link) {
@@ -43,11 +23,7 @@ const Project: React.FC<IProjectProps> = ({ project }) => {
 
   return (
     <div className={styles.container} onClick={handleContainerClick}>
-      <img
-        className={cx(styles.img, logo ? styles.logo : "")}
-        src={src}
-        alt={project.title}
-      />
+      <img className={styles.img} src={project.img} alt={project.title} />
       {!isMobile() && (
         <div className={cx("flex-center", styles.imgContainer)}>
           <div className={styles.buttons}>

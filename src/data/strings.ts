@@ -4,6 +4,11 @@ import tsg from "icons/tsg.jpg";
 import everis from "icons/everis.png";
 import csi from "icons/csi.png";
 import info from "icons/info.jpg";
+import csharp from "icons/csharp.png";
+import reactLogo from "icons/react-no-text.png";
+import netLogo from "icons/net-orange-bg.png";
+import ny from "icons/ny.jpg";
+import leopard from "icons/leopard.jpg";
 
 export interface IProject {
   img: string;
@@ -83,8 +88,7 @@ export const strings: IStrings = {
       {
         title: "Find your Home",
         description: "Aplicación de búsqueda de casas para comprar o rentar",
-        img:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Lower_Manhattan_skyline_-_June_2017.jpg/1920px-Lower_Manhattan_skyline_-_June_2017.jpg",
+        img: ny,
         repo: "https://github.com/davidvargash1991/find-my-home",
         link: "https://find-my-home.now.sh/home",
         type: "Frontend - React.js",
@@ -92,8 +96,7 @@ export const strings: IStrings = {
       {
         title: "Animal Wiki",
         description: "Es una enciclopedia animal de prueba con fotos de Flickr",
-        img:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Schrecklicherpfeilgiftfrosch-01.jpg/220px-Schrecklicherpfeilgiftfrosch-01.jpg",
+        img: leopard,
         repo: "https://github.com/davidvargash1991/animal-wiki",
         link: "https://animal-wiki.now.sh/home",
         type: "Frontend - React.js",
@@ -101,7 +104,7 @@ export const strings: IStrings = {
       {
         title: "Get Coordinates Console",
         description: "Aplicación de consola para almacenar coordenadas",
-        img: "csharp",
+        img: csharp,
         repo: "https://github.com/davidvargash1991/RetriveCoordinatesCSharp",
         link: "",
         type: "Console - C#",
@@ -110,7 +113,7 @@ export const strings: IStrings = {
         title: "Store Manager - FE",
         description:
           "Aplicación de inventario de prueba, con ella aprendí sobre JWT auth y GraphQL",
-        img: "react",
+        img: reactLogo,
         repo: "https://github.com/davidvargash1991/StoreManager-Frontend",
         link: "",
         type: "Frontend - React.js",
@@ -119,7 +122,7 @@ export const strings: IStrings = {
         title: "Store Manager - BE",
         description:
           "Aplicación de inventario de prueba, con ella aprendí sobre JWT auth y GraphQL",
-        img: "net",
+        img: netLogo,
         repo: "https://github.com/davidvargash1991/StoreManager-Backend",
         link: "",
         type: "Backend - .Net",
@@ -260,8 +263,7 @@ export const strings: IStrings = {
         title: "Find your Home",
         description:
           "This is a sample real estate search for finding properties for rent or buy",
-        img:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Lower_Manhattan_skyline_-_June_2017.jpg/1920px-Lower_Manhattan_skyline_-_June_2017.jpg",
+        img: ny,
         repo: "https://github.com/davidvargash1991/find-my-home",
         link: "https://find-my-home.now.sh/home",
         type: "Frontend - React.js",
@@ -270,8 +272,7 @@ export const strings: IStrings = {
         title: "Animal Wiki",
         description:
           "This is a sample animal encyclopedia with gallery from Flickr",
-        img:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Schrecklicherpfeilgiftfrosch-01.jpg/220px-Schrecklicherpfeilgiftfrosch-01.jpg",
+        img: leopard,
         repo: "https://github.com/davidvargash1991/animal-wiki",
         link: "https://animal-wiki.now.sh/home",
         type: "Frontend - React.js",
@@ -280,7 +281,7 @@ export const strings: IStrings = {
         title: "Get Coordinates Console",
         description:
           "Console App for retrieving and saving coordinates from google maps based on city name to a given database",
-        img: "csharp",
+        img: csharp,
         repo: "https://github.com/davidvargash1991/RetriveCoordinatesCSharp",
         link: "",
         type: "Console - C#",
@@ -289,7 +290,7 @@ export const strings: IStrings = {
         title: "Store Manager - FE",
         description:
           "Sample Inventory app, I used this repo for learning about JWT auth and GraphQL",
-        img: "react",
+        img: reactLogo,
         repo: "https://github.com/davidvargash1991/StoreManager-Frontend",
         link: "",
         type: "Frontend - React.js",
@@ -298,7 +299,7 @@ export const strings: IStrings = {
         title: "Store Manager - BE",
         description:
           "Sample Inventory app, I used this repo for learning about JWT auth and GraphQL",
-        img: "net",
+        img: netLogo,
         repo: "https://github.com/davidvargash1991/StoreManager-Backend",
         link: "",
         type: "Backend - .Net",
