@@ -3,7 +3,6 @@ import { ILanguageProps } from "data/strings";
 import Navbar from "components/ui/navbar";
 import Hero from "components/ui/hero";
 import About from "components/ui/about";
-import Responsive from "components/ui/responsive";
 import Portfolio from "components/ui/portfolio";
 import Technologies from "components/ui/technologies";
 import Experience from "components/ui/experience";
@@ -83,7 +82,6 @@ class Home extends Component<IHomeProps> {
         />
         <Hero strings={strings} />
         <About ref={this.aboutRef} strings={strings} />
-        <Responsive strings={strings} />
         <Portfolio
           ref={this.portfolioRef}
           strings={strings}
