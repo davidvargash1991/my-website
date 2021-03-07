@@ -19,7 +19,7 @@ interface IHomeState {
   viewportWidth: number;
 }
 
-class Home extends Component<IHomeProps> {
+class Home extends Component<IHomeProps, IHomeState> {
   state = {
     viewportWidth: window.innerWidth,
   };

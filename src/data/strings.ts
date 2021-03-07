@@ -159,7 +159,7 @@ export const strings: IStrings = {
           "Revisión y aprobación de Pull Requests usando GIT",
           "Conecté con APIs y servicios Restful",
           "Desarrollé Unit Tests usando enzyme y jest",
-          "Creación de HTML usando sass modules, box model, selectors, nested class, media queries, responsive design",
+          "Creación de HTML usando sass modules, box model, selectors, media queries, responsive design",
         ],
         technologies: [
           {
@@ -438,7 +438,7 @@ export const strings: IStrings = {
           "Reviewed and approved Pull Requests using GIT",
           "Connected with API and Restful services",
           "Unit Testing using enzyme and jest",
-          "HTML creation using sass modules, box model, selectors, nested class, media queries, responsive design",
+          "HTML creation using sass modules, box model, selectors, media queries, responsive design",
         ],
         technologies: [
           {

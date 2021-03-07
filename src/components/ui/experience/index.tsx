@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import styles from "./experience.module.scss";
 import cx from "classnames";
+import moment from "moment";
 import { useSwipeable } from "react-swipeable";
 import ExperienceItem from "./item";
 import { ILanguageProps } from "data/strings";
 import { ISectionProps } from "../about";
 import Subtitle from "components/ui/subtitle";
 import Caret from "components/ui/icons/caret";
+import reactLogo from "icons/react.png";
+import netLogo from "icons/net.png";
+import jsLogo from "icons/js.png";
 
 const Experience: React.FC<ISectionProps> = React.forwardRef(
   (props: ILanguageProps, ref: React.Ref<any>) => {
@@ -27,6 +31,11 @@ const Experience: React.FC<ISectionProps> = React.forwardRef(
       onSwipedLeft: (eventData) => handleNextClick(),
     });
 
+    const expReact = moment().diff(moment("01-12-2018", "DD-MM-YYYY"), "years");
+    const expDotNet = moment().diff("2015-11-01", "years");
+
+    const lang = window.location.pathname.substr(1, 2);
+
     return (
       <div ref={ref} className={cx("container", styles.container)}>
         <Subtitle
@@ -45,6 +54,28 @@ const Experience: React.FC<ISectionProps> = React.forwardRef(
               <Caret />
             </div>
           )}
+        </div>
+        <div className={styles.infoContainer}>
+          <div className={styles.info}>
+            <div className={styles.item}>
+              <img className={styles.img} src={reactLogo} alt="react" />
+              <div className={styles.name}>{`${expReact} ${
+                lang === "es" ? "años de experiencia" : "years of experience"
+              }`}</div>
+            </div>
+            <div className={styles.item}>
+              <img className={styles.img} src={netLogo} alt="dotnet" />
+              <div className={styles.name}>{`${expDotNet} ${
+                lang === "es" ? "años de experiencia" : "years of experience"
+              }`}</div>
+            </div>
+            <div className={cx(styles.item, styles.last)}>
+              <img className={styles.img} src={jsLogo} alt="javascript" />
+              <div className={styles.name}>{`${expDotNet} ${
+                lang === "es" ? "años de experiencia" : "years of experience"
+              }`}</div>
+            </div>
+          </div>
         </div>
       </div>
     );
