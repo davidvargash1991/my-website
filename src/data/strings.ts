@@ -4,11 +4,27 @@ import tsg from "icons/tsg.jpg";
 import everis from "icons/everis.png";
 import csi from "icons/csi.png";
 import info from "icons/info.jpg";
+import lumon from "icons/lumon.jpg";
+import globe from "icons/globe.png";
 import csharp from "icons/csharp.png";
 import reactLogo from "icons/react-no-text.png";
-import netLogo from "icons/net-orange-bg.png";
+import netLogoOrange from "icons/net-orange-bg.png";
 import ny from "icons/ny.jpg";
 import leopard from "icons/leopard.jpg";
+import reactLogoText from "icons/react.png";
+import reduxLogo from "icons/redux.png";
+import tsLogo from "icons/ts.png";
+import nextLogo from "icons/next.png";
+import sassLogo from "icons/sass.png";
+import jestLogo from "icons/jest.png";
+import githubLogo from "icons/github.png";
+import netLogo from "icons/net.png";
+import sqlLogo from "icons/sql.svg";
+import jsLogo from "icons/js.png";
+import netOld from "icons/net-old.png";
+import xamarin from "icons/xamarin.png";
+import delphi from "icons/delphi.png";
+import oracle from "icons/oracle.png";
 
 export interface IProject {
   img: string;
@@ -19,13 +35,18 @@ export interface IProject {
   type: string;
 }
 
+interface ITech {
+  alt: string;
+  img: any;
+}
+
 export interface IExperience {
   company: string;
   location: string;
   position: string;
   date: string;
   facts: string[];
-  technologies: string[];
+  technologies: ITech[];
   img: any;
 }
 
@@ -44,8 +65,6 @@ export interface ILanguage {
   portfolioText: string;
   techText: string;
   experienceTitle: string;
-  expereinceBtnMore: string;
-  expereinceBtnLess: string;
   projects: IProject[];
   experience: IExperience[];
 }
@@ -82,8 +101,6 @@ export const strings: IStrings = {
     portfolioText:
       "Estos son proyectos que creo en mi tiempo libre, me ayudan a practicar y aprender",
     experienceTitle: "Experiencia",
-    expereinceBtnMore: "Ver más",
-    expereinceBtnLess: "Ver menos",
     projects: [
       {
         title: "Find your Home",
@@ -122,7 +139,7 @@ export const strings: IStrings = {
         title: "Store Manager - BE",
         description:
           "Aplicación de inventario de prueba, con ella aprendí sobre JWT auth y GraphQL",
-        img: netLogo,
+        img: netLogoOrange,
         repo: "https://github.com/davidvargash1991/StoreManager-Backend",
         link: "",
         type: "Backend - .Net",
@@ -145,12 +162,34 @@ export const strings: IStrings = {
           "Creación de HTML usando sass modules, box model, selectors, nested class, media queries, responsive design",
         ],
         technologies: [
-          "React.js",
-          "Redux",
-          "Typescript",
-          "SASS",
-          "Jest",
-          "Github",
+          {
+            alt: "React.js",
+            img: reactLogoText,
+          },
+          {
+            alt: "Redux",
+            img: reduxLogo,
+          },
+          {
+            alt: "Typescript",
+            img: tsLogo,
+          },
+          {
+            alt: "Next.js",
+            img: nextLogo,
+          },
+          {
+            alt: "Sass",
+            img: sassLogo,
+          },
+          {
+            alt: "Jest",
+            img: jestLogo,
+          },
+          {
+            alt: "Github",
+            img: githubLogo,
+          },
         ],
         img: tl,
       },
@@ -163,7 +202,20 @@ export const strings: IStrings = {
           "Migración de aplicación de inventario de impresoras a nuevas tecnologías",
           "El cliente fue M9 en Londres",
         ],
-        technologies: [".Net Core", "React.js", "SQL Server"],
+        technologies: [
+          {
+            alt: "react.js",
+            img: reactLogoText,
+          },
+          {
+            alt: ".Net Core",
+            img: netLogo,
+          },
+          {
+            alt: "Sql Server",
+            img: sqlLogo,
+          },
+        ],
         img: tsg,
       },
       {
@@ -176,7 +228,20 @@ export const strings: IStrings = {
           "Resolución de bugs de producción",
           "Tareas de depuración",
         ],
-        technologies: [".Net Core", "React.js", "SQL Server"],
+        technologies: [
+          {
+            alt: "react.js",
+            img: reactLogoText,
+          },
+          {
+            alt: ".Net Core",
+            img: netLogo,
+          },
+          {
+            alt: "Sql Server",
+            img: sqlLogo,
+          },
+        ],
         img: everis,
       },
       {
@@ -189,7 +254,24 @@ export const strings: IStrings = {
           "Creé controladores en .Net",
           "Creé interfaces usando HTML y Javascript",
         ],
-        technologies: [".Net", "Javascript", "SQL Server"],
+        technologies: [
+          {
+            alt: "react.js",
+            img: reactLogoText,
+          },
+          {
+            alt: ".Net",
+            img: netOld,
+          },
+          {
+            alt: "Javascript",
+            img: jsLogo,
+          },
+          {
+            alt: "Sql Server",
+            img: sqlLogo,
+          },
+        ],
         img: csi,
       },
       {
@@ -205,7 +287,24 @@ export const strings: IStrings = {
           "Trabajé con el cliente para la comunicación con SAP usando XML",
           "Desarrollé un Controlador para calcular la carga de los camiones y sugerir rutas",
         ],
-        technologies: [".Net", "Xamarin", "Javascript", "SQL Server"],
+        technologies: [
+          {
+            alt: ".Net",
+            img: netOld,
+          },
+          {
+            alt: "Javascript",
+            img: jsLogo,
+          },
+          {
+            alt: "Sql Server",
+            img: sqlLogo,
+          },
+          {
+            alt: "Xamarin",
+            img: xamarin,
+          },
+        ],
         img: info,
       },
       {
@@ -219,8 +318,21 @@ export const strings: IStrings = {
           "Integración con api publica para traer fotos, videos y coordenadas",
           "Desarrolle un mapa con las coordenadas usando el API de Google Maps",
         ],
-        technologies: [".Net", "Javascript", "SQL Server"],
-        img: null,
+        technologies: [
+          {
+            alt: ".Net",
+            img: netOld,
+          },
+          {
+            alt: "Javascript",
+            img: jsLogo,
+          },
+          {
+            alt: "Sql Server",
+            img: sqlLogo,
+          },
+        ],
+        img: lumon,
       },
       {
         company: "Orbis",
@@ -231,8 +343,17 @@ export const strings: IStrings = {
           "Software ERP",
           "Desarrolle modulo de nómina usando Delphi y Oracle",
         ],
-        technologies: ["Delphi", "Oracle"],
-        img: null,
+        technologies: [
+          {
+            alt: "Delphi",
+            img: delphi,
+          },
+          {
+            alt: "Oracle",
+            img: oracle,
+          },
+        ],
+        img: globe,
       },
     ],
   },
@@ -256,8 +377,6 @@ export const strings: IStrings = {
     portfolioText:
       "These are projects that I build in my free time, they are projects that help me practice and learn",
     experienceTitle: "Experience",
-    expereinceBtnMore: "Show more",
-    expereinceBtnLess: "Show less",
     projects: [
       {
         title: "Find your Home",
@@ -299,7 +418,7 @@ export const strings: IStrings = {
         title: "Store Manager - BE",
         description:
           "Sample Inventory app, I used this repo for learning about JWT auth and GraphQL",
-        img: netLogo,
+        img: netLogoOrange,
         repo: "https://github.com/davidvargash1991/StoreManager-Backend",
         link: "",
         type: "Backend - .Net",
@@ -322,12 +441,34 @@ export const strings: IStrings = {
           "HTML creation using sass modules, box model, selectors, nested class, media queries, responsive design",
         ],
         technologies: [
-          "React.js",
-          "Redux",
-          "Typescript",
-          "SASS",
-          "Jest",
-          "Github",
+          {
+            alt: "React.js",
+            img: reactLogoText,
+          },
+          {
+            alt: "Redux",
+            img: reduxLogo,
+          },
+          {
+            alt: "Typescript",
+            img: tsLogo,
+          },
+          {
+            alt: "Next.js",
+            img: nextLogo,
+          },
+          {
+            alt: "Sass",
+            img: sassLogo,
+          },
+          {
+            alt: "Jest",
+            img: jestLogo,
+          },
+          {
+            alt: "Github",
+            img: githubLogo,
+          },
         ],
         img: tl,
       },
@@ -340,7 +481,20 @@ export const strings: IStrings = {
           "Did migration of printers inventory application to new technologies",
           "The client was M9 based in London",
         ],
-        technologies: [".Net Core", "React.js", "SQL Server"],
+        technologies: [
+          {
+            alt: "react.js",
+            img: reactLogoText,
+          },
+          {
+            alt: ".Net Core",
+            img: netLogo,
+          },
+          {
+            alt: "Sql Server",
+            img: sqlLogo,
+          },
+        ],
         img: tsg,
       },
       {
@@ -353,7 +507,20 @@ export const strings: IStrings = {
           "Tracked and resolved production bugs",
           "Debugging tasks",
         ],
-        technologies: [".Net Core", "React.js", "SQL Server"],
+        technologies: [
+          {
+            alt: "react.js",
+            img: reactLogoText,
+          },
+          {
+            alt: ".Net Core",
+            img: netLogo,
+          },
+          {
+            alt: "Sql Server",
+            img: sqlLogo,
+          },
+        ],
         img: everis,
       },
       {
@@ -366,7 +533,24 @@ export const strings: IStrings = {
           "Created controllers in .Net",
           "Created interfaces using HTML and Javascript",
         ],
-        technologies: [".Net", "Javascript", "SQL Server"],
+        technologies: [
+          {
+            alt: "react.js",
+            img: reactLogoText,
+          },
+          {
+            alt: ".Net",
+            img: netOld,
+          },
+          {
+            alt: "Javascript",
+            img: jsLogo,
+          },
+          {
+            alt: "Sql Server",
+            img: sqlLogo,
+          },
+        ],
         img: csi,
       },
       {
@@ -382,7 +566,24 @@ export const strings: IStrings = {
           "Collaborated with customer for XML file communication with SAP system",
           "Developed Controller for calculating trucks load and suggested route",
         ],
-        technologies: [".Net", "Xamarin", "Javascript", "SQL Server"],
+        technologies: [
+          {
+            alt: ".Net",
+            img: netOld,
+          },
+          {
+            alt: "Javascript",
+            img: jsLogo,
+          },
+          {
+            alt: "Sql Server",
+            img: sqlLogo,
+          },
+          {
+            alt: "Xamarin",
+            img: xamarin,
+          },
+        ],
         img: info,
       },
       {
@@ -396,8 +597,21 @@ export const strings: IStrings = {
           "Integrated with public api for fetching photos, videos and coordinates",
           "Developed rendering of coordinates using google maps API",
         ],
-        technologies: [".Net", "Javascript", "SQL Server"],
-        img: null,
+        technologies: [
+          {
+            alt: ".Net",
+            img: netOld,
+          },
+          {
+            alt: "Javascript",
+            img: jsLogo,
+          },
+          {
+            alt: "Sql Server",
+            img: sqlLogo,
+          },
+        ],
+        img: lumon,
       },
       {
         company: "Orbis",
@@ -405,8 +619,17 @@ export const strings: IStrings = {
         position: "Developer",
         date: "2011 - 2015",
         facts: ["ERP Software", "Developed HR module using Delphi and Oracle"],
-        technologies: ["Delphi", "Oracle"],
-        img: null,
+        technologies: [
+          {
+            alt: "Delphi",
+            img: delphi,
+          },
+          {
+            alt: "Oracle",
+            img: oracle,
+          },
+        ],
+        img: globe,
       },
     ],
   },
