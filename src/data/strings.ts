@@ -25,6 +25,7 @@ import netOld from "icons/net-old.png";
 import xamarin from "icons/xamarin.png";
 import delphi from "icons/delphi.png";
 import oracle from "icons/oracle.png";
+import azureLogo from "icons/azure.png";
 
 export interface IProject {
   img: string;
@@ -215,6 +216,10 @@ export const strings: IStrings = {
             alt: "Sql Server",
             img: sqlLogo,
           },
+          {
+            alt: "Azure",
+            img: azureLogo,
+          },
         ],
         img: tsg,
       },
@@ -255,10 +260,6 @@ export const strings: IStrings = {
           "Creé interfaces usando HTML y Javascript",
         ],
         technologies: [
-          {
-            alt: "react.js",
-            img: reactLogoText,
-          },
           {
             alt: ".Net",
             img: netOld,
@@ -494,6 +495,10 @@ export const strings: IStrings = {
             alt: "Sql Server",
             img: sqlLogo,
           },
+          {
+            alt: "Azure",
+            img: azureLogo,
+          },
         ],
         img: tsg,
       },
@@ -534,10 +539,6 @@ export const strings: IStrings = {
           "Created interfaces using HTML and Javascript",
         ],
         technologies: [
-          {
-            alt: "react.js",
-            img: reactLogoText,
-          },
           {
             alt: ".Net",
             img: netOld,
