@@ -3,9 +3,15 @@ import styles from "./footer.module.scss";
 import cx from "classnames";
 import Linkedin from "components/ui/icons/linkedin";
 import Github from "components/ui/icons/github";
-import { INavigationProps } from "../navbar";
+import { ILanguageProps } from "data/strings";
 
-const Footer: React.FC<INavigationProps> = (props) => {
+export interface IFooterProps extends ILanguageProps {
+  handleAboutClick: () => void;
+  handlePortfolioClick: () => void;
+  handleExperienceClick: () => void;
+}
+
+const Footer: React.FC<IFooterProps> = (props) => {
   const logoClick = () => {
     const c = document.documentElement.scrollTop || document.body.scrollTop;
     if (c > 0) {

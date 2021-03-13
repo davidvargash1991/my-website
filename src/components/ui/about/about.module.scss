@@ -15,6 +15,7 @@
   width: 100%;
   height: auto;
   background-image: radial-gradient(circle, #00d4ff, #0460c7);
+  overflow: hidden;
 }
 
 .info {
@@ -30,6 +31,21 @@
 .item {
   min-height: 140px;
   color: $white;
+  position: relative;
+  top: 180px;
+  transition: transform 0.5s ease;
+
+  &.middle {
+    transition: transform 1s ease;
+  }
+
+  &.last {
+    transition: transform 1.5s ease;
+  }
+}
+
+.moveUp {
+  transform: translateY(-180px);
 }
 
 .img {
@@ -74,6 +90,7 @@
     height: 120px;
     border-bottom: 1px $white solid;
     padding: 10px;
+    top: 0;
 
     &.last {
       border-bottom: none;

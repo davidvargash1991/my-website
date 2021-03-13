@@ -17,22 +17,26 @@ interface IHomeProps extends ILanguageProps {
 
 interface IHomeState {
   viewportWidth: number;
+  animateAbout: boolean;
+  animateExperience: boolean;
 }
 
 class Home extends Component<IHomeProps, IHomeState> {
   state = {
     viewportWidth: window.innerWidth,
+    animateAbout: false,
+    animateExperience: false,
   };
 
   private aboutRef = React.createRef<HTMLHeadElement>();
   private portfolioRef = React.createRef<HTMLDivElement>();
   private experienceRef = React.createRef<HTMLDivElement>();
 
-  public updateWindowDimensions = () => {
+  private updateWindowDimensions = () => {
     this.setState({ viewportWidth: window.innerWidth });
   };
 
-  public handleAboutClick = () => {
+  private handleAboutClick = () => {
     if (this.aboutRef.current) {
       window.scrollTo({
         top: this.aboutRef.current.offsetTop - NAV_HEIGHT,
@@ -41,7 +45,7 @@ class Home extends Component<IHomeProps, IHomeState> {
     }
   };
 
-  public handlePortfolioClick = () => {
+  private handlePortfolioClick = () => {
     if (this.portfolioRef.current) {
       window.scrollTo({
         top: this.portfolioRef.current.offsetTop - NAV_HEIGHT,
@@ -50,13 +54,21 @@ class Home extends Component<IHomeProps, IHomeState> {
     }
   };
 
-  public handleExperienceClick = () => {
+  private handleExperienceClick = () => {
     if (this.experienceRef.current) {
       window.scrollTo({
         top: this.experienceRef.current.offsetTop - NAV_HEIGHT,
         behavior: "smooth",
       });
     }
+  };
+
+  public enableAnimateAbout = () => {
+    this.setState({ animateAbout: true });
+  };
+
+  public enableAnimateExp = () => {
+    this.setState({ animateExperience: true });
   };
 
   public componentDidMount() {
@@ -74,29 +86,38 @@ class Home extends Component<IHomeProps, IHomeState> {
         <Navbar
           strings={strings}
           viewportWidth={this.state.viewportWidth}
+          animateAbout={this.state.animateAbout}
+          animateExperience={this.state.animateExperience}
           handleAboutClick={this.handleAboutClick}
           handlePortfolioClick={this.handlePortfolioClick}
           handleExperienceClick={this.handleExperienceClick}
           handleSpanishClick={handleSpanishClick}
           handleEnglishClick={handleEnglishClick}
+          enableAnimateAbout={this.enableAnimateAbout}
+          enableAnimateExperience={this.enableAnimateExp}
         />
         <Hero strings={strings} />
-        <About ref={this.aboutRef} strings={strings} />
+        <About
+          ref={this.aboutRef}
+          strings={strings}
+          animate={this.state.animateAbout}
+        />
         <Portfolio
           ref={this.portfolioRef}
           strings={strings}
           viewportWidth={this.state.viewportWidth}
         />
         <Technologies strings={strings} />
-        <Experience ref={this.experienceRef} strings={strings} />
+        <Experience
+          ref={this.experienceRef}
+          strings={strings}
+          animate={this.state.animateExperience}
+        />
         <Footer
           strings={strings}
-          viewportWidth={this.state.viewportWidth}
           handleAboutClick={this.handleAboutClick}
           handlePortfolioClick={this.handlePortfolioClick}
           handleExperienceClick={this.handleExperienceClick}
-          handleSpanishClick={handleSpanishClick}
-          handleEnglishClick={handleEnglishClick}
         />
       </React.Fragment>
     );

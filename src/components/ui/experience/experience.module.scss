@@ -2,6 +2,7 @@
 
 .container {
   padding-bottom: 0;
+  overflow: hidden;
 }
 
 .subtitle {
@@ -84,6 +85,21 @@
 .item {
   min-height: 100px;
   color: $white;
+  position: relative;
+  top: 180px;
+  transition: transform 0.5s ease;
+
+  &.middle {
+    transition: transform 1s ease;
+  }
+
+  &.last {
+    transition: transform 1.5s ease;
+  }
+}
+
+.moveUp {
+  transform: translateY(-180px);
 }
 
 .img {
@@ -136,6 +152,7 @@
     border-bottom: 1px $white solid;
     padding: 10px;
     margin: 0 auto;
+    top: 0;
 
     &.last {
       border-bottom: none;

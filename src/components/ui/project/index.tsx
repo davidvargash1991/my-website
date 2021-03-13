@@ -4,7 +4,7 @@ import cx from "classnames";
 import { isMobile } from "utils/mobile";
 import { IProject } from "data/strings";
 import Github from "components/ui/icons/github";
-import web from "icons/web.svg";
+import Web from "components/ui/icons/web";
 
 interface IProjectProps {
   project: IProject;
@@ -43,7 +43,7 @@ const Project: React.FC<IProjectProps> = ({ project }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img className={styles.icon} src={web} alt="website" />
+                <Web color="#ffffff" heigth="16" width="16" />
                 Visit
               </a>
             )}

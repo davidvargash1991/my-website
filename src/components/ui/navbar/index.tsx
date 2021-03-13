@@ -10,11 +10,15 @@ import { ILanguageProps } from "data/strings";
 
 export interface INavigationProps extends ILanguageProps {
   viewportWidth: number;
+  animateAbout: boolean;
+  animateExperience: boolean;
   handleAboutClick: () => void;
   handlePortfolioClick: () => void;
   handleExperienceClick: () => void;
   handleSpanishClick: () => void;
   handleEnglishClick: () => void;
+  enableAnimateAbout: () => void;
+  enableAnimateExperience: () => void;
 }
 
 interface INavbarState {
@@ -62,6 +66,7 @@ class Navbar extends Component<INavigationProps, INavbarState> {
         : orientation === "landscape"
         ? 1
         : 80;
+
     if (window.scrollY > heroLimit) {
       if (!this.state.hasPassedHero) {
         this.setState({ hasPassedHero: true });
@@ -69,6 +74,18 @@ class Navbar extends Component<INavigationProps, INavbarState> {
     } else {
       if (this.state.hasPassedHero) {
         this.setState({ hasPassedHero: false });
+      }
+    }
+
+    if (!this.props.animateAbout && this.props.viewportWidth > 767) {
+      if (window.scrollY >= 300) {
+        this.props.enableAnimateAbout();
+      }
+    }
+
+    if (!this.props.animateExperience && this.props.viewportWidth > 767) {
+      if (window.scrollY >= 2210) {
+        this.props.enableAnimateExperience();
       }
     }
   };

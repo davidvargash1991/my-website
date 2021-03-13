@@ -4,7 +4,6 @@ import cx from "classnames";
 import moment from "moment";
 import { useSwipeable } from "react-swipeable";
 import ExperienceItem from "./item";
-import { ILanguageProps } from "data/strings";
 import { ISectionProps } from "../about";
 import Subtitle from "components/ui/subtitle";
 import Caret from "components/ui/icons/caret";
@@ -12,8 +11,12 @@ import reactLogo from "icons/react.png";
 import netLogo from "icons/net.png";
 import jsLogo from "icons/js.png";
 
-const Experience: React.FC<ISectionProps> = React.forwardRef(
-  (props: ILanguageProps, ref: React.Ref<any>) => {
+interface IExperienceProps extends ISectionProps {
+  animate: boolean;
+}
+
+const Experience: React.FC<IExperienceProps> = React.forwardRef(
+  (props: IExperienceProps, ref: React.Ref<any>) => {
     const [activeItem, setActiveItem] = useState(0);
 
     const handleNextClick = () => {
@@ -57,19 +60,29 @@ const Experience: React.FC<ISectionProps> = React.forwardRef(
         </div>
         <div className={styles.infoContainer}>
           <div className={styles.info}>
-            <div className={styles.item}>
+            <div
+              className={cx(styles.item, { [styles.moveUp]: props.animate })}
+            >
               <img className={styles.img} src={reactLogo} alt="react" />
               <div className={styles.name}>{`${expReact} ${
                 lang === "es" ? "años de experiencia" : "years of experience"
               }`}</div>
             </div>
-            <div className={styles.item}>
+            <div
+              className={cx(styles.item, styles.middle, {
+                [styles.moveUp]: props.animate,
+              })}
+            >
               <img className={styles.img} src={netLogo} alt="dotnet" />
               <div className={styles.name}>{`${expDotNet} ${
                 lang === "es" ? "años de experiencia" : "years of experience"
               }`}</div>
             </div>
-            <div className={cx(styles.item, styles.last)}>
+            <div
+              className={cx(styles.item, styles.last, {
+                [styles.moveUp]: props.animate,
+              })}
+            >
               <img className={styles.img} src={jsLogo} alt="javascript" />
               <div className={styles.name}>{`${expDotNet} ${
                 lang === "es" ? "años de experiencia" : "years of experience"
