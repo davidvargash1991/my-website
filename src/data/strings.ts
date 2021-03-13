@@ -52,7 +52,6 @@ export interface IExperience {
 }
 
 export interface ILanguage {
-  heroTitle: string;
   heroSubtitle: string;
   aboutMeTitle: string;
   textAbout: string;
@@ -83,7 +82,6 @@ const years = moment().diff("2011-08-01", "years");
 
 export const strings: IStrings = {
   spanish: {
-    heroTitle: "Full Stack Developer",
     heroSubtitle:
       "Soy un desarrollador Full Stack experimentado, me enfoco sobre todo en desarrollo FrontEnd el cual disfruto bastante",
     aboutMeTitle: "Sobre mi",
@@ -359,7 +357,6 @@ export const strings: IStrings = {
     ],
   },
   english: {
-    heroTitle: "Full Stack Developer",
     heroSubtitle:
       "I am an experienced Full Stack developer, I focus mostly on FrontEnd Development which I enjoy a lot",
     aboutMeTitle: "About Me",

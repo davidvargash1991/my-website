@@ -34,6 +34,13 @@
 
   &:hover {
     cursor: pointer;
+    transform: translateY(-5px);
+
+    svg {
+      path {
+        stroke: $primary;
+      }
+    }
   }
 }
 
@@ -48,6 +55,13 @@
 
   &:hover {
     cursor: pointer;
+    transform: translateY(-5px);
+
+    svg {
+      path {
+        stroke: $primary;
+      }
+    }
   }
 }
 
