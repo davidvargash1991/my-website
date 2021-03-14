@@ -130,10 +130,26 @@
 
   .caretNext {
     right: 17px;
+
+    &:hover {
+      svg {
+        path {
+          stroke: $white;
+        }
+      }
+    }
   }
 
   .caretPrev {
     left: 4px;
+
+    &:hover {
+      svg {
+        path {
+          stroke: $white;
+        }
+      }
+    }
   }
 
   .infoContainer {

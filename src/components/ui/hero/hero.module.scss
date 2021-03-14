@@ -131,6 +131,31 @@
   z-index: 0;
 }
 
+@media only screen and (max-width: 1280px) {
+  .textContainer {
+    .title {
+      font-size: 4rem;
+    }
+    .subtitle {
+      font-size: 3rem;
+    }
+    .images {
+      margin-left: 40px;
+
+      .logo {
+        height: 12vh;
+        width: 12vh;
+      }
+    }
+  }
+  .photoContainer {
+    img {
+      height: 25vh;
+      width: 25vh;
+    }
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .container {
     height: 77vh;
