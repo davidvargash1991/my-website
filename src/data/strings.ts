@@ -12,7 +12,6 @@ import netLogoOrange from "icons/net-orange-bg.png";
 import ny from "icons/ny.jpg";
 import leopard from "icons/leopard.jpg";
 import reactLogoText from "icons/react.png";
-import reduxLogo from "icons/redux.png";
 import nextLogo from "icons/next.png";
 import netLogo from "icons/net.png";
 import sqlLogo from "icons/sql.svg";
@@ -161,7 +160,7 @@ export const strings: IStrings = {
           },
           {
             alt: "Redux",
-            img: reduxLogo,
+            img: null,
           },
           {
             alt: "Typescript",
@@ -439,7 +438,7 @@ export const strings: IStrings = {
           },
           {
             alt: "Redux",
-            img: reduxLogo,
+            img: null,
           },
           {
             alt: "Typescript",

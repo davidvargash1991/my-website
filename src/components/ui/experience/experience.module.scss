@@ -75,7 +75,6 @@
 
 .info {
   display: flex;
-  flex-wrap: wrap;
   max-width: 920px;
   margin: 15px auto;
   justify-content: space-between;
@@ -158,20 +157,28 @@
 
   .item {
     justify-content: center;
-    width: 67%;
-    height: 120px;
-    border-bottom: 1px $white solid;
+    width: 33%;
     padding: 10px;
     margin: 0 auto;
-    top: 0;
+    top: 130px;
 
-    &.last {
-      border-bottom: none;
+    svg {
+      height: 30px;
+      width: 30px;
     }
+  }
+
+  .moveUp {
+    transform: translateY(-130px);
+  }
+
+  .img {
+    height: 50px;
+    width: 50px;
   }
 
   .name {
     text-align: center;
-    margin-bottom: 5px;
+    font-size: 1.8rem;
   }
 }

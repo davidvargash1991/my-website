@@ -77,14 +77,18 @@ class Navbar extends Component<INavigationProps, INavbarState> {
       }
     }
 
-    if (!this.props.animateAbout && this.props.viewportWidth > 767) {
+    if (!this.props.animateAbout) {
       if (window.scrollY >= 300) {
         this.props.enableAnimateAbout();
       }
     }
 
-    if (!this.props.animateExperience && this.props.viewportWidth > 767) {
-      if (window.scrollY >= 2210) {
+    console.log("scroll", window.scrollY);
+
+    const experienceLocation = this.props.viewportWidth > 767 ? 2210 : 2300;
+
+    if (!this.props.animateExperience) {
+      if (window.scrollY >= experienceLocation) {
         this.props.enableAnimateExperience();
       }
     }

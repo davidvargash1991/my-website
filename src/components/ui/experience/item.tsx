@@ -9,6 +9,7 @@ import GithubIcon from "components/ui/icons/githubFull";
 import JestIcon from "components/ui/icons/jest";
 import JsIcon from "components/ui/icons/javascript";
 import XamarinIcon from "components/ui/icons/xamarin";
+import ReduxIcon from "components/ui/icons/redux";
 
 interface IExperienceItemProps {
   experience: IExperience;
@@ -41,16 +42,18 @@ const ExperienceItem: React.FC<IExperienceItemProps> = ({ experience }) => {
         <div className={styles.techs}>
           {experience.technologies.map((tech, idx) => {
             switch (tech.alt) {
-              case "Typescript":
-                return <TsIcon />;
-              case "Sass":
-                return <SassIcon />;
               case "Github":
                 return <GithubIcon />;
               case "Jest":
                 return <JestIcon />;
               case "Javascript":
                 return <JsIcon />;
+              case "Redux":
+                return <ReduxIcon />;
+              case "Sass":
+                return <SassIcon />;
+              case "Typescript":
+                return <TsIcon />;
               case "Xamarin":
                 return <XamarinIcon />;
               default:
