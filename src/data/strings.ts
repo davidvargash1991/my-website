@@ -13,16 +13,10 @@ import ny from "icons/ny.jpg";
 import leopard from "icons/leopard.jpg";
 import reactLogoText from "icons/react.png";
 import reduxLogo from "icons/redux.png";
-import tsLogo from "icons/ts.png";
 import nextLogo from "icons/next.png";
-import sassLogo from "icons/sass.png";
-import jestLogo from "icons/jest.png";
-import githubLogo from "icons/github.png";
 import netLogo from "icons/net.png";
 import sqlLogo from "icons/sql.svg";
-import jsLogo from "icons/js.png";
 import netOld from "icons/net-old.png";
-import xamarin from "icons/xamarin.png";
 import delphi from "icons/delphi.png";
 import oracle from "icons/oracle.png";
 import azureLogo from "icons/azure.png";
@@ -171,7 +165,7 @@ export const strings: IStrings = {
           },
           {
             alt: "Typescript",
-            img: tsLogo,
+            img: null,
           },
           {
             alt: "Next.js",
@@ -179,15 +173,15 @@ export const strings: IStrings = {
           },
           {
             alt: "Sass",
-            img: sassLogo,
+            img: null,
           },
           {
             alt: "Jest",
-            img: jestLogo,
+            img: null,
           },
           {
             alt: "Github",
-            img: githubLogo,
+            img: null,
           },
         ],
         img: tl,
@@ -264,7 +258,7 @@ export const strings: IStrings = {
           },
           {
             alt: "Javascript",
-            img: jsLogo,
+            img: null,
           },
           {
             alt: "Sql Server",
@@ -293,7 +287,7 @@ export const strings: IStrings = {
           },
           {
             alt: "Javascript",
-            img: jsLogo,
+            img: null,
           },
           {
             alt: "Sql Server",
@@ -301,7 +295,7 @@ export const strings: IStrings = {
           },
           {
             alt: "Xamarin",
-            img: xamarin,
+            img: null,
           },
         ],
         img: info,
@@ -324,7 +318,7 @@ export const strings: IStrings = {
           },
           {
             alt: "Javascript",
-            img: jsLogo,
+            img: null,
           },
           {
             alt: "Sql Server",
@@ -449,7 +443,7 @@ export const strings: IStrings = {
           },
           {
             alt: "Typescript",
-            img: tsLogo,
+            img: null,
           },
           {
             alt: "Next.js",
@@ -457,15 +451,15 @@ export const strings: IStrings = {
           },
           {
             alt: "Sass",
-            img: sassLogo,
+            img: null,
           },
           {
             alt: "Jest",
-            img: jestLogo,
+            img: null,
           },
           {
             alt: "Github",
-            img: githubLogo,
+            img: null,
           },
         ],
         img: tl,
@@ -542,7 +536,7 @@ export const strings: IStrings = {
           },
           {
             alt: "Javascript",
-            img: jsLogo,
+            img: null,
           },
           {
             alt: "Sql Server",
@@ -571,7 +565,7 @@ export const strings: IStrings = {
           },
           {
             alt: "Javascript",
-            img: jsLogo,
+            img: null,
           },
           {
             alt: "Sql Server",
@@ -579,7 +573,7 @@ export const strings: IStrings = {
           },
           {
             alt: "Xamarin",
-            img: xamarin,
+            img: null,
           },
         ],
         img: info,
@@ -602,7 +596,7 @@ export const strings: IStrings = {
           },
           {
             alt: "Javascript",
-            img: jsLogo,
+            img: null,
           },
           {
             alt: "Sql Server",

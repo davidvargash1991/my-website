@@ -3,6 +3,12 @@ import styles from "./item.module.scss";
 import cx from "classnames";
 import { IExperience } from "data/strings";
 import location from "icons/location.svg";
+import TsIcon from "components/ui/icons/typescript";
+import SassIcon from "components/ui/icons/sass";
+import GithubIcon from "components/ui/icons/githubFull";
+import JestIcon from "components/ui/icons/jest";
+import JsIcon from "components/ui/icons/javascript";
+import XamarinIcon from "components/ui/icons/xamarin";
 
 interface IExperienceItemProps {
   experience: IExperience;
@@ -33,14 +39,31 @@ const ExperienceItem: React.FC<IExperienceItemProps> = ({ experience }) => {
       <div className={styles.technologies}>
         <div className={cx(styles.position, styles.tech)}>Technologies:</div>
         <div className={styles.techs}>
-          {experience.technologies.map((tech, idx) => (
-            <img
-              key={tech.alt}
-              className={styles.tech}
-              alt={tech.alt}
-              src={tech.img}
-            />
-          ))}
+          {experience.technologies.map((tech, idx) => {
+            switch (tech.alt) {
+              case "Typescript":
+                return <TsIcon />;
+              case "Sass":
+                return <SassIcon />;
+              case "Github":
+                return <GithubIcon />;
+              case "Jest":
+                return <JestIcon />;
+              case "Javascript":
+                return <JsIcon />;
+              case "Xamarin":
+                return <XamarinIcon />;
+              default:
+                return (
+                  <img
+                    key={tech.alt}
+                    className={styles.tech}
+                    alt={tech.alt}
+                    src={tech.img}
+                  />
+                );
+            }
+          })}
         </div>
       </div>
     </div>

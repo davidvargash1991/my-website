@@ -9,7 +9,7 @@ import Subtitle from "components/ui/subtitle";
 import Caret from "components/ui/icons/caret";
 import reactLogo from "icons/react.png";
 import netLogo from "icons/net.png";
-import jsLogo from "icons/js.png";
+import JsIcon from "components/ui/icons/javascript";
 
 interface IExperienceProps extends ISectionProps {
   animate: boolean;
@@ -83,7 +83,7 @@ const Experience: React.FC<IExperienceProps> = React.forwardRef(
                 [styles.moveUp]: props.animate,
               })}
             >
-              <img className={styles.img} src={jsLogo} alt="javascript" />
+              <JsIcon />
               <div className={styles.name}>{`${expDotNet} ${
                 lang === "es" ? "años de experiencia" : "years of experience"
               }`}</div>

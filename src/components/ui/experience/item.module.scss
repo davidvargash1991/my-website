@@ -18,21 +18,26 @@
 
 .content {
   width: 100%;
-  height: auto;
+  height: calc(70% - 8px);
   text-align: left;
   padding-left: 25px;
+  box-sizing: border-box;
+  background-color: rgba(23, 99, 155, 0.7);
+  display: inline-block;
+  border-bottom-left-radius: 10px;
 }
 
 ul {
   list-style: none;
+
   li {
     font-weight: 300;
     font-size: 1.6rem;
-    color: $gray-title;
+    color: $white;
 
     &::before {
       content: "\2022";
-      color: $primary;
+      color: $white;
       font-weight: bold;
       display: inline-block;
       width: 1em;
@@ -43,20 +48,21 @@ ul {
 }
 
 .position {
-  font-size: 2.4rem;
+  font-size: 3.5rem;
   font-family: $titles;
-  color: $primary;
-  margin-left: 3px;
-  margin-bottom: 12px;
+  color: $white;
+  margin: 16px 0 12px 3px;
 
   &.tech {
     margin-bottom: 18px;
+    color: $primary;
+    font-size: 2.8rem;
   }
 }
 
 .location {
   font-size: 1.5rem;
-  color: $gray-secondary;
+  color: $gray-background;
 }
 
 .technologies {
@@ -64,6 +70,8 @@ ul {
   background-color: $gray-background;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .techs {
@@ -91,7 +99,7 @@ ul {
   }
 
   .content {
-    width: 93%;
+    height: calc(73% - 8px);
   }
 
   .techs {
@@ -107,7 +115,7 @@ ul {
 @media only screen and (max-width: 767px) {
   .container {
     padding: 0;
-    height: 550px;
+    height: 560px;
     display: block;
     width: 77vw;
   }
@@ -129,13 +137,20 @@ ul {
 
   .content {
     padding-left: 10px;
-    width: 93%;
+    border-bottom-left-radius: 0;
+  }
+
+  .position {
+    font-size: 3.1rem;
   }
 
   .technologies {
-    height: 146px;
+    height: 184px;
     border-top-right-radius: 0;
     border-bottom-left-radius: 10px;
+    padding: 0 10px;
+    position: absolute;
+    top: 375px;
   }
 
   .techs {
@@ -146,6 +161,11 @@ ul {
     .tech {
       height: 50px;
       width: 50px;
+    }
+
+    svg {
+      height: 24px;
+      width: 24px;
     }
   }
 }
