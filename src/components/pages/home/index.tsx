@@ -113,12 +113,7 @@ class Home extends Component<IHomeProps, IHomeState> {
           strings={strings}
           animate={this.state.animateExperience}
         />
-        <Footer
-          strings={strings}
-          handleAboutClick={this.handleAboutClick}
-          handlePortfolioClick={this.handlePortfolioClick}
-          handleExperienceClick={this.handleExperienceClick}
-        />
+        <Footer strings={strings} />
       </React.Fragment>
     );
   }

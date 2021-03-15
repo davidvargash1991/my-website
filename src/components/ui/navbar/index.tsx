@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styles from "./navbar.module.scss";
 import cx from "classnames";
-import mail from "icons/mail.svg";
+import Mail from "components/ui/icons/mail";
 import Linkedin from "components/ui/icons/linkedin";
 import Github from "components/ui/icons/github";
 import es from "icons/es.svg";
@@ -83,8 +83,6 @@ class Navbar extends Component<INavigationProps, INavbarState> {
       }
     }
 
-    console.log("scroll", window.scrollY);
-
     const experienceLocation = this.props.viewportWidth > 767 ? 2210 : 2300;
 
     if (!this.props.animateExperience) {
@@ -120,7 +118,9 @@ class Navbar extends Component<INavigationProps, INavbarState> {
                 className={styles.mail}
                 href="mailto:davidvargash.1991@tutanota.com"
               >
-                <img className={styles.icon} alt="mail" src={mail} />
+                <div className={styles.icon}>
+                  <Mail />
+                </div>
                 <div className={styles.text}>
                   davidvargash.1991@tutanota.com
                 </div>

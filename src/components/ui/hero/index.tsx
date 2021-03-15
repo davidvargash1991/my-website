@@ -14,7 +14,7 @@ class Hero extends Component<ILanguageProps> {
           <div className={styles.textContainer}>
             <img className={styles.photo} src={photo} alt="David Vargas" />
             <h1 className={styles.title}>
-              Full Stack <span>Developer</span>
+              David <span>Vargas</span>
             </h1>
             <div className={styles.subtitle}>{strings.heroSubtitle}</div>
             <div className={styles.images}>

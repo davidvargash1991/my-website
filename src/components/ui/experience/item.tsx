@@ -43,19 +43,19 @@ const ExperienceItem: React.FC<IExperienceItemProps> = ({ experience }) => {
           {experience.technologies.map((tech, idx) => {
             switch (tech.alt) {
               case "Github":
-                return <GithubIcon />;
+                return <GithubIcon key={tech.alt} />;
               case "Jest":
-                return <JestIcon />;
+                return <JestIcon key={tech.alt} />;
               case "Javascript":
-                return <JsIcon />;
+                return <JsIcon key={tech.alt} />;
               case "Redux":
-                return <ReduxIcon />;
+                return <ReduxIcon key={tech.alt} />;
               case "Sass":
-                return <SassIcon />;
+                return <SassIcon key={tech.alt} />;
               case "Typescript":
-                return <TsIcon />;
+                return <TsIcon key={tech.alt} />;
               case "Xamarin":
-                return <XamarinIcon />;
+                return <XamarinIcon key={tech.alt} />;
               default:
                 return (
                   <img
