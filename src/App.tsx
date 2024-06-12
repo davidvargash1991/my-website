@@ -1,22 +1,9 @@
 import React from "react";
-import Home from "./components/pages/home";
-import { strings } from "data/strings";
+import Router from "components/router/Router";
+import "./styles/global.scss";
 
 const App = () => {
-  const handleSpanishClick = () => {
-    window.location.replace(`${window.location.origin}/es`);
-  };
-  const handleEnglishClick = () => {
-    window.location.replace(`${window.location.origin}/en`);
-  };
-  const lang = window.location.pathname.substr(1, 2);
-  return (
-    <Home
-      strings={lang === "es" ? strings.spanish : strings.english}
-      handleSpanishClick={handleSpanishClick}
-      handleEnglishClick={handleEnglishClick}
-    />
-  );
+  return <Router />;
 };
 
 export default App;

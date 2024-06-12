@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./navbar.module.scss";
+import { useSearchParams } from "react-router-dom";
 import cx from "classnames";
 import Mail from "components/ui/icons/mail";
 import Linkedin from "components/ui/icons/linkedin";
@@ -15,8 +16,6 @@ export interface INavigationProps extends ILanguageProps {
   handleAboutClick: () => void;
   handlePortfolioClick: () => void;
   handleExperienceClick: () => void;
-  handleSpanishClick: () => void;
-  handleEnglishClick: () => void;
   enableAnimateAbout: () => void;
   enableAnimateExperience: () => void;
 }
@@ -26,8 +25,10 @@ interface INavbarState {
   orientation: string;
 }
 
-class Navbar extends Component<INavigationProps, INavbarState> {
-  getScreenOrientation = () => {
+const Navbar: React.FC<INavigationProps> = (props) => {
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const getScreenOrientation = () => {
     if (window.matchMedia("(orientation: portrait)").matches) {
       return "portrait";
     }
@@ -39,173 +40,162 @@ class Navbar extends Component<INavigationProps, INavbarState> {
     return "";
   };
 
-  public state: INavbarState = {
-    hasPassedHero: false,
-    orientation: this.getScreenOrientation(),
-  };
+  const [hasPassedHero, setHasPassedHero] = useState(false);
+  const [orientation, setOrientation] = useState(getScreenOrientation());
 
-  private logoClick = () => {
+  const logoClick = () => {
     const c = document.documentElement.scrollTop || document.body.scrollTop;
     if (c > 0) {
-      window.requestAnimationFrame(this.logoClick);
+      window.requestAnimationFrame(logoClick);
       window.scrollTo(0, c - c / 8);
     }
   };
 
-  private setScreenOrientation = () => {
+  const setScreenOrientation = () => {
     setTimeout(() => {
-      this.setState({ orientation: this.getScreenOrientation() });
+      setOrientation(getScreenOrientation());
     }, 300);
   };
 
-  private listenToScroll = (event: any) => {
-    const { orientation } = this.state;
+  const listenToScroll = (event: any) => {
     const heroLimit =
-      this.props.viewportWidth > 767
-        ? 160
-        : orientation === "landscape"
-        ? 1
-        : 80;
+      props.viewportWidth > 767 ? 160 : orientation === "landscape" ? 1 : 80;
 
     if (window.scrollY > heroLimit) {
-      if (!this.state.hasPassedHero) {
-        this.setState({ hasPassedHero: true });
+      if (!hasPassedHero) {
+        setHasPassedHero(true);
       }
     } else {
-      if (this.state.hasPassedHero) {
-        this.setState({ hasPassedHero: false });
+      if (hasPassedHero) {
+        setHasPassedHero(false);
       }
     }
 
-    if (!this.props.animateAbout) {
+    if (!props.animateAbout) {
       if (window.scrollY >= 300) {
-        this.props.enableAnimateAbout();
+        props.enableAnimateAbout();
       }
     }
 
-    const experienceLocation = this.props.viewportWidth > 767 ? 2210 : 2300;
+    const experienceLocation = props.viewportWidth > 767 ? 2210 : 2300;
 
-    if (!this.props.animateExperience) {
+    if (!props.animateExperience) {
       if (window.scrollY >= experienceLocation) {
-        this.props.enableAnimateExperience();
+        props.enableAnimateExperience();
       }
     }
   };
 
-  public componentDidMount() {
-    window.addEventListener("scroll", this.listenToScroll);
-    this.setScreenOrientation();
-    window.addEventListener("orientationchange", this.setScreenOrientation);
-  }
-  public componentWillUnmount() {
-    window.removeEventListener("scroll", this.listenToScroll);
-    window.removeEventListener("orientationchange", this.setScreenOrientation);
-  }
-  public render() {
-    const { hasPassedHero } = this.state;
-    return (
-      <nav className={cx(styles.navbar, hasPassedHero ? styles.shadow : "")}>
-        <div
-          className={cx(
-            styles.upper,
-            styles.upperContent,
-            hasPassedHero ? styles.color : ""
-          )}
-        >
-          <div className={cx(styles.content, styles.upperContent)}>
-            <div>
-              <a
-                className={styles.mail}
-                href="mailto:davidvargash.1991@tutanota.com"
+  const handleEnglishClick = () => {
+    setSearchParams({ lang: "en" });
+  };
+
+  const handleSpanishClick = () => {
+    setSearchParams({ lang: "es" });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenToScroll);
+    setScreenOrientation();
+    window.addEventListener("orientationchange", setScreenOrientation);
+
+    return () => {
+      window.removeEventListener("scroll", listenToScroll);
+      window.removeEventListener("orientationchange", setScreenOrientation);
+    };
+  }, []);
+
+  return (
+    <nav className={cx(styles.navbar, hasPassedHero ? styles.shadow : "")}>
+      <div
+        className={cx(
+          styles.upper,
+          styles.upperContent,
+          hasPassedHero ? styles.color : ""
+        )}
+      >
+        <div className={cx(styles.content, styles.upperContent)}>
+          <div>
+            <a
+              className={styles.mail}
+              href="mailto:davidvargash.1991@tutanota.com"
+            >
+              <div className={styles.icon}>
+                <Mail />
+              </div>
+              <div className={styles.text}>davidvargash.1991@tutanota.com</div>
+            </a>
+          </div>
+          <div className={styles.social}>
+            <a
+              href="https://www.linkedin.com/in/david-vargas-8aa700137/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div
+                className={cx(
+                  "flex-center",
+                  styles.sociallink,
+                  hasPassedHero ? styles.blue : ""
+                )}
               >
-                <div className={styles.icon}>
-                  <Mail />
-                </div>
-                <div className={styles.text}>
-                  davidvargash.1991@tutanota.com
-                </div>
-              </a>
-            </div>
-            <div className={styles.social}>
-              <a
-                href="https://www.linkedin.com/in/david-vargas-8aa700137/"
-                target="_blank"
-                rel="noopener noreferrer"
+                <Linkedin color="#ffffff" />
+              </div>
+            </a>
+            <a
+              href="https://github.com/davidvargash1991"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div
+                className={cx(
+                  "flex-center",
+                  styles.sociallink,
+                  hasPassedHero ? styles.blue : ""
+                )}
               >
-                <div
-                  className={cx(
-                    "flex-center",
-                    styles.sociallink,
-                    hasPassedHero ? styles.blue : ""
-                  )}
-                >
-                  <Linkedin color="#ffffff" />
-                </div>
-              </a>
-              <a
-                href="https://github.com/davidvargash1991"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div
-                  className={cx(
-                    "flex-center",
-                    styles.sociallink,
-                    hasPassedHero ? styles.blue : ""
-                  )}
-                >
-                  <Github color="#ffffff" />
-                </div>
-              </a>
-            </div>
+                <Github color="#ffffff" />
+              </div>
+            </a>
           </div>
         </div>
-        <div className={styles.lower}>
-          <div className={styles.content}>
-            <div className={styles.logo} onClick={this.logoClick}>
-              David Vargas
+      </div>
+      <div className={styles.lower}>
+        <div className={styles.content}>
+          <div className={styles.logo} onClick={logoClick}>
+            David Vargas
+          </div>
+          <div className={cx("flex-center", styles.navigation)}>
+            <div className={styles.link} onClick={props.handleAboutClick}>
+              {props.strings.aboutMeTitle}
             </div>
-            <div className={cx("flex-center", styles.navigation)}>
-              <div
-                className={styles.link}
-                onClick={this.props.handleAboutClick}
-              >
-                {this.props.strings.aboutMeTitle}
-              </div>
-              <div
-                className={styles.link}
-                onClick={this.props.handlePortfolioClick}
-              >
-                {this.props.strings.portfolioTitle}
-              </div>
-              <div
-                className={styles.link}
-                onClick={this.props.handleExperienceClick}
-              >
-                {this.props.strings.experienceTitle}
-              </div>
+            <div className={styles.link} onClick={props.handlePortfolioClick}>
+              {props.strings.portfolioTitle}
             </div>
-            <div className={cx("flex-center", styles.language)}>
-              <img
-                className={cx(styles.icon, styles.flag)}
-                src={en}
-                alt="en"
-                title="English"
-                onClick={this.props.handleEnglishClick}
-              />
-              <img
-                className={cx(styles.icon, styles.flag)}
-                src={es}
-                alt="es"
-                title="Español"
-                onClick={this.props.handleSpanishClick}
-              />
+            <div className={styles.link} onClick={props.handleExperienceClick}>
+              {props.strings.experienceTitle}
             </div>
           </div>
+          <div className={cx("flex-center", styles.language)}>
+            <img
+              className={cx(styles.icon, styles.flag)}
+              src={en}
+              alt="en"
+              title="English"
+              onClick={handleEnglishClick}
+            />
+            <img
+              className={cx(styles.icon, styles.flag)}
+              src={es}
+              alt="es"
+              title="Español"
+              onClick={handleSpanishClick}
+            />
+          </div>
         </div>
-      </nav>
-    );
-  }
-}
+      </div>
+    </nav>
+  );
+};
 
 export default Navbar;

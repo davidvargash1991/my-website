@@ -1,11 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./about.module.scss";
 import cx from "classnames";
 import { ILanguageProps } from "data/strings";
 import Subtitle from "components/ui/subtitle";
+import { useSearchParams } from "react-router-dom";
 
 export interface ISectionProps extends ILanguageProps {
-  ref: React.Ref<any>;
+  ref: any;
 }
 
 interface IAboutProps extends ISectionProps {
@@ -14,10 +16,19 @@ interface IAboutProps extends ISectionProps {
 
 const About: React.FC<IAboutProps> = React.forwardRef(
   (props: IAboutProps, ref: React.Ref<any>) => {
+    const [searchParams] = useSearchParams();
+
     return (
       <div className={cx("container", styles.container)}>
         <Subtitle ref={ref} text={props.strings.aboutMeTitle} />
         <p className={styles.text}>{props.strings.textAbout}</p>
+        <Link
+          to={`/Profile?lang=${searchParams.get("lang") || "en"}`}
+          target="_blank"
+          className={cx("button-link", styles.link)}
+        >
+          {props.strings.btnCv}
+        </Link>
         <div className={styles.infoContainer}>
           <div className={styles.info}>
             <div

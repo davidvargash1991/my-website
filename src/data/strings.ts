@@ -53,6 +53,7 @@ export interface ILanguage {
   remoteText: string;
   locationTitle: string;
   locationText: string;
+  btnCv:string;
   responsiveText: string;
   portfolioTitle: string;
   portfolioText: string;
@@ -93,6 +94,7 @@ export const strings: IStrings = {
     portfolioText:
       "Estos son proyectos que creo en mi tiempo libre, me ayudan a practicar y aprender",
     experienceTitle: "Experiencia",
+    btnCv: 'Ver mi CV',
     projects: [
       {
         title: "Find your Home",
@@ -142,7 +144,7 @@ export const strings: IStrings = {
         company: "Truelogic Software",
         location: "Remoto",
         position: "Full Stack Developer",
-        date: "2019 - A la fecha",
+        date: "2019 - 2024",
         facts: [
           "Plataforma de creación de sitios web para fotógrafos",
           "El cliente fue Zenfolio en San Francisco",
@@ -360,6 +362,7 @@ export const strings: IStrings = {
     remoteText: "I have experience working with distributed teams",
     locationTitle: "Location",
     locationText: "Bogota - Colombia",
+    btnCv: 'View My CV',
     responsiveText:
       "I build the applications with responsive design in mind, always testing across browsers",
     techText:
@@ -420,7 +423,7 @@ export const strings: IStrings = {
         company: "Truelogic Software",
         location: "Remote",
         position: "Full Stack Developer",
-        date: "2019 - Present",
+        date: "2019 - 2024",
         facts: [
           "Website editor project for photographers",
           "The client was Zenfolio based in San Francisco",

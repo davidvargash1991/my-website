@@ -5,7 +5,7 @@ import cx from "classnames";
 interface ISubtitleProps {
   text: string;
   className?: string;
-  ref?: React.Ref<any>;
+  ref?: any;
 }
 
 const SubTitle: React.FC<ISubtitleProps> = React.forwardRef(
