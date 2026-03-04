@@ -1,22 +1,24 @@
 import React, { useState } from "react";
 import styles from "./experience.module.scss";
-import cx from "classnames";
-import moment from "moment";
+import dayjs from "dayjs";
+import customParseFormat from "dayjs/plugin/customParseFormat";
 import { useSwipeable } from "react-swipeable";
 import ExperienceItem from "./item";
-import { ISectionProps } from "../about";
+import type { ISectionProps } from "../about";
 import Subtitle from "components/ui/subtitle";
 import Caret from "components/ui/icons/caret";
 import reactLogo from "icons/react.png";
 import netLogo from "icons/net.png";
 import JsIcon from "components/ui/icons/javascript";
 
+dayjs.extend(customParseFormat);
+
 interface IExperienceProps extends ISectionProps {
   animate: boolean;
 }
 
-const Experience: React.FC<IExperienceProps> = React.forwardRef(
-  (props: IExperienceProps, ref: React.Ref<any>) => {
+const Experience = React.forwardRef<HTMLDivElement, IExperienceProps>(
+  (props, ref) => {
     const [activeItem, setActiveItem] = useState(0);
 
     const handleNextClick = () => {
@@ -30,17 +32,17 @@ const Experience: React.FC<IExperienceProps> = React.forwardRef(
     };
 
     const handlers = useSwipeable({
-      onSwipedRight: (eventData) => handlePrevClick(),
-      onSwipedLeft: (eventData) => handleNextClick(),
+      onSwipedRight: () => handlePrevClick(),
+      onSwipedLeft: () => handleNextClick(),
     });
 
-    const expReact = moment().diff(moment("01-12-2018", "DD-MM-YYYY"), "years");
-    const expDotNet = moment().diff("2015-11-01", "years");
+    const expReact = dayjs().diff(dayjs("01-12-2018", "DD-MM-YYYY"), "year");
+    const expDotNet = dayjs().diff("2015-11-01", "year");
 
     const lang = window.location.pathname.substr(1, 2);
 
     return (
-      <div ref={ref} className={cx("container", styles.container)}>
+      <div ref={ref} className={`container ${styles.container}`}>
         <Subtitle
           className={styles.subtitle}
           text={props.strings.experienceTitle}
@@ -61,7 +63,7 @@ const Experience: React.FC<IExperienceProps> = React.forwardRef(
         <div className={styles.infoContainer}>
           <div className={styles.info}>
             <div
-              className={cx(styles.item, { [styles.moveUp]: props.animate })}
+              className={ `${styles.item} ${props.animate ? styles.moveUp : ''}` }
             >
               <img className={styles.img} src={reactLogo} alt="react" />
               <div className={styles.name}>{`${expReact} ${
@@ -69,9 +71,7 @@ const Experience: React.FC<IExperienceProps> = React.forwardRef(
               }`}</div>
             </div>
             <div
-              className={cx(styles.item, styles.middle, {
-                [styles.moveUp]: props.animate,
-              })}
+              className={ `${styles.item} ${styles.middle} ${props.animate ? styles.moveUp : ''}` }
             >
               <img className={styles.img} src={netLogo} alt="dotnet" />
               <div className={styles.name}>{`${expDotNet} ${
@@ -79,9 +79,7 @@ const Experience: React.FC<IExperienceProps> = React.forwardRef(
               }`}</div>
             </div>
             <div
-              className={cx(styles.item, styles.last, {
-                [styles.moveUp]: props.animate,
-              })}
+              className={ `${styles.item} ${styles.last} ${props.animate ? styles.moveUp : ''}` }
             >
               <JsIcon />
               <div className={styles.name}>{`${expDotNet} ${

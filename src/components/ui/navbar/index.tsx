@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import styles from "./navbar.module.scss";
 import { useSearchParams } from "react-router-dom";
-import cx from "classnames";
 import Mail from "components/ui/icons/mail";
 import Linkedin from "components/ui/icons/linkedin";
 import Github from "components/ui/icons/github";
 import es from "icons/es.svg";
 import en from "icons/en.svg";
-import { ILanguageProps } from "data/strings";
+import type { ILanguageProps } from "data/strings";
 
 export interface INavigationProps extends ILanguageProps {
   viewportWidth: number;
@@ -20,13 +19,8 @@ export interface INavigationProps extends ILanguageProps {
   enableAnimateExperience: () => void;
 }
 
-interface INavbarState {
-  hasPassedHero: boolean;
-  orientation: string;
-}
-
 const Navbar: React.FC<INavigationProps> = (props) => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [, setSearchParams] = useSearchParams();
 
   const getScreenOrientation = () => {
     if (window.matchMedia("(orientation: portrait)").matches) {
@@ -57,7 +51,7 @@ const Navbar: React.FC<INavigationProps> = (props) => {
     }, 300);
   };
 
-  const listenToScroll = (event: any) => {
+  const listenToScroll = () => {
     const heroLimit =
       props.viewportWidth > 767 ? 160 : orientation === "landscape" ? 1 : 80;
 
@@ -106,15 +100,11 @@ const Navbar: React.FC<INavigationProps> = (props) => {
   }, []);
 
   return (
-    <nav className={cx(styles.navbar, hasPassedHero ? styles.shadow : "")}>
+    <nav className={`${styles.navbar} ${hasPassedHero ? styles.shadow : ""}`}>
       <div
-        className={cx(
-          styles.upper,
-          styles.upperContent,
-          hasPassedHero ? styles.color : ""
-        )}
+        className={`${styles.upper} ${styles.upperContent} ${hasPassedHero ? styles.color : ""}`}
       >
-        <div className={cx(styles.content, styles.upperContent)}>
+        <div className={`${styles.content} ${styles.upperContent}`}>
           <div>
             <a
               className={styles.mail}
@@ -133,11 +123,7 @@ const Navbar: React.FC<INavigationProps> = (props) => {
               rel="noopener noreferrer"
             >
               <div
-                className={cx(
-                  "flex-center",
-                  styles.sociallink,
-                  hasPassedHero ? styles.blue : ""
-                )}
+                className={`flex-center ${styles.sociallink} ${hasPassedHero ? styles.blue : ""}`}
               >
                 <Linkedin color="#ffffff" />
               </div>
@@ -148,11 +134,7 @@ const Navbar: React.FC<INavigationProps> = (props) => {
               rel="noopener noreferrer"
             >
               <div
-                className={cx(
-                  "flex-center",
-                  styles.sociallink,
-                  hasPassedHero ? styles.blue : ""
-                )}
+                className={`flex-center ${styles.sociallink} ${hasPassedHero ? styles.blue : ""}`}
               >
                 <Github color="#ffffff" />
               </div>
@@ -165,7 +147,7 @@ const Navbar: React.FC<INavigationProps> = (props) => {
           <div className={styles.logo} onClick={logoClick}>
             David Vargas
           </div>
-          <div className={cx("flex-center", styles.navigation)}>
+          <div className={`flex-center ${styles.navigation}`}>
             <div className={styles.link} onClick={props.handleAboutClick}>
               {props.strings.aboutMeTitle}
             </div>
@@ -176,16 +158,16 @@ const Navbar: React.FC<INavigationProps> = (props) => {
               {props.strings.experienceTitle}
             </div>
           </div>
-          <div className={cx("flex-center", styles.language)}>
+          <div className={`flex-center ${styles.language}`}>
             <img
-              className={cx(styles.icon, styles.flag)}
+              className={`${styles.icon} ${styles.flag}`}
               src={en}
               alt="en"
               title="English"
               onClick={handleEnglishClick}
             />
             <img
-              className={cx(styles.icon, styles.flag)}
+              className={`${styles.icon} ${styles.flag}`}
               src={es}
               alt="es"
               title="Español"

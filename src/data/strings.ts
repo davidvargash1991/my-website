@@ -1,4 +1,4 @@
-import moment from "moment";
+import dayjs from "dayjs";
 import tl from "icons/tl.jpg";
 import tsg from "icons/tsg.jpg";
 import everis from "icons/everis.png";
@@ -71,7 +71,7 @@ export interface ILanguageProps {
   strings: ILanguage;
 }
 
-const years = moment().diff("2011-08-01", "years");
+const years = dayjs().diff("2011-08-01", "year");
 
 export const strings: IStrings = {
   spanish: {

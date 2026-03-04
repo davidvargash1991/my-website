@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import styles from "./portfolio.module.scss";
-import cx from "classnames";
 import { useSwipeable } from "react-swipeable";
 import Project from "../project";
-import { IProject } from "data/strings";
-import { ISectionProps } from "../about";
+import type { IProject } from "data/strings";
+import type { ISectionProps } from "../about";
 import Subtitle from "components/ui/subtitle";
 import Pager from "components/ui/pager";
 
@@ -12,8 +11,8 @@ interface IPortfolioProps extends ISectionProps {
   viewportWidth: number;
 }
 
-const Portfolio: React.FC<IPortfolioProps> = React.forwardRef(
-  (props: IPortfolioProps, ref: React.Ref<any>) => {
+const Portfolio = React.forwardRef<HTMLDivElement, IPortfolioProps>(
+  (props, ref) => {
     const [page, setPage] = useState(0);
 
     const pageSize = props.viewportWidth > 767 ? 4 : 1;
@@ -21,8 +20,8 @@ const Portfolio: React.FC<IPortfolioProps> = React.forwardRef(
     const numberOfPages = Math.ceil(props.strings.projects.length / pageSize);
 
     const handlers = useSwipeable({
-      onSwipedRight: (eventData) => setPage(page > 0 ? page - 1 : 0),
-      onSwipedLeft: (eventData) => {
+      onSwipedRight: () => setPage(page > 0 ? page - 1 : 0),
+      onSwipedLeft: () => {
         if (page + 1 < numberOfPages) {
           setPage(page + 1);
         }
@@ -34,7 +33,7 @@ const Portfolio: React.FC<IPortfolioProps> = React.forwardRef(
     };
 
     return (
-      <div ref={ref} className={cx("container", styles.container)}>
+      <div ref={ref} className={`container ${styles.container}`}>
         <Subtitle text={props.strings.portfolioTitle} />
         <p className={styles.text}>{props.strings.portfolioText}</p>
         <div {...handlers} className={styles.projects}>
@@ -47,7 +46,6 @@ const Portfolio: React.FC<IPortfolioProps> = React.forwardRef(
         <Pager
           numberOfPages={numberOfPages}
           activePage={page}
-          pageSize={pageSize}
           onSetPage={handlePagerChange}
         />
       </div>

@@ -1,4 +1,4 @@
-@import "../../../styles/styleguide.scss";
+@use "../../../styles/styleguide.scss" as *;
 
 .sub {
   font-size: 3rem;

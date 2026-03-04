@@ -1,9 +1,9 @@
-import React from "react";
-import Router from "components/router/Router";
-import "./styles/global.scss";
+import Home from './components/pages/home';
 
 const App = () => {
-  return <Router />;
+  const lang = window.location.pathname.substr(1, 2);
+  console.log(lang);
+  return <Home />;
 };
 
 export default App;

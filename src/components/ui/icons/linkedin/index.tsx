@@ -1,5 +1,5 @@
 import React from "react";
-import { IIconProps } from "../IconProps";
+import type { IIconProps } from "../IconProps";
 
 const Linkedin: React.FC<IIconProps> = (props) => (
   <svg

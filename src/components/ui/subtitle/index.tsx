@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./subtitle.module.scss";
-import cx from "classnames";
 
 interface ISubtitleProps {
   text: string;
@@ -10,7 +9,7 @@ interface ISubtitleProps {
 
 const SubTitle: React.FC<ISubtitleProps> = React.forwardRef(
   (props: ISubtitleProps, ref: React.Ref<any>) => (
-    <h2 ref={ref ? ref : null} className={cx(styles.sub, props.className)}>
+    <h2 ref={ref ? ref : null} className={` ${styles.sub} ${props.className}`}>
       {props.text}
     </h2>
   )

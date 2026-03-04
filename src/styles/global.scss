@@ -1,4 +1,4 @@
-@import "./styleguide.scss";
+@use "./styleguide.scss" as *;
 
 .button-link {
   font-size: 1.5rem;

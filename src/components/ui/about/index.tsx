@@ -1,37 +1,32 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from "./about.module.scss";
-import cx from "classnames";
-import { ILanguageProps } from "data/strings";
+import type { ILanguageProps } from "data/strings";
 import Subtitle from "components/ui/subtitle";
-import { useSearchParams } from "react-router-dom";
 
 export interface ISectionProps extends ILanguageProps {
-  ref: any;
 }
 
 interface IAboutProps extends ISectionProps {
   animate: boolean;
 }
 
-const About: React.FC<IAboutProps> = React.forwardRef(
+const About = React.forwardRef<any, IAboutProps>(
   (props: IAboutProps, ref: React.Ref<any>) => {
-    const [searchParams] = useSearchParams();
 
     return (
-      <div className={cx("container", styles.container)}>
+      <div className={`container ${styles.container}`}>
         <Subtitle ref={ref} text={props.strings.aboutMeTitle} />
         <p className={styles.text}>{props.strings.textAbout}</p>
         <div className={styles.infoContainer}>
           <div className={styles.info}>
             <div
-              className={cx(styles.item, { [styles.moveUp]: props.animate })}
+              className={`${styles.item} ${props.animate ? styles.moveUp : ''}`}
             >
               <div className={styles.code}>
                 <div className={styles.upperBar}>
                   <div className={styles.upperButton} />
-                  <div className={cx(styles.upperButton, styles.second)} />
-                  <div className={cx(styles.upperButton, styles.last)} />
+                  <div className={`${styles.upperButton} ${styles.second}`} />
+                  <div className={`${styles.upperButton} ${styles.last}`} />
                 </div>
                 <div className={styles.line}>
                   <div className={styles.enumeration} />
@@ -91,9 +86,7 @@ const About: React.FC<IAboutProps> = React.forwardRef(
               <div className={styles.description}>{props.strings.totalExp}</div>
             </div>
             <div
-              className={cx(styles.item, styles.middle, {
-                [styles.moveUp]: props.animate,
-              })}
+              className={`${styles.item} ${styles.middle} ${props.animate ? styles.moveUp : ''}`}
             >
               <div className={styles.pc}>
                 <div className={styles.screen}>
@@ -102,20 +95,20 @@ const About: React.FC<IAboutProps> = React.forwardRef(
                     <div className={styles.head} />
                     <div className={styles.body} />
                   </div>
-                  <div className={cx(styles.participant, styles.small)}>
-                    <div className={cx(styles.head, styles.small)} />
-                    <div className={cx(styles.body, styles.small)} />
+                  <div className={`${styles.participant} ${styles.small}`}>
+                    <div className={`${styles.head} ${styles.small}`} />
+                    <div className={`${styles.body} ${styles.small}`} />
                   </div>
                   <div
-                    className={cx(styles.participant, styles.small, styles.two)}
+                    className={`${styles.participant} ${styles.small} ${styles.two}`}
                   >
-                    <div className={cx(styles.head, styles.small)} />
-                    <div className={cx(styles.body, styles.small)} />
+                    <div className={`${styles.head} ${styles.small}`} />
+                    <div className={`${styles.body} ${styles.small}`} />
                   </div>
                   <div className={styles.bottomMenu}>
-                    <div className={cx(styles.button, styles.red)} />
+                    <div className={`${styles.button} ${styles.red}`} />
                     <div className={styles.button} />
-                    <div className={cx(styles.button, styles.red)} />
+                    <div className={`${styles.button} ${styles.red}`} />
                   </div>
                 </div>
               </div>
@@ -127,16 +120,14 @@ const About: React.FC<IAboutProps> = React.forwardRef(
               </div>
             </div>
             <div
-              className={cx(styles.item, styles.last, {
-                [styles.moveUp]: props.animate,
-              })}
+              className={`${styles.item} ${styles.last} ${props.animate ? styles.moveUp : ''}`}
             >
               <div className={styles.location} />
               <div className={styles.name}>{props.strings.locationTitle}</div>
               <div className={styles.description}>
                 {props.strings.locationText}
               </div>
-              <div className={cx(styles.description, styles.multiple)}>
+              <div className={`${styles.description} ${styles.multiple}`}>
                 UTC -05:00
               </div>
             </div>

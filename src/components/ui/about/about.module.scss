@@ -1,4 +1,4 @@
-@import "../../../styles/styleguide.scss";
+@use "../../../styles/styleguide.scss" as *;
 
 .container {
   padding: 15px 0 0 0;

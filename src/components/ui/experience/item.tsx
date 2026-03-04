@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./item.module.scss";
-import cx from "classnames";
-import { IExperience } from "data/strings";
+import type { IExperience } from "data/strings";
 import location from "icons/location.svg";
 import TsIcon from "components/ui/icons/typescript";
 import SassIcon from "components/ui/icons/sass";
@@ -38,9 +37,9 @@ const ExperienceItem: React.FC<IExperienceItemProps> = ({ experience }) => {
         </div>
       </div>
       <div className={styles.technologies}>
-        <div className={cx(styles.position, styles.tech)}>Technologies:</div>
+        <div className={`container ${styles.position} ${styles.tech}`}>Technologies:</div>
         <div className={styles.techs}>
-          {experience.technologies.map((tech, idx) => {
+          {experience.technologies.map((tech) => {
             switch (tech.alt) {
               case "Github":
                 return <GithubIcon key={tech.alt} />;

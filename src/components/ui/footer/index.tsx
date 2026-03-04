@@ -1,13 +1,12 @@
 import React from "react";
 import styles from "./footer.module.scss";
-import cx from "classnames";
 import Caret from "components/ui/icons/caret";
 import Linkedin from "components/ui/icons/linkedin";
 import Github from "components/ui/icons/github";
 import Mail from "components/ui/icons/mail";
 import Location from "components/ui/icons/location";
 import Phone from "components/ui/icons/phone";
-import { ILanguageProps } from "data/strings";
+import type { ILanguageProps } from "data/strings";
 
 const Footer: React.FC<ILanguageProps> = () => {
   const logoClick = () => {
@@ -22,12 +21,12 @@ const Footer: React.FC<ILanguageProps> = () => {
       <div className={styles.caret} onClick={logoClick}>
         <Caret />
       </div>
-      <div className={cx(styles.fullWidth, styles.content)}>
+      <div className={`${styles.fullWidth} ${styles.content}`}>
         <div>
           <div className={styles.title} onClick={logoClick}>
             David Vargas
           </div>
-          <div className={cx(styles.text, styles.position)}>
+          <div className={`${styles.text} ${styles.position}`}>
             Full Stack Developer
           </div>
           <div className={styles.social}>
@@ -36,7 +35,7 @@ const Footer: React.FC<ILanguageProps> = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className={cx("flex-center", styles.link)}>
+              <div className={`flex-center ${styles.link}`}>
                 <Linkedin color="#2087c5" />
               </div>
             </a>
@@ -45,7 +44,7 @@ const Footer: React.FC<ILanguageProps> = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className={cx("flex-center", styles.link)}>
+              <div className={`flex-center ${styles.link}`}>
                 <Github color="#2087c5" />
               </div>
             </a>

@@ -4,7 +4,7 @@ interface ICaretProps {
   down?: boolean;
 }
 
-const Caret: React.FC<ICaretProps> = (props) => {
+const Caret: React.FC<ICaretProps> = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

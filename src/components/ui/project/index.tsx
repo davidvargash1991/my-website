@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "./project.module.scss";
-import cx from "classnames";
 import { isMobile } from "utils/mobile";
-import { IProject } from "data/strings";
+import type { IProject } from "data/strings";
 import Github from "components/ui/icons/github";
 import Web from "components/ui/icons/web";
 
@@ -25,10 +24,10 @@ const Project: React.FC<IProjectProps> = ({ project }) => {
     <div className={styles.container} onClick={handleContainerClick}>
       <img className={styles.img} src={project.img} alt={project.title} />
       {!isMobile() && (
-        <div className={cx("flex-center", styles.imgContainer)}>
+        <div className={`flex-center ${styles.imgContainer}`}>
           <div className={styles.buttons}>
             <a
-              className={cx("flex-center", styles.button)}
+              className={`flex-center ${styles.button}`}
               href={project.repo}
               target="_blank"
               rel="noopener noreferrer"
@@ -38,7 +37,7 @@ const Project: React.FC<IProjectProps> = ({ project }) => {
             </a>
             {project.link && (
               <a
-                className={cx("flex-center", styles.button)}
+                className={`flex-center ${styles.button}`}
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -54,7 +53,7 @@ const Project: React.FC<IProjectProps> = ({ project }) => {
       <div className={styles.title}>{project.title}</div>
       <div className={styles.description}>{project.description}</div>
       <div
-        className={cx(styles.buttons, !project.link ? styles.single : "")}
+        className={`flex-center ${styles.buttons} ${!project.link ? styles.single : ""}`}
       ></div>
     </div>
   );
