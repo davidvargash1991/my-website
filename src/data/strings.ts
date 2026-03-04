@@ -5,6 +5,7 @@ import everis from "icons/everis.png";
 import csi from "icons/csi.png";
 import info from "icons/info.jpg";
 import lumon from "icons/lumon.jpg";
+import adecco from 'icons/adecco-logo.png';
 import globe from "icons/globe.png";
 import csharp from "icons/csharp.png";
 import reactLogo from "icons/react-no-text.png";
@@ -139,19 +140,47 @@ export const strings: IStrings = {
     ],
     experience: [
       {
+        company: "Adecco",
+        location: "Remoto",
+        position: "Desarrollador Senior React",
+        date: "2024 - 2026",
+        facts: [
+          "Desarrollé componentes de dashboard para aplicaciones empresariales de Home Depot, con visualizaciones de datos en tiempo real e integración en canalizaciones de Vertex AI.",
+          "Diseñé e implementé lógica robusta de obtención de datos de API usando middleware basado en Express y flujos asincronos.",
+          "Creé pruebas unitarias integrales con React Testing Library, mejorando la confiabilidad del código y detectando regresiones de casos límite.",
+          "Trabajé colaborativamente en equipos distribuidos en un entorno empresarial de alta seguridad."
+        ],
+        technologies: [
+          {
+            alt: "React.js",
+            img: reactLogoText,
+          },
+          {
+            alt: "Redux",
+            img: null,
+          },
+          {
+            alt: "Typescript",
+            img: null,
+          },
+          {
+            alt: "Github",
+            img: null,
+          },
+        ],
+        img: adecco,
+      },
+      {
         company: "Truelogic Software",
         location: "Remoto",
-        position: "Full Stack Developer",
+        position: "Desarrollador Senior Frontend",
         date: "2019 - 2024",
         facts: [
-          "Plataforma de creación de sitios web para fotógrafos",
-          "El cliente fue Zenfolio en San Francisco",
-          "Desarrollé componentes FrontEnd usando React.Js, Typescript y redux",
-          "Desarrollé aplicaciones con estado global (reducers, store, actions, dispatchers)",
-          "Revisión y aprobación de Pull Requests usando GIT",
-          "Conecté con APIs y servicios Restful",
-          "Desarrollé Unit Tests usando enzyme y jest",
-          "Creación de HTML usando sass modules, box model, selectors, media queries, responsive design",
+          "Lideré el desarrollo frontend para sitios web de alto tráfico accesibles al público, incluidos Zenfolio (EE.UU. y Europa) y The Cleveland Museum of Art, sirviendo a decenas de miles de usuarios mensualmente.",
+          "Diseñé e implementé generación dinámica de páginas desde Drupal CMS, traduciendo contenido en componentes React escalables y reutilizables usando TypeScript y Next.js.",
+          "Me enfoqué fuertemente en accesibilidad web (estándares WCAG) para el sitio del Cleveland Museum para garantizar acceso inclusivo para todos los usuarios.",
+          "Construí componentes interactivos complejos incluyendo editores de arrastrar y soltar, carruseles animados e integraciones personalizadas con APIs de terceros (p. ej. Instagram).",
+          "Participé en planificación arquitectónica, diseño de estructura de componentes y estrategias de migración en bases de código React grandes.",
         ],
         technologies: [
           {
@@ -417,19 +446,47 @@ export const strings: IStrings = {
     ],
     experience: [
       {
+        company: "Adecco",
+        location: "Remote",
+        position: "Senior React Developer",
+        date: "2024 - 2026",
+        facts: [
+          "Developed dashboard components for Home Depot enterprise applications, with real-time data visualizations and integration into Vertex AI pipelines.",
+          "Designed and implemented robust API data-fetching logic using Express-based middleware and async workflows.",
+          "Created comprehensive unit tests with React Testing Library, improving code reliability and catching edge case regressions.",
+          "Worked collaboratively across distributed teams in a high-security enterprise environment."
+        ],
+        technologies: [
+          {
+            alt: "React.js",
+            img: reactLogoText,
+          },
+          {
+            alt: "Redux",
+            img: null,
+          },
+          {
+            alt: "Typescript",
+            img: null,
+          },
+          {
+            alt: "Github",
+            img: null,
+          },
+        ],
+        img: adecco,
+      },
+      {
         company: "Truelogic Software",
         location: "Remote",
-        position: "Full Stack Developer",
+        position: "Senior Frontend Developer",
         date: "2019 - 2024",
         facts: [
-          "Website editor project for photographers",
-          "The client was Zenfolio based in San Francisco",
-          "Developed FrontEnd components using React.Js, Typescript and redux",
-          "Developed applications with global states (reducers, store, actions, dispatchers)",
-          "Reviewed and approved Pull Requests using GIT",
-          "Connected with API and Restful services",
-          "Unit Testing using enzyme and jest",
-          "HTML creation using sass modules, box model, selectors, media queries, responsive design",
+          "Led frontend development for high-traffic, public-facing websites including Zenfolio (US & Europe) and The Cleveland Museum of Art, serving tens of thousands of users monthly.",
+          "Designed and implemented dynamic page generation from Drupal CMS, translating content into scalable, reusable React components using TypeScript and Next.js.",
+          "Focused heavily on web accessibility (WCAG standards) for the Cleveland Museum site to ensure inclusive access for all users.",
+          "Built complex interactive components including drag-and-drop editors, animated carousels, and custom integrations with third-party APIs (e.g. Instagram).",
+          "Participated in architectural planning, component structure design, and migration strategies across large React codebases.",
         ],
         technologies: [
           {
