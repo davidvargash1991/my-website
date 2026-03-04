@@ -16,7 +16,7 @@ const About = React.forwardRef<any, IAboutProps>(
     return (
       <div className={`container ${styles.container}`}>
         <Subtitle ref={ref} text={props.strings.aboutMeTitle} />
-        <p className={styles.text}>{props.strings.textAbout}</p>
+        <div className={styles.text} dangerouslySetInnerHTML={{__html: props.strings.textAbout}} />
         <div className={styles.infoContainer}>
           <div className={styles.info}>
             <div

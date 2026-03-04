@@ -13,7 +13,7 @@ const Hero = (props: ILanguageProps) => {
           <h1 className={styles.title}>
             David <span>Vargas</span>
           </h1>
-          <div className={styles.subtitle}>{props.strings.heroSubtitle}</div>
+          <div className={styles.subtitle} dangerouslySetInnerHTML={{__html: props.strings.heroSubtitle}} />
           <div className={styles.images}>
             <img className={styles.logo} src={reactLogo} alt="react.js" />
             <img className={styles.logo} src={netLogo} alt=".net" />

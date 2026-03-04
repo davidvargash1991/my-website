@@ -76,10 +76,10 @@ const years = dayjs().diff("2011-08-01", "year");
 export const strings: IStrings = {
   spanish: {
     heroSubtitle:
-      "Soy un desarrollador Full Stack experimentado, me enfoco sobre todo en desarrollo FrontEnd el cual disfruto bastante",
-    aboutMeTitle: "Sobre mi",
+      `Soy un ingeniero de software senior con más de ${years} años de experiencia construyendo aplicaciones web escalables. Me enfoco en desarrollo frontend con React y TypeScript.`,
+    aboutMeTitle: "Sobre mí",
     textAbout:
-      "Disfruto construir webistes modernos y bellos; para este propósito, siempre estoy haciendo cursos para aprender las últimas técnicas y tecnologías, de esa manera puedo construir las mejores aplicaciones posibles",
+      "<p>Disfruto creando aplicaciones web modernas y bien estructuradas que balancean usabilidad, rendimiento y mantenibilidad. Valoro el código limpio, las buenas decisiones de diseño y entornos de equipo colaborativos.<br /><br />Continuamente mejoro mis habilidades para mantenerme alineado con las mejores prácticas frontend actuales, enfocándome en entregar soluciones estables y de alta calidad en lugar de perseguir tendencias.</p>",
     totalExp: `${years} años desde Agosto de 2011`,
     remoteTitle: "Trabajo Remoto",
     remoteText: "Tengo experiencia trabajando en equipos distribuidos",
@@ -351,10 +351,10 @@ export const strings: IStrings = {
   },
   english: {
     heroSubtitle:
-      "I am an experienced Full Stack developer, I focus mostly on FrontEnd Development which I enjoy a lot",
+      `I am a senior software engineer with over ${years} years of experience building scalable web applications. My focus is on frontend development with React and TypeScript.`,
     aboutMeTitle: "About Me",
     textAbout:
-      "I enjoy building modern and beautiful webistes, for this purpose I keep always making courses to learn new cool features, that way I can build the most impressive applications as possible",
+      "<p>I enjoy building modern, well-structured web applications that balance usability, performance, and maintainability. I value clean code, thoughtful design decisions, and collaborative team environments.<br /><br />I continuously improve my skills to stay aligned with current frontend best practices, focusing on delivering stable and high-quality solutions rather than chasing trends.</p>",
     totalExp: `${years} years since August 2011`,
     remoteTitle: "Remote Work",
     remoteText: "I have experience working with distributed teams",
