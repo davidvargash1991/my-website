@@ -22,13 +22,6 @@ const About: React.FC<IAboutProps> = React.forwardRef(
       <div className={cx("container", styles.container)}>
         <Subtitle ref={ref} text={props.strings.aboutMeTitle} />
         <p className={styles.text}>{props.strings.textAbout}</p>
-        <Link
-          to={`/Profile?lang=${searchParams.get("lang") || "en"}`}
-          target="_blank"
-          className={cx("button-link", styles.link)}
-        >
-          {props.strings.btnCv}
-        </Link>
         <div className={styles.infoContainer}>
           <div className={styles.info}>
             <div

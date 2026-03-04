@@ -2,7 +2,6 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Home from "../pages/home";
-import Profile from "components/pages/profile/Profile";
 
 const router = createBrowserRouter([
   {
@@ -12,10 +11,6 @@ const router = createBrowserRouter([
   {
     path: "*",
     element: <Home />,
-  },
-  {
-    path: "/Profile",
-    element: <Profile />,
   },
 ]);
 
