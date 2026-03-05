@@ -5,7 +5,6 @@ import Linkedin from "components/ui/icons/linkedin";
 import Github from "components/ui/icons/github";
 import Mail from "components/ui/icons/mail";
 import Location from "components/ui/icons/location";
-import Phone from "components/ui/icons/phone";
 import type { ILanguageProps } from "data/strings";
 
 const Footer: React.FC<ILanguageProps> = () => {
@@ -60,13 +59,6 @@ const Footer: React.FC<ILanguageProps> = () => {
               href="mailto:davidvargash.1991@protonmail.com"
             >
               davidvargash.1991@protonmail.com
-            </a>
-          </div>
-          <div className={styles.text}>
-            <Phone />
-            <span>Tel: </span>{" "}
-            <a className={styles.text} href="tel:+573133461507">
-              +573133461507
             </a>
           </div>
           <div className={styles.text}>
