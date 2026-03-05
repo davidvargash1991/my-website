@@ -108,12 +108,12 @@ const Navbar: React.FC<INavigationProps> = (props) => {
           <div>
             <a
               className={styles.mail}
-              href="mailto:davidvargash.1991@tutanota.com"
+              href="mailto:davidvargash.1991@protonmail.com"
             >
               <div className={styles.icon}>
                 <Mail />
               </div>
-              <div className={styles.text}>davidvargash.1991@tutanota.com</div>
+              <div className={styles.text}>davidvargash.1991@protonmail.com</div>
             </a>
           </div>
           <div className={styles.social}>

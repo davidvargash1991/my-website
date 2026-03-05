@@ -380,7 +380,7 @@ export const strings: IStrings = {
   },
   english: {
     heroSubtitle:
-      `I am a senior software engineer with over ${years} years of experience building scalable web applications. My focus is on frontend development with React and TypeScript.`,
+      `I am a senior frontend engineer with over ${years} years of experience building scalable web applications. My focus is on frontend development with React and TypeScript.`,
     aboutMeTitle: "About Me",
     textAbout:
       "<p>I enjoy building modern, well-structured web applications that balance usability, performance, and maintainability. I value clean code, thoughtful design decisions, and collaborative team environments.<br /><br />I continuously improve my skills to stay aligned with current frontend best practices, focusing on delivering stable and high-quality solutions rather than chasing trends.</p>",

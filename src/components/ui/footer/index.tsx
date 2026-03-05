@@ -27,7 +27,7 @@ const Footer: React.FC<ILanguageProps> = () => {
             David Vargas
           </div>
           <div className={`${styles.text} ${styles.position}`}>
-            Full Stack Developer
+            Senior Frontend Engineer
           </div>
           <div className={styles.social}>
             <a
@@ -57,9 +57,9 @@ const Footer: React.FC<ILanguageProps> = () => {
             <span>Email: </span>{" "}
             <a
               className={styles.text}
-              href="mailto:davidvargash.1991@tutanota.com"
+              href="mailto:davidvargash.1991@protonmail.com"
             >
-              davidvargash.1991@tutanota.com
+              davidvargash.1991@protonmail.com
             </a>
           </div>
           <div className={styles.text}>
