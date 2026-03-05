@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import styles from "./navbar.module.scss";
-import { useSearchParams } from "react-router-dom";
-import Mail from "components/ui/icons/mail";
-import Linkedin from "components/ui/icons/linkedin";
-import Github from "components/ui/icons/github";
-import es from "icons/es.svg";
-import en from "icons/en.svg";
-import type { ILanguageProps } from "data/strings";
+import React, { useState, useEffect } from 'react';
+import styles from './navbar.module.scss';
+import { useSearchParams } from 'react-router-dom';
+import Mail from 'components/ui/icons/mail';
+import Linkedin from 'components/ui/icons/linkedin';
+import Github from 'components/ui/icons/github';
+import es from 'icons/es.svg';
+import en from 'icons/en.svg';
+import type { ILanguageProps } from 'data/strings';
 
 export interface INavigationProps extends ILanguageProps {
   viewportWidth: number;
@@ -23,15 +23,15 @@ const Navbar: React.FC<INavigationProps> = (props) => {
   const [, setSearchParams] = useSearchParams();
 
   const getScreenOrientation = () => {
-    if (window.matchMedia("(orientation: portrait)").matches) {
-      return "portrait";
+    if (window.matchMedia('(orientation: portrait)').matches) {
+      return 'portrait';
     }
 
-    if (window.matchMedia("(orientation: landscape)").matches) {
-      return "landscape";
+    if (window.matchMedia('(orientation: landscape)').matches) {
+      return 'landscape';
     }
 
-    return "";
+    return '';
   };
 
   const [hasPassedHero, setHasPassedHero] = useState(false);
@@ -53,7 +53,7 @@ const Navbar: React.FC<INavigationProps> = (props) => {
 
   const listenToScroll = () => {
     const heroLimit =
-      props.viewportWidth > 767 ? 160 : orientation === "landscape" ? 1 : 80;
+      props.viewportWidth > 767 ? 160 : orientation === 'landscape' ? 1 : 80;
 
     if (window.scrollY > heroLimit) {
       if (!hasPassedHero) {
@@ -81,28 +81,28 @@ const Navbar: React.FC<INavigationProps> = (props) => {
   };
 
   const handleEnglishClick = () => {
-    setSearchParams({ lang: "en" });
+    setSearchParams({ lang: 'en' });
   };
 
   const handleSpanishClick = () => {
-    setSearchParams({ lang: "es" });
+    setSearchParams({ lang: 'es' });
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", listenToScroll);
+    window.addEventListener('scroll', listenToScroll);
     setScreenOrientation();
-    window.addEventListener("orientationchange", setScreenOrientation);
+    window.addEventListener('orientationchange', setScreenOrientation);
 
     return () => {
-      window.removeEventListener("scroll", listenToScroll);
-      window.removeEventListener("orientationchange", setScreenOrientation);
+      window.removeEventListener('scroll', listenToScroll);
+      window.removeEventListener('orientationchange', setScreenOrientation);
     };
   }, []);
 
   return (
-    <nav className={`${styles.navbar} ${hasPassedHero ? styles.shadow : ""}`}>
+    <nav className={`${styles.navbar} ${hasPassedHero ? styles.shadow : ''}`}>
       <div
-        className={`${styles.upper} ${styles.upperContent} ${hasPassedHero ? styles.color : ""}`}
+        className={`${styles.upper} ${styles.upperContent} ${hasPassedHero ? styles.color : ''}`}
       >
         <div className={`${styles.content} ${styles.upperContent}`}>
           <div>
@@ -113,7 +113,9 @@ const Navbar: React.FC<INavigationProps> = (props) => {
               <div className={styles.icon}>
                 <Mail />
               </div>
-              <div className={styles.text}>davidvargash.1991@protonmail.com</div>
+              <div className={styles.text}>
+                davidvargash.1991@protonmail.com
+              </div>
             </a>
           </div>
           <div className={styles.social}>
@@ -123,7 +125,7 @@ const Navbar: React.FC<INavigationProps> = (props) => {
               rel="noopener noreferrer"
             >
               <div
-                className={`flex-center ${styles.sociallink} ${hasPassedHero ? styles.blue : ""}`}
+                className={`flex-center ${styles.sociallink} ${hasPassedHero ? styles.blue : ''}`}
               >
                 <Linkedin color="#ffffff" />
               </div>
@@ -134,7 +136,7 @@ const Navbar: React.FC<INavigationProps> = (props) => {
               rel="noopener noreferrer"
             >
               <div
-                className={`flex-center ${styles.sociallink} ${hasPassedHero ? styles.blue : ""}`}
+                className={`flex-center ${styles.sociallink} ${hasPassedHero ? styles.blue : ''}`}
               >
                 <Github color="#ffffff" />
               </div>
@@ -157,8 +159,14 @@ const Navbar: React.FC<INavigationProps> = (props) => {
             <div className={styles.link} onClick={props.handleExperienceClick}>
               {props.strings.experienceTitle}
             </div>
+            <a className={styles.link} href="/cv.pdf" target="_blank">
+              {props.strings.downloadResumeBtn}
+            </a>
           </div>
           <div className={`flex-center ${styles.language}`}>
+            <a className={`${styles.link} ${styles.downloadCV}`} href="/cv.pdf" target="_blank">
+              {props.strings.downloadResumeBtn}
+            </a>
             <img
               className={`${styles.icon} ${styles.flag}`}
               src={en}

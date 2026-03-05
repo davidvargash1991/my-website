@@ -59,6 +59,7 @@ export interface ILanguage {
   portfolioText: string;
   techText: string;
   experienceTitle: string;
+  downloadResumeBtn: string;
   projects: IProject[];
   experience: IExperience[];
 }
@@ -77,7 +78,7 @@ const years = dayjs().diff("2011-08-01", "year");
 export const strings: IStrings = {
   spanish: {
     heroSubtitle:
-      `Soy un ingeniero de software senior con más de ${years} años de experiencia construyendo aplicaciones web escalables. Me enfoco en desarrollo frontend con React y TypeScript.`,
+      `Ingeniero de software senior con más de ${years} años de experiencia construyendo aplicaciones web escalables. Me enfoco en desarrollo frontend con React y TypeScript.`,
     aboutMeTitle: "Sobre mí",
     textAbout:
       "<p>Disfruto creando aplicaciones web modernas y bien estructuradas que balancean usabilidad, rendimiento y mantenibilidad. Valoro el código limpio, las buenas decisiones de diseño y entornos de equipo colaborativos.<br /><br />Continuamente mejoro mis habilidades para mantenerme alineado con las mejores prácticas frontend actuales, enfocándome en entregar soluciones estables y de alta calidad en lugar de perseguir tendencias.</p>",
@@ -89,11 +90,12 @@ export const strings: IStrings = {
     responsiveText:
       "Construyo las aplicaciones pensando siempre en todos los dispositivos, y revisando en multiples navegadores",
     techText:
-      "Trabajo con las mejores tecnologías y técnicas para consturir aplicaciones brillantes y de clase mundial",
+      "Me enfoco en construir aplicaciones mantenibles, escalables y bien estructuradas utilizando tecnologías frontend modernas.",
     portfolioTitle: "Portafolio",
     portfolioText:
-      "Estos son proyectos que creo en mi tiempo libre, me ayudan a practicar y aprender",
+      "Proyectos personales utilizados para explorar tecnologías, experimentar con ideas y practicar patrones de desarrollo modernos.",
     experienceTitle: "Experiencia",
+    downloadResumeBtn: "Descargar CV",
     projects: [
       {
         title: "Find your Home",
@@ -105,7 +107,7 @@ export const strings: IStrings = {
       },
       {
         title: "Animal Wiki",
-        description: "Es una enciclopedia animal de prueba con fotos de Flickr",
+        description: "Es una enciclopedia animal de prueba con fotos del API REST de Flickr",
         img: leopard,
         repo: "https://github.com/davidvargash1991/animal-wiki",
         link: "https://animal-wiki.now.sh/home",
@@ -148,7 +150,8 @@ export const strings: IStrings = {
           "Desarrollé componentes de dashboard para aplicaciones empresariales de Home Depot, con visualizaciones de datos en tiempo real e integración en canalizaciones de Vertex AI.",
           "Diseñé e implementé lógica robusta de obtención de datos de API usando middleware basado en Express y flujos asincronos.",
           "Creé pruebas unitarias integrales con React Testing Library, mejorando la confiabilidad del código y detectando regresiones de casos límite.",
-          "Trabajé colaborativamente en equipos distribuidos en un entorno empresarial de alta seguridad."
+          "Trabajé colaborativamente en equipos distribuidos en un entorno empresarial de alta seguridad.",
+          "Migrée aplicaciones de Webpack a Vite para mejorar el rendimiento del desarrollo."
         ],
         technologies: [
           {
@@ -164,9 +167,21 @@ export const strings: IStrings = {
             img: null,
           },
           {
-            alt: "Github",
+            alt: "React Testing Library",
             img: null,
           },
+          {
+            alt: "Node.js",
+            img: null,
+          },
+          {
+            alt: "Vite",
+            img: null,
+          },
+                    {
+            alt: "Github",
+            img: null,
+          }
         ],
         img: adecco,
       },
@@ -380,7 +395,7 @@ export const strings: IStrings = {
   },
   english: {
     heroSubtitle:
-      `I am a senior frontend engineer with over ${years} years of experience building scalable web applications. My focus is on frontend development with React and TypeScript.`,
+      `Senior frontend engineer specializing in React and TypeScript with ${years}+ years of experience building scalable web applications.<br /><br />Experienced in modern frontend architectures, performance optimization, and long-term enterprise applications.`,
     aboutMeTitle: "About Me",
     textAbout:
       "<p>I enjoy building modern, well-structured web applications that balance usability, performance, and maintainability. I value clean code, thoughtful design decisions, and collaborative team environments.<br /><br />I continuously improve my skills to stay aligned with current frontend best practices, focusing on delivering stable and high-quality solutions rather than chasing trends.</p>",
@@ -392,10 +407,11 @@ export const strings: IStrings = {
     responsiveText:
       "I build the applications with responsive design in mind, always testing across browsers",
     techText:
-      "I work with the best technologies and techniques in order to build brilliant world class applications",
+      "I focus on building maintainable, scalable, and well-structured applications using modern frontend technologies.",
     portfolioTitle: "Portfolio",
+    downloadResumeBtn: "Download CV",
     portfolioText:
-      "These are projects that I build in my free time, they are projects that help me practice and learn",
+      "Personal projects used to explore technologies, experiment with ideas, and practice modern development patterns.",
     experienceTitle: "Experience",
     projects: [
       {
@@ -410,7 +426,7 @@ export const strings: IStrings = {
       {
         title: "Animal Wiki",
         description:
-          "This is a sample animal encyclopedia with gallery from Flickr",
+          "This is a sample animal encyclopedia with gallery from Flickr's REST API",
         img: leopard,
         repo: "https://github.com/davidvargash1991/animal-wiki",
         link: "https://animal-wiki.now.sh/home",
@@ -454,7 +470,8 @@ export const strings: IStrings = {
           "Developed dashboard components for Home Depot enterprise applications, with real-time data visualizations and integration into Vertex AI pipelines.",
           "Designed and implemented robust API data-fetching logic using Express-based middleware and async workflows.",
           "Created comprehensive unit tests with React Testing Library, improving code reliability and catching edge case regressions.",
-          "Worked collaboratively across distributed teams in a high-security enterprise environment."
+          "Worked collaboratively across distributed teams in a high-security enterprise environment.",
+          "Migrated applications from Webpack to Vite to improve development performance."
         ],
         technologies: [
           {
@@ -470,9 +487,21 @@ export const strings: IStrings = {
             img: null,
           },
           {
-            alt: "Github",
+            alt: "React Testing Library",
             img: null,
           },
+          {
+            alt: "Node.js",
+            img: null,
+          },
+          {
+            alt: "Vite",
+            img: null,
+          },
+                    {
+            alt: "Github",
+            img: null,
+          }
         ],
         img: adecco,
       },

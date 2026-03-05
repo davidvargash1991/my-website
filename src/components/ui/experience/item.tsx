@@ -9,6 +9,9 @@ import JestIcon from "components/ui/icons/jest";
 import JsIcon from "components/ui/icons/javascript";
 import XamarinIcon from "components/ui/icons/xamarin";
 import ReduxIcon from "components/ui/icons/redux";
+import NodeIcon from "components/ui/icons/node";
+import ViteIcon from "components/ui/icons/vite";
+import RtlIcon from "../icons/rtl";
 
 interface IExperienceItemProps {
   experience: IExperience;
@@ -37,7 +40,7 @@ const ExperienceItem: React.FC<IExperienceItemProps> = ({ experience }) => {
         </div>
       </div>
       <div className={styles.technologies}>
-        <div className={`container ${styles.position} ${styles.tech}`}>Technologies:</div>
+        <div className={`${styles.position} ${styles.tech}`}>Technologies:</div>
         <div className={styles.techs}>
           {experience.technologies.map((tech) => {
             switch (tech.alt) {
@@ -55,6 +58,12 @@ const ExperienceItem: React.FC<IExperienceItemProps> = ({ experience }) => {
                 return <TsIcon key={tech.alt} />;
               case "Xamarin":
                 return <XamarinIcon key={tech.alt} />;
+              case "Node.js":
+                return <NodeIcon key={tech.alt} />;
+              case "Vite":
+                return <ViteIcon key={tech.alt} />;
+              case "React Testing Library":
+                return <RtlIcon key={tech.alt} />;
               default:
                 return (
                   <img
